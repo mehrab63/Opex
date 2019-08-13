@@ -1,0 +1,589 @@
+﻿@page
+
+@model Opex.Pages.SummaryModel
+@{
+    Layout = null;
+        ViewData["Title"] = "اطلاعات ثبت نام";
+    
+}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        @if (ViewData["Title"] != null)
+        {
+        @ViewData["Title"];
+        } - Opex
+    </title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href=""
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <title>درخواست صدور پروانه کسب</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- CSS Files -->
+    <link href="~/css/themify-icons-demo.css" rel="stylesheet" />
+    <link href="~/css/demo.css" rel="stylesheet" />
+    <link href="~/css/themify-icons.css" rel="stylesheet" />
+    <link href="~/css/intlTelInput.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap-rtl.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap-rtl.css" />
+    <link rel="stylesheet" href="/css/boot.css" />
+    <link rel="stylesheet" type='text/css' href="/css/fontawesome.css" />
+    <link rel="stylesheet" type='text/css' href="/css/font-awesome.css" />
+    <link rel="stylesheet" type='text/css' href="/css/fontawesome.min.css" />
+    <link rel="stylesheet" type='text/css' href="/css/font-awesome.min.css" />
+    <link rel="stylesheet" type='text/css' href="/css/style.css" />
+    <!-- Fonts and Icons -->
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="/css/themify-icons.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+                    <div class="pull-left">
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <div class="col-sm-10 col-sm-offset-1 ">
+            <div class="wizard-container">
+                <div class="card wizard-card" data-color="blue" id="wizard">
+                    <div class="wizard-header" style="font-family:SDF">
+                        <h3 class="wizard-title"><strong>خلاصه پرونده</strong></h3>
+                        <p class="category">  خلاصه اطلاعات ثبت شده در اتحادیه</p>
+                    </div>
+                    <div class="tab-pane" id="location">
+                        <div class="col-sm-12">
+                            
+                            @if (@ViewData["message"]!=null)
+                            {
+                            <div class="alert alert-danger">@ViewData["message"]</div>
+                            }
+                            <div class="card-body ">
+                                <div class="col-sm-12">
+                                    <div class="row"><div class="alert alert-info"><strong>مشخصات فردی </strong></div></div>
+                                    @if (@ViewData["messageM"] != null)
+                                    {
+                                        <div class="alert alert-danger">@ViewData["messageM"]</div>
+                                    }
+                                    @if (Model.MemberIsValid)
+                                    {
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 text-center">
+                                                <img src="~/img/logo.png" />
+                                                <p>اتحادیه صادرکنندگان فرآورده های نفت، گاز و پتروشیمی ایران</p>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 ">
+                                                <table class="table table-user-information">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td> نام</td>
+                                                            <td>@Model.Members.نام </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td> نام خانوادگی</td>
+                                                            <td>@Model.Members.نامخانوادگی </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td> نام پدر</td>
+                                                            <td>@Model.Members.نامپدر </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ایمیل</td>
+                                                            <td><a href="mailto:info@support.com">@Model.Members.ایمیل </a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td> تلفن همراه: </td>
+                                                            <td>
+                                                                @Model.Members.تلفنهمراه
+                                                            </td>
+                                                        </tr>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="alert alert-info"><strong>مشخصات صنفی </strong></div>
+
+                                            <div class="col-xs-12 col-sm-12">
+                                                <table class="table table-user-information">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td> کد پستی</td>
+                                                            <td>@Model.Members.کدپستی </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td> پلاک آبی</td>
+                                                            <td>@Model.Members.پلاکآبی </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>  نوع مالکیت</td>
+                                                            <td>@Model.Members.نوعمالکیت </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>آدرس</td>
+                                                            <td> @Model.Members.آدرس  </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>شماره تلفن:</td>
+                                                            <td>
+                                                                @Model.Members.تلفنمغازه
+                                                            </td>
+                                                        </tr>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="alert alert-info"><strong>مشخصات شرکت </strong></div>
+
+                                            <div class="col-xs-12 col-sm-12">
+                                                <table class="table table-user-information">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td> نام شرکت</td>
+                                                            <td>@Model.Members.نامشرکت </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td> مدیر عامل شرکت</td>
+                                                            <td>@Model.Members.نام  @Model.Members.نامخانوادگی </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>شماره ثبت</td>
+                                                            <td>@Model.Members.شمارهثبتشرکت </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>شناسه ملی</td>
+                                                            <td> @Model.Members.شناسهثبتشرکت  </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>شماره تلفن:</td>
+                                                            <td>
+                                                                @Model.Members.تلفنمغازه
+                                                            </td>
+                                                        </tr>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    }
+                                    <div class="row">
+                                        <div class="alert alert-info"><strong>اعضای هیئت مدیره</strong></div>
+                                        @if (@ViewData["messageOM"] != null)
+                                        {
+                                            <div class=" alert-danger">@ViewData["messageOM"]</div><br />
+                                        }
+                                        <div class="row">
+                                            @if (Model.OfficeMembersIsValid)
+                                            {
+                                                int i = 0;
+                                                ViewBag.Title = "Employee Data";
+                                                var employeeData = Model.OfficeMembers;
+                                                <div class=" col-md-12   custyle">
+                                                    <table class="table table-striped custab">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="text-right">ردیف</th>
+                                                                <th class="text-right">نام و نام خانوادگی</th>
+                                                                <th class="text-right">کد ملی</th>
+                                                                <th class="text-right">تحصیلات</th>
+                                                                <th class="text-right">سمت</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @foreach (var item in employeeData)
+                                                            {
+                                                                i++;
+                                                                <tr>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => i)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.Lname)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.ShMelli)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.DReshte)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.Role)
+                                                                    </td>
+                                                                </tr>
+                                                            }
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="alert alert-info"><strong>مدارک بارگذاری شده</strong></div>
+                                        @if (@ViewData["messageB"] != null)
+                                        {
+                                            <div class=" alert-danger">@ViewData["messageB"]</div><br />
+                                        }
+                                        <div class="row">
+                                            @if (Model.BinaryIsValid)
+                                            {
+                                                int i = 0; 
+                                                var binarys = Model.Binarys;
+                                                <div class=" col-md-12   custyle">
+                                                    <table class="table table-striped custab">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="text-right">ردیف</th>
+                                                                <th class="text-right">تاریخ</th>
+                                                                <th class="text-right">عنوان</th>
+                                                                <th class="text-right">توضیحات</th> 
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @foreach (var item in binarys)
+                                                            {
+                                                                i++;
+                                                                <tr>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => i)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.Ddate)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.Subject)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.Description)
+                                                                    </td> 
+                                                                </tr>
+                                                            }
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div> 
+                                    <div class="row">
+                                        <div class="alert alert-info"><strong>ارزیابی توان مالی و بازرگانی</strong></div>
+                                        @if (@ViewData["messageFB"] != null)
+                                        {
+                                            <div class=" alert-danger">@ViewData["messageFB"]</div><br />
+                                        }
+                                        @if (Model.FinancialBalanceIsValid)
+                                        {
+                                            <div class="col-xs-6 col-sm-6 ">
+                                                <label><h4><strong> توان مالی شرکت در 5 سال گذشته</strong></h4></label>
+                                                <span>(جدول 1-3)</span>
+                                                <div class="row">
+                                                    <table class="table table-user-information">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td> سال</td>
+                                                                <td>@Model.FinancialBalance.AffordabilityYear</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> کل محصول صادرشده (تن / بشکه)</td>
+                                                                <td>@Model.FinancialBalance.TotalExportProduct5Year</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>  مبلغ صادراتی ارزی</td>
+                                                                <td>@Model.FinancialBalance.ExprotCurencyPrice</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>مبلغ صادراتی ریالی</td>
+                                                                <td> @Model.FinancialBalance.ExportRialPrice </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>سال(بیمه)</td>
+                                                                <td>
+                                                                    @Model.FinancialBalance.InsuranceYear
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> کل مبلغ بیمه تأمین اجتماعی پرداخت‌شده:</td>
+                                                                <td> @Model.FinancialBalance.TotalInsurance</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> کل مبلغ مالیات پرداختی:</td>
+                                                                <td> @Model.FinancialBalance.TotalTaxPayment)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> مجموعه تناژ صادراتی طی یک سال گذشته:</td>
+                                                                <td>@Model.FinancialBalance.TotalExportYear</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>  فرآورده‌های صادراتی به ترتیب میزان صادرات:</td>
+                                                                <td>
+                                                                    درجه1: @Model.FinancialBalance.ExportDegree1 - درجه2: @Model.FinancialBalance.ExportDegree2 - درجه3: @Model.FinancialBalance.ExportDegree3
+
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>  ارزش صادراتی ریالی:</td>
+                                                                <td>@Model.FinancialBalance.ExportValueRial</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>  ارزش صادراتی ارزی:</td>
+                                                                <td>@Model.FinancialBalance.ExportValueCurency</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>  سایر فرآورده‌ها:</td>
+                                                                <td>@Model.FinancialBalance.OtherProduct</td>
+                                                            </tr>
+                                                        <tbody></tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6">
+                                                <label><h4><strong> توان تجهیزاتی</strong></h4></label>
+                                                <span>(فهرست ماشین‌آلات و تجهیزات تولیدی)</span>
+                                                <div class="row">
+                                                    <table class="table table-user-information">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>نام ماشین‌آلات و تجهیزات:</td>
+                                                                <td>@Model.FinancialBalance.EquipmentName</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>شرح مشخصات و مدت‌زمان کارکرد:</td>
+                                                                <td>@Model.FinancialBalance.EquipmentDisp</td>
+                                                            <tr>
+                                                                <td> تعداد:</td>
+                                                                <td>@Model.FinancialBalance.EquipmentQuantity</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>ملکی/استیجاری:</td>
+                                                                <td>@Model.FinancialBalance.EquipmentOwnerType</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-6 col-sm-6 ">
+                                                <h4><strong>فرآورده‌های تولیدی</strong>:</h4>
+                                                <div class="row">
+                                                    <table class="table table-user-information">
+
+
+                                                        <thead>
+                                                            <tr>
+                                                                <td>مجموع تناژ تولیدی یک سال:</td>
+                                                                <td> @Model.FinancialBalance.TotalProductYear</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> ظرفیت اسمی محصولات مندرج در پروانه بهره‌برداری:</td>
+                                                                <td>  @Model.FinancialBalance.NamedProductCapacity</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>ظرفیت عملیاتی محصولات بر اساس پروانه بهره‌برداری: </td>
+                                                                <td>  @Model.FinancialBalance.OperationalProductCapacity</td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody></tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                    <div class="row">
+                                        <div class="alert alert-info"><strong>پرسشنامه</strong></div>
+                                        @if (@ViewData["messageQ"] != null)
+                                        {
+                                            <div class=" alert-danger">@ViewData["messageQ"]</div><br />
+                                        }
+                                        @if (Model.QuestionnaireIsValid)
+                                        {
+                                            <table class="table table-user-information">
+                                                <thead><tr><td></td></tr></thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <strong>
+                                                                1- عضو كدام تشكل يا انجمن صنفي هستيد؟  (با ذكر تاريخ عضويت)
+                                                            </strong> <br />
+                                                            <div class="alert alert-warning ">
+                                                                @Model.Questionnaire.Question1
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <strong>
+                                                                اتاق های بازرگانی سراسر کشور: (لطفاً نام ببرید)
+                                                            </strong><br />
+                                                            <div class="alert alert-warning ">
+                                                                @Model.Questionnaire.Question11
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <strong> - اتاق های مشترک ایران با سایر کشورها  (لطفاً نام ببرید)</strong><br />
+                                                            <div class="alert alert-warning ">
+                                                                @Model.Questionnaire.Question12
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <strong>اتحادیه ها و تشکل های صنفی دیگر  (لطفاً نام ببرید)</strong><br />
+                                                            <div class="alert alert-warning ">
+                                                                @Model.Questionnaire.Question13
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <strong>هرگونه تشکل یا سازمان و ارگانهای غیر دولتی  (لطفاً نام ببرید)</strong><br />
+                                                            <div class="alert alert-warning ">
+                                                                @Model.Questionnaire.Question14
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <strong>2- آیا اعضاء هیئت مدیره یا مدیر عامل آن شرکت محترم عضو هیأت مدیره تشکل های دیگر صنفی، اقتصادی، اجتماعی و امثالهم میباشد؟ (لطفاً نام ببرید)</strong>
+                                                            <br /><div class="alert alert-warning "> @Model.Questionnaire.Question2</div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <strong> 3- آیا اعضاء هیئت مدیره یا مدیر عامل آن شرکت محترم عضو هیأت مدیره یا مدیر عامل و یا سهامدار عمده شرکت های دیگری نیز می باشند؟</strong><br />
+                                                            <div class="alert alert-warning ">
+                                                                @Model.Questionnaire.Question3
+                                                            </div>
+                                                        </td>
+                                                    <tr>
+                                                        <td>
+                                                            <strong> لطفاً نام هر یک از شرکت ها و سمت فرد مربوطه و نوع فعالیت شرکت مزبور را مرقوم فرمائید. (لطفاً نام ببرید</strong>
+                                                            <br /><div class="alert alert-warning ">
+                                                                @Model.Questionnaire.Question3Disp
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <strong>4- آیا آن شرکت در خارج از ایران دارای دفتر یا نمایندگی و یا شعبه می باشد؟</strong>
+                                                            <br /><div class="alert alert-warning ">
+                                                                @Model.Questionnaire.Question4
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <strong>لطفاً اسم کشورها را مرقوم فرمائید:</strong>
+                                                            <br /><div class="alert alert-warning ">
+                                                                @Model.Questionnaire.Question4Disp
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <strong>5- در صورت نیاز به برگزاری جلسات و یا پیگیری کارهای اتحادیه در سازمان ها، نهادها و مراجع قانونی تحت پوشش سه قوه مملکتی آیا اتحادیه می تواند از کمک آن عضو محترم بهره گیری نماید؟</strong>
+                                                            <br /> <div class="alert alert-warning ">
+                                                                @Model.Questionnaire.Question5
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+
+
+                                            </table>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wizard-footer">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container text-dark text-center ">
+            &copy; 1398 - اتحادیه صادرکنندگان فرآورده های نفت، گاز و پتروشیمی ایران - <a href="www.opex.ir">Opex</a> - <a asp-area="" asp-page="/Privacy">حریم خصوصی</a>
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha256-E/V4cWE4qvAeO5MOhjtGtqDzPndRO1LBk8lJ/PR7CA4=">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/register.js" asp-append-version="true"></script>
+    <script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+    <script src="/js/register.js" type="text/javascript"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--  Plugin for the Wizard -->
+    <script src=" /js/demo.js" type="text/javascript"></script>
+    <script src=" /js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+    <!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+    <script src=" /js/jquery.validate.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $('#wizard').bootstrapWizard('show', 1);
+        });
+    </script>
+</body>
+</html>

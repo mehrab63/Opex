@@ -1,0 +1,98 @@
+﻿@page
+@model Opex.Pages.Binarys.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TblBinarys</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.FileFormat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.FileFormat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.Binary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.Binary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.Subject)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.Subject)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.CreateUser)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.CreateUser)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.EditDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.EditDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.EtCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.EtCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.Ddate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.Ddate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.Number)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.Number)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.RelatedBinarys)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.RelatedBinarys)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.IsEdit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.IsEdit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.NoNeedScan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.NoNeedScan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblBinarys.NoNeedScanUser)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblBinarys.NoNeedScanUser)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.TblBinarys.BinaryId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,0 +1,165 @@
+﻿@page
+@model Opex.Pages.Questionnaire.IndexModel
+
+@{
+    ViewData["Title"] = "پرسشنامه";
+}
+<input type="hidden" id="selectedTab" value="question" />
+<div class="tab-pane" id="type">
+    <div class="col-md-12" style="margin-top:85px">
+        <div class=" col-md-12 col-lg-12 ">
+            <h2>پرسشنامه </h2>
+            @if (Model.ShowMessage)
+            {
+                <div class="alert alert-success">
+                    @Model.Message
+
+                </div>
+            }
+            <table class="table table-user-information">
+                <tbody>
+                    <tr>
+
+                        <td> 1- عضو كدام تشكل يا انجمن صنفي هستيد؟  (با ذكر تاريخ عضويت)</td>
+                        <td>@Html.DisplayFor(modelItem => modelItem.tblQuestionnaire.Question1)</td>
+                    </tr>
+                    <tr>
+
+                        <td>
+                            - اتاق های بازرگانی سراسر کشور: (لطفاً نام ببرید)
+                        </td>
+                        <td>@Html.DisplayFor(model => model.tblQuestionnaire.Question11)</td>
+                    </tr>
+                    <tr>
+                        <td> - اتاق های مشترک ایران با سایر کشورها  (لطفاً نام ببرید)</td>
+                        <td>@Html.DisplayFor(model => model.tblQuestionnaire.Question12)</td>
+                    </tr>
+                    <tr>
+                        <td>اتحادیه ها و تشکل های صنفی دیگر  (لطفاً نام ببرید)</td>
+                        <td>@Html.DisplayFor(model => model.tblQuestionnaire.Question13)</td>
+                    </tr>
+                    <tr>
+                        <td>هرگونه تشکل یا سازمان و ارگانهای غیر دولتی  (لطفاً نام ببرید)</td>
+                        <td>@Html.DisplayFor(model => model.tblQuestionnaire.Question14)</td>
+                    </tr>
+                    <tr>
+                        <td>2- آیا اعضاء هیئت مدیره یا مدیر عامل آن شرکت محترم عضو هیأت مدیره تشکل های دیگر صنفی، اقتصادی، اجتماعی و امثالهم میباشد؟ (لطفاً نام ببرید)</td>
+                        <td>@Html.DisplayFor(model => model.tblQuestionnaire.Question2)</td>
+                    </tr>
+                    <tr>
+                        <td> 3- آیا اعضاء هیئت مدیره یا مدیر عامل آن شرکت محترم عضو هیأت مدیره یا مدیر عامل و یا سهامدار عمده شرکت های دیگری نیز می باشند؟</td>
+                        <td>@Html.DisplayFor(model => model.tblQuestionnaire.Question3)</td>
+                    </tr>
+                    <tr>
+                        <td> لطفاً نام هر یک از شرکت ها و سمت فرد مربوطه و نوع فعالیت شرکت مزبور را مرقوم فرمائید. (لطفاً نام ببرید</td>
+                        <td>@Html.DisplayFor(model => model.tblQuestionnaire.Question3Disp)</td>
+                    </tr>
+                    <tr>
+                        <td>4- آیا آن شرکت در خارج از ایران دارای دفتر یا نمایندگی و یا شعبه می باشد؟</td>
+                        <td>@Html.DisplayFor(model => model.tblQuestionnaire.Question4)</td>
+                    </tr>
+                    <tr>
+                        <td>لطفاً اسم کشورها را مرقوم فرمائید:</td>
+                        <td>@Html.DisplayFor(model => model.tblQuestionnaire.Question4Disp)</td>
+                    </tr>
+                    <tr>
+                        <td>5- در صورت نیاز به برگزاری جلسات و یا پیگیری کارهای اتحادیه در سازمان ها، نهادها و مراجع قانونی تحت پوشش سه قوه مملکتی آیا اتحادیه می تواند از کمک آن عضو محترم بهره گیری نماید؟</td>
+                        <td>@Html.DisplayFor(model => model.tblQuestionnaire.Question5)</td>
+                    </tr>
+<tbody>
+                    <tr>
+                        
+                        <td>
+                            @if (Model.Qid == null)
+                            {
+                            <a class="btn btn-primary" asp-page="./Edit">پاسخ به سوالات</a>
+                            }
+                            else
+                            { 
+                            <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@Model.tblQuestionnaire.Qid">پاسخ به سوالات</a>
+                            }
+                        </td>
+                       
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div> 
+
+
+@section Footer{
+
+    <div class="pull-right">
+
+        <a class='btn btn-next btn-fill btn-danger btn-wd' asp-page="/Binarys/Index">مرحله بعدی</a>
+
+    </div>
+    <div class="pull-left">
+        <a asp-page="/FinancialBalance/Index" class='btn btn-previous btn-default btn-wd' name='Previous'>مرحله قبلی</a>
+    </div>
+    <div class="clearfix"></div>
+}
+
+
+@section Scripts{
+    <!--   Core JS Files   -->
+    <script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+    <script src="/js/register.js" type="text/javascript"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--  Plugin for the Wizard -->
+    <script src=" /js/demo.js" type="text/javascript"></script>
+    <script src=" /js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+    <!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+    <script src=" /js/jquery.validate.min.js" type="text/javascript"></script>
+    <script>
+
+        $(document).ready(function () {
+            var first = $('#selectedTab').val();
+            var mid = $('#selectedTab').val();
+            if (first == "rquest-type") {
+                $('#wizard').bootstrapWizard('show', 1);
+            }
+            else {
+                $('#wizard').bootstrapWizard('show', 0);
+            }
+            switch (mid) {
+                case "type":
+                    $('#wizard').bootstrapWizard('show', 0);
+                    break;
+
+                case "facilities":
+                    $('#wizard').bootstrapWizard('show', 1);
+                    break;
+                case "payment":
+                    $('#wizard').bootstrapWizard('show', 2);
+                    break;
+                case "question":
+                    $('#wizard').bootstrapWizard('show', 3);
+                    break;
+                case "upload":
+                    $('#wizard').bootstrapWizard('show', 4);
+                    break;
+                case "description":
+                    $('#wizard').bootstrapWizard('show', 5);
+                    break;
+                case "Verify1":
+                    $('#wizard').bootstrapWizard('show', 6);
+                    break;
+
+            }
+
+        });
+
+    </script>
+}

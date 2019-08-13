@@ -1,0 +1,254 @@
+﻿@page
+@model Opex.Pages.RolsModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Opex</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href=""
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <title>درخواست صدور پروانه کسب</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- CSS Files -->
+    <link href="~/css/themify-icons-demo.css" rel="stylesheet" />
+    <link href="~/css/demo.css" rel="stylesheet" />
+    <link href="~/css/themify-icons.css" rel="stylesheet" />
+    <link href="~/css/intlTelInput.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap-rtl.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap-rtl.css" />
+    <link rel="stylesheet" href="/css/boot.css" />
+    <link rel="stylesheet" type='text/css' href="/css/fontawesome.css" />
+    <link rel="stylesheet" type='text/css' href="/css/font-awesome.css" />
+    <link rel="stylesheet" type='text/css' href="/css/fontawesome.min.css" />
+    <link rel="stylesheet" type='text/css' href="/css/font-awesome.min.css" />
+    <link rel="stylesheet" type='text/css' href="/css/style.css" />
+    <!-- Fonts and Icons -->
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="/css/themify-icons.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+                    <div class="pull-left">
+                        <img src="~/img/t-logo.png" style="width:50%;height:50%" />
+                    </div>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Index"><span class="glyphicon glyphicon-home"></span> صفحه اصلی</a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Register"><span class="glyphicon glyphicon-list-alt"></span> ثبت عضویت</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Correspondence/Index"><span class="glyphicon glyphicon-tasks"></span> مکاتبات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Login"><span class="glyphicon glyphicon-log-in"></span>ورود</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <input type="hidden" id="selectedTab" value="payment" />
+        <div class="tab-pane" id="payment">
+            <div class="col-sm-10 col-sm-offset-1"> 
+                <h2> شرایط،قوانین و مدارک لازم برای عضویت در اتحادیه.</h2>
+                <div class="col-sm-10 col-sm-offset-1 ">
+                    <p class="more" style="direction: rtl;text-align: justify">
+                        <Strong>مقدمه</Strong>
+
+                        </br>
+                        بر اساس مفاد مواد 8 و 12 اساسنامه کلیه اشخاص حقیقی و حقوقی که حوزه
+                        فعالیت و اشتغال آنها در
+                        امور مربوط به صادرات فرآورده‌های
+                        نفت، گاز و پتروشیمی می‌باشد، می‌توانند به عضویت اتحادیه درآیند و
+                        فعالیت متقاضیان عضویت در
+                        اتحادیه در زمینه صادرات
+                        فرآورده‌های نفت، گاز و پتروشیمی باید با ارائه مستندات، مورد تائید
+                        یکی از کمیسیون‌های تخصصی
+                        قرار گرفته و سپس
+                        به تصویب هیئت‌مدیره برسد. متقاضیان عضویت در اتحادیه بر اساس مفاد
+                        آیین نامه اجرایی عضویت در
+                        اتحادیه مصوب شهریور
+                        ماه 1397می بایست مدارک و مستندات لازم را به هنگام تشکیل پرونده عضویت
+                        به دبیرخانه اتحادیه تحویل
+                        دهند.طبقه بندی
+                        اعضاء در اتحادیه بر اساس مفاد آیین نامه اجرایی عضویت در اتحادیه
+                        اعضاء اتحادیه به سه گروه
+                        طبقه‌بندی می‌شوند:<br />
+                        1 - اعضاء اصلی <br />
+                        تمام اشخاص حقیقی و حقوقی شامل شرکت‌ها و مؤسساتی که در حوزه تخصصی
+                        صادرات فرآورده‌های نفت، گاز و
+                        پتروشیمی اشتغال داشته باشند،
+                        در صورت دارا بودن شرایط عمومی و اختصاصی عضویت اعضاء اصلی(مواد 9، 10
+                        و 11 اساسنامه) به‌عنوان
+                        عضو اصلی اتحادیه
+                        پذیرفته می‌شوند. این اعضاء دارای حق رأی در مجامع عمومی اتحادیه(اعم
+                        از عادی و فوق‌العاده) و
+                        کمیسیون‌های تخصصی
+                        خواهند بود.<br />
+                        2 - اعضاء فرعی <br />
+                        تمام اشخاص حقوقی شامل شرکت‌ها و مؤسسات خدماتی(ازجمله حمل‌ونقل،
+
+                        ترانزیت، کارگزاری‌های بیمه و
+
+                        بورس، بانک ها، شرکت های بازرسی،
+
+                        تجهیزات، آزمایشگاه ها و...)که خدمات خود را در حوزه تخصصی
+                        فرآورده‌های نفت، گاز و پتروشیمی به
+                        تولیدکنندگان و
+                        صادرکنندگان عضو اتحادیه ارائه می‌نمایند، در صورت دارا بودن شرایط
+                        عمومی عضویت در اتحادیه(موضوع
+                        ماده 9 اساسنامه)
+                        یا ارائه مجوزهای مورد لزوم برای فعالیت های خود می‌توانند به مدت یک
+                        سال به‌عنوان عضو فرعی این
+                        اتحادیه پذیرفته
+                        شوند.این اعضاء دارای حق رأی در مجامع عمومی اتحادیه و کمیسیون‌های
+                        تخصصی نخواهند بود.<br />
+                        3 - اعضاء افتخاری <br />
+                        اعضاء افتخاری شامل اتحادیه‌ها، انجمن‌ها، تشکل‌های صنفی و حرفه‌ای
+                        حوزه صنعت نفت و همچنین تمام
+                        متخصصان و کارشناسان داخلی و
+                        خارجی، مدیران برتر، استادان دانشگاه، فارغ‌التحصیلان نمونه و...دارای
+                        تجربه و یا سابقه خدمات
+                        ارزنده‌ای در زمینه
+                        مدیریت، پژوهش، نوآوری و... در انجام امور صادرات و تولید فرآورده‌های
+                        نفت، گاز و پتروشیمی
+                        می‌شوند.نمایندگان این
+                        گروه از اعضاء می‌توانند در صورت دعوت از سوی هیئت‌مدیره و یا
+                        هیئت‌رئیسه گروه‌های تخصصی در
+                        جلسه‌های مشورتی بدون
+                        حق رأی شرکت نمایند.فرآیند عضویت در اتحادیه در ارتباط با فرآیند
+                        عضویت زیر مواد زیر از آیین
+                        نامه اجرایی عضویت
+                        در اتحادیه قابل توجه است: ماده 2 - تأیید عضویت اعضاء اصلی تأیید عضویت
+                        اعضاء اصلی در اتحادیه طی
+                        چهار مرحله زیر
+                        صورت می‌گیرد:<br />
+
+                        ماده 3 - تأیید عضویت اعضاء فرعی و افتخاری تأیید عضویت اعضاء فرعی و
+                        افتخاری در حیطه تشخیص
+                        کمیسیون فنی، نظارت و پایش و با تأیید
+                        هیئت‌مدیره اتحادیه می‌باشد.مدارک و مستندات لازم جهت عضویت در
+                        اتحادیه <br />
+                        1 - درخواست کتبی جهت عضویت روی سربرگ و با امضای مدیرعامل به همراه
+                        جدول خوداظهاری میزان حجم
+                        صادرات[پیوست شماره 1]<br />
+                        2 - تکمیل فرم اطلاعات متقاضی <br />
+                        • فرم اطلاعات اشخاص حقیقی یا حقوقی[پیوست شماره 2 و 3]<br />
+                        • فرم های ارزیابی فنی– بازرگانی اعضاء و پرسشنامه انجام فعالیت های
+                        تشکیلاتی[پیوست شماره
+
+                        4]<br />
+                        3 - تصویر کارت بازرگانی معتبر یا مجوزهای رسمی و قانونی دال بر انجام
+                        فعالیت های مرتبط با حوزه
+                        صادرات فرآورده های نفت، گاز و
+                        پتروشیمی <br />
+                        4 - تصویر آگهی تأسیس و آخرین روزنامه رسمی مدیران و حق امضاء و
+                        تغییرات <br />
+                        5 - تصویر حداقل سه فقره از اظهارنامه‌های صادراتی یک سال اخیر مربوط به
+                        فرآورده‌های نفت، گاز و
+                        پتروشیمی(برای واحدهای صادراتی) <br />
+                        6 - تصویر پروانه بهره‌برداری(برای واحدهای تولیدی)<br />
+                        7 - ارائه اسناد مثبته دال بر انجام فعالیت های بازرگانی، ترانزیت، حمل
+                        و نقل و سواپ فرآورده های
+                        نفتی(برای واحدهای بازرگانی) <br />
+                        8 - تصویر تمام صفحات شناسنامه و كارت ملي اعضاء هیئت‌مدیره و
+                        مديرعامل <br />
+                        9 - تکمیل و امضاء تعهدنامه روی سربرگ شرکت[پیوست شماره 5]<br />
+                        10 - تکمیل و امضاء مرامنامه اتحادیه[پیوست شماره 6]<br />
+                        11 - ارائه معرفی‌نامه نوشتاری از دو عضو اتحاديه<br />
+                        12 - واریز مبالغ حق عضويت ساليانه و وروديه بر اساس مصوبه مجمع عمومی
+                        سالانه(مبلغ مصوب سالانه پس
+                        از تایید و تصویب عضویت توسط
+                        هیئت مدیره به متقاضی اعلام می شود)</br>
+                        موارد قابل توجه به هنگام فرایند عضویت در اتحادیه</br>
+                        * حضور مدیرعامل يا نماينده قانوني متقاضی عضویت در جلسه كميسيون تخصصي
+                        ذيربط جهت ارائه توضيحات
+                        تكميلي در رابطه با فعالیت‌های
+                        شركت با دعوت قبلي دبيرخانه اتحاديه الزامی است.</br>
+                        * لطفاً مدارک مورد درخواست را به‌صورت خوانا اسکن نموده و به همراه
+                        فرم های زیر از طریق ایمیل به
+                        نشانی mail@opex.ir
+                        به دبیرخانه ارسال نمایید و جهت پیگیری با کارشناسان امور کمیسیونهای
+                        تخصصی اتحادیه تماس حاصل
+                        فرمایید.</br>
+                        * درصورتی‌که در هر مرحله خلاف اظهارات متقاضي ثابت گردد، نسبت به
+                        ابطال عضويت اقدام لازم بعمل
+                        خواهد آمد.</br>
+                        * واریز وجه پس از تأیید عضویت متقاضی و اعلام به وی انجام خواهد گرفت.
+                        تعیین میزان حق عضویت
+                        سالیانه و ورودیه بر اساس بند 3
+                        ماده 19 اساسنامه اتحادیه و بنا به پیشنهاد هیئت‌مدیره و با تصویب مجمع
+                        عمومی عادی سالیانه و درج
+                        در آگهی رسمی اتحادیه
+                        صورت می‌گیرد. </br>
+                        *پذیرش قطعی عضویت متقاضی منوط به پرداخت مبالغ حق ورودیه و حق عضویت
+                        سالانه است.</br>
+                        *مبلغ ورودیه برای هر عضو فقط یک‌بار در ابتدای عضویت دریافت
+                        می‌گردد.</br>
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-10 col-sm-offset-1"><span class="glyphicon glyphicon-share-alt"></span><a href="/Index">بازگشت </a></div>
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted" style="margin-top:3%">
+        <div class="container text-dark text-center ">
+            &copy; 1398 - اتحادیه صادرکنندگان فرآورده های نفت، گاز و پتروشیمی ایران - <a href="http://www.opex.ir">Opex</a> - <a asp-area="" asp-page="/Privacy">حریم خصوصی</a>
+        </div>
+    </footer>
+    <!--   Core JS Files   -->
+    <script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--  Plugin for the Wizard -->
+    <script src=" /js/demo.js" type="text/javascript"></script>
+    <script src=" /js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+    <!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+    <script src=" /js/jquery.validate.min.js" type="text/javascript"></script>
+</body>
+</html>

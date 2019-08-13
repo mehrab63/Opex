@@ -1,0 +1,142 @@
+﻿@page
+@model Opex.Pages.Payments.EditModel
+
+@{
+    ViewData["Title"] = "ویرایش سند مالی";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<input type="hidden" id="selectedTab" value="verify2" />
+<div class="tab-pane" id="verify2">
+    <div class="col-md-12" style="margin-top:105px">
+        <h2>ویرایش سند مالی</h2>
+
+        <div class="text-center">
+
+            <h4><strong>فیش @Model.TblPayments.PaymentAbout</strong> </h4>
+            <br />
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="TblPayments.PaymentId" />
+                    <input type="hidden" asp-for="TblPayments.CreateDate" />
+                    <input type="hidden" asp-for="TblPayments.CreateUser" />
+                    <input type="hidden" asp-for="TblPayments.EtCode" />
+                    <input type="hidden" asp-for="TblPayments.SystemCode" />
+                    <input type="hidden" asp-for="TblPayments.PaymentType" />
+                    <input type="hidden" asp-for="TblPayments.PaymentAbout" />
+                    <input type="hidden" asp-for="TblPayments.PaymentPrice" />
+                    <input type="hidden" asp-for="TblPayments.FromYear" />
+                    <input type="hidden" asp-for="TblPayments.ToYear" />  
+                    <input type="hidden" asp-for="TblPayments.Mandeh" />
+                    <input type="hidden" asp-for="TblPayments.FishBank" />
+                    <input type="hidden" asp-for="TblPayments.FishComment" />
+                    <input type="hidden" asp-for="TblPayments.CheckNum" />
+                    <input type="hidden" asp-for="TblPayments.CheckDate" />
+                    <input type="hidden" asp-for="TblPayments.CheckShobe" />
+                    <input type="hidden" asp-for="TblPayments.CheckBank" />
+                    <input type="hidden" asp-for="TblPayments.CheckComment" />
+                    <input type="hidden" asp-for="TblPayments.OldPaymentId" />
+                    <input type="hidden" asp-for="TblPayments.IsEdit" />
+                    <input type="hidden" asp-for="TblPayments.CheckStateId" />
+                    <input type="hidden" asp-for="TblPayments.DateSabt" />
+                    <input type="hidden" asp-for="TblPayments.BinaryId" />
+                    <input type="hidden" asp-for="TblPayments.Mandeh" />
+                    <input type="hidden" asp-for="TblPayments.Discount" />
+
+                    <div class=" col-md-12   custyle">
+                        <table class="table table-striped custab">
+                            <thead>
+                                <tr>
+                                    <th class="text-right">ویرایش</th>
+                                    <th class="text-right">پرداختی بابت</th>
+                                    <th class="text-right">شماره سند</th>
+                                    <th class="text-right">تاریخ پرداخت</th>
+                                    <th class="text-right">مبلغ قابل پرداخت</th> 
+                                    <th class="text-right">عملیات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <span class="glyphicon glyphicon-edit"></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-body">
+                                        @Model.TblPayments.PaymentAbout.ToString()
+
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input onkeypress="javascript:return isNumber(event)" style="direction:ltr" asp-for="TblPayments.FishNum" class="form-control" />
+                                            <span asp-validation-for="TblPayments.FishNum" class="text-danger"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input asp-for="TblPayments.FishDate" class="form-control" />
+                                            <span asp-validation-for="TblPayments.FishDate" class="text-danger"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-success">
+                                            <strong> 
+                                                @Opex.Helpers.Services.FormatNumber(Model.TblPayments.TotalPrice.ToString()).ToString() ریال
+                                            </strong>
+                                        </div>
+
+                                    </td> 
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="submit" value="ذخیره" class="btn btn-primary" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-page="./Index">بازگشت به لیست</a>
+        </div>
+        <div class="alert"></div>
+
+    </div>
+
+</div>
+
+@section Footer{
+    <div class="wizard-footer"> 
+        <div class="clearfix"></div>
+    </div>
+
+}
+@section Scripts{
+    <!--   Core JS Files   -->
+    <script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+    <script src="/js/register.js" type="text/javascript"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--  Plugin for the Wizard -->
+    <script src=" /js/demo.js" type="text/javascript"></script>
+    <script src=" /js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+    <!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+    <script src=" /js/jquery.validate.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $('#wizard').bootstrapWizard('show', 7);
+        });
+    </script>
+}

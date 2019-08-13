@@ -1,0 +1,1509 @@
+﻿@page
+@model Opex.Pages.Senfi.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>TblMembers</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TblMembers.OldMemberId" class="control-label"></label>
+                <input asp-for="TblMembers.OldMemberId" class="form-control" />
+                <span asp-validation-for="TblMembers.OldMemberId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کدیکتا" class="control-label"></label>
+                <input asp-for="TblMembers.کدیکتا" class="form-control" />
+                <span asp-validation-for="TblMembers.کدیکتا" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کداستان" class="control-label"></label>
+                <input asp-for="TblMembers.کداستان" class="form-control" />
+                <span asp-validation-for="TblMembers.کداستان" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کدشهرستان" class="control-label"></label>
+                <input asp-for="TblMembers.کدشهرستان" class="form-control" />
+                <span asp-validation-for="TblMembers.کدشهرستان" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ناماستان" class="control-label"></label>
+                <input asp-for="TblMembers.ناماستان" class="form-control" />
+                <span asp-validation-for="TblMembers.ناماستان" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نامشهرستان" class="control-label"></label>
+                <input asp-for="TblMembers.نامشهرستان" class="form-control" />
+                <span asp-validation-for="TblMembers.نامشهرستان" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کداتحادیه" class="control-label"></label>
+                <input asp-for="TblMembers.کداتحادیه" class="form-control" />
+                <span asp-validation-for="TblMembers.کداتحادیه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ناماتحادیه" class="control-label"></label>
+                <input asp-for="TblMembers.ناماتحادیه" class="form-control" />
+                <span asp-validation-for="TblMembers.ناماتحادیه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.وضعیتپرونده" class="control-label"></label>
+                <input asp-for="TblMembers.وضعیتپرونده" class="form-control" />
+                <span asp-validation-for="TblMembers.وضعیتپرونده" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نوعپروانه" class="control-label"></label>
+                <input asp-for="TblMembers.نوعپروانه" class="form-control" />
+                <span asp-validation-for="TblMembers.نوعپروانه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهپروانهکسب" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهپروانهکسب" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهپروانهکسب" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخصدور" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخصدور" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخصدور" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهدرخواست" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهدرخواست" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهدرخواست" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخدرخواست" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخدرخواست" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخدرخواست" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مرحلهدرخواست" class="control-label"></label>
+                <input asp-for="TblMembers.مرحلهدرخواست" class="form-control" />
+                <span asp-validation-for="TblMembers.مرحلهدرخواست" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ملاحضاتدرخواست" class="control-label"></label>
+                <input asp-for="TblMembers.ملاحضاتدرخواست" class="form-control" />
+                <span asp-validation-for="TblMembers.ملاحضاتدرخواست" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخانقضاء" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخانقضاء" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخانقضاء" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریختمدید" class="control-label"></label>
+                <input asp-for="TblMembers.تاریختمدید" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریختمدید" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.درجهصنفی" class="control-label"></label>
+                <input asp-for="TblMembers.درجهصنفی" class="form-control" />
+                <span asp-validation-for="TblMembers.درجهصنفی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.علترددرخواست" class="control-label"></label>
+                <input asp-for="TblMembers.علترددرخواست" class="form-control" />
+                <span asp-validation-for="TblMembers.علترددرخواست" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهعضویت" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهعضویت" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهعضویت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهبایگانی" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهبایگانی" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهبایگانی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نوعفعالیت" class="control-label"></label>
+                <input asp-for="TblMembers.نوعفعالیت" class="form-control" />
+                <span asp-validation-for="TblMembers.نوعفعالیت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مسلسلجدید" class="control-label"></label>
+                <input asp-for="TblMembers.مسلسلجدید" class="form-control" />
+                <span asp-validation-for="TblMembers.مسلسلجدید" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مسلسلقدیم" class="control-label"></label>
+                <input asp-for="TblMembers.مسلسلقدیم" class="form-control" />
+                <span asp-validation-for="TblMembers.مسلسلقدیم" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهتاییداماکن" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهتاییداماکن" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهتاییداماکن" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریختاییداماکن" class="control-label"></label>
+                <input asp-for="TblMembers.تاریختاییداماکن" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریختاییداماکن" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.جنسیت" class="control-label"></label>
+                <input asp-for="TblMembers.جنسیت" class="form-control" />
+                <span asp-validation-for="TblMembers.جنسیت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نام" class="control-label"></label>
+                <input asp-for="TblMembers.نام" class="form-control" />
+                <span asp-validation-for="TblMembers.نام" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاهل" class="control-label"></label>
+                <input asp-for="TblMembers.تاهل" class="form-control" />
+                <span asp-validation-for="TblMembers.تاهل" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نامخانوادگی" class="control-label"></label>
+                <input asp-for="TblMembers.نامخانوادگی" class="form-control" />
+                <span asp-validation-for="TblMembers.نامخانوادگی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نامپدر" class="control-label"></label>
+                <input asp-for="TblMembers.نامپدر" class="form-control" />
+                <span asp-validation-for="TblMembers.نامپدر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کدملی" class="control-label"></label>
+                <input asp-for="TblMembers.کدملی" class="form-control" />
+                <span asp-validation-for="TblMembers.کدملی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهشناسنامه" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهشناسنامه" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهشناسنامه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مسلسلشناسنامه" class="control-label"></label>
+                <input asp-for="TblMembers.مسلسلشناسنامه" class="form-control" />
+                <span asp-validation-for="TblMembers.مسلسلشناسنامه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخصدورشناسنامه" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخصدورشناسنامه" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخصدورشناسنامه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.محلصدورشناسنامه" class="control-label"></label>
+                <input asp-for="TblMembers.محلصدورشناسنامه" class="form-control" />
+                <span asp-validation-for="TblMembers.محلصدورشناسنامه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریختولد" class="control-label"></label>
+                <input asp-for="TblMembers.تاریختولد" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریختولد" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.محلتولد" class="control-label"></label>
+                <input asp-for="TblMembers.محلتولد" class="form-control" />
+                <span asp-validation-for="TblMembers.محلتولد" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.بخش" class="control-label"></label>
+                <input asp-for="TblMembers.بخش" class="form-control" />
+                <span asp-validation-for="TblMembers.بخش" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ملیت" class="control-label"></label>
+                <input asp-for="TblMembers.ملیت" class="form-control" />
+                <span asp-validation-for="TblMembers.ملیت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ایثارگر" class="control-label"></label>
+                <input asp-for="TblMembers.ایثارگر" class="form-control" />
+                <span asp-validation-for="TblMembers.ایثارگر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.موقت" class="control-label"></label>
+                <input asp-for="TblMembers.موقت" class="form-control" />
+                <span asp-validation-for="TblMembers.موقت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.روستا" class="control-label"></label>
+                <input asp-for="TblMembers.روستا" class="form-control" />
+                <span asp-validation-for="TblMembers.روستا" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ولایت" class="control-label"></label>
+                <input asp-for="TblMembers.ولایت" class="form-control" />
+                <span asp-validation-for="TblMembers.ولایت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.صادره" class="control-label"></label>
+                <input asp-for="TblMembers.صادره" class="form-control" />
+                <span asp-validation-for="TblMembers.صادره" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.موافقتنامه" class="control-label"></label>
+                <input asp-for="TblMembers.موافقتنامه" class="form-control" />
+                <span asp-validation-for="TblMembers.موافقتنامه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کدپستی" class="control-label"></label>
+                <input asp-for="TblMembers.کدپستی" class="form-control" />
+                <span asp-validation-for="TblMembers.کدپستی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.آدرس" class="control-label"></label>
+                <input asp-for="TblMembers.آدرس" class="form-control" />
+                <span asp-validation-for="TblMembers.آدرس" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.پلاکآبی" class="control-label"></label>
+                <input asp-for="TblMembers.پلاکآبی" class="form-control" />
+                <span asp-validation-for="TblMembers.پلاکآبی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.پلاکثبتی" class="control-label"></label>
+                <input asp-for="TblMembers.پلاکثبتی" class="form-control" />
+                <span asp-validation-for="TblMembers.پلاکثبتی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.وضعیتاستقرار" class="control-label"></label>
+                <input asp-for="TblMembers.وضعیتاستقرار" class="form-control" />
+                <span asp-validation-for="TblMembers.وضعیتاستقرار" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.محلاستقرار" class="control-label"></label>
+                <input asp-for="TblMembers.محلاستقرار" class="form-control" />
+                <span asp-validation-for="TblMembers.محلاستقرار" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.حدودصنفی" class="control-label"></label>
+                <input asp-for="TblMembers.حدودصنفی" class="form-control" />
+                <span asp-validation-for="TblMembers.حدودصنفی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.فاصلهصنفی" class="control-label"></label>
+                <input asp-for="TblMembers.فاصلهصنفی" class="form-control" />
+                <span asp-validation-for="TblMembers.فاصلهصنفی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.جهتصنفی" class="control-label"></label>
+                <input asp-for="TblMembers.جهتصنفی" class="form-control" />
+                <span asp-validation-for="TblMembers.جهتصنفی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.رسته" class="control-label"></label>
+                <input asp-for="TblMembers.رسته" class="form-control" />
+                <span asp-validation-for="TblMembers.رسته" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کدرسته" class="control-label"></label>
+                <input asp-for="TblMembers.کدرسته" class="form-control" />
+                <span asp-validation-for="TblMembers.کدرسته" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شناسهصنفی" class="control-label"></label>
+                <input asp-for="TblMembers.شناسهصنفی" class="form-control" />
+                <span asp-validation-for="TblMembers.شناسهصنفی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تحصیلات" class="control-label"></label>
+                <input asp-for="TblMembers.تحصیلات" class="form-control" />
+                <span asp-validation-for="TblMembers.تحصیلات" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.دین" class="control-label"></label>
+                <input asp-for="TblMembers.دین" class="form-control" />
+                <span asp-validation-for="TblMembers.دین" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.عنوانواحدصنفی" class="control-label"></label>
+                <input asp-for="TblMembers.عنوانواحدصنفی" class="form-control" />
+                <span asp-validation-for="TblMembers.عنوانواحدصنفی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.سالتاسیس" class="control-label"></label>
+                <input asp-for="TblMembers.سالتاسیس" class="form-control" />
+                <span asp-validation-for="TblMembers.سالتاسیس" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تعدادکارکنان" class="control-label"></label>
+                <input asp-for="TblMembers.تعدادکارکنان" class="form-control" />
+                <span asp-validation-for="TblMembers.تعدادکارکنان" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تحتتکفل" class="control-label"></label>
+                <input asp-for="TblMembers.تحتتکفل" class="form-control" />
+                <span asp-validation-for="TblMembers.تحتتکفل" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تعدادشریک" class="control-label"></label>
+                <input asp-for="TblMembers.تعدادشریک" class="form-control" />
+                <span asp-validation-for="TblMembers.تعدادشریک" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.وضعیتتملک" class="control-label"></label>
+                <input asp-for="TblMembers.وضعیتتملک" class="form-control" />
+                <span asp-validation-for="TblMembers.وضعیتتملک" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.وضعیتسند" class="control-label"></label>
+                <input asp-for="TblMembers.وضعیتسند" class="form-control" />
+                <span asp-validation-for="TblMembers.وضعیتسند" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مساحت" class="control-label"></label>
+                <input asp-for="TblMembers.مساحت" class="form-control" />
+                <span asp-validation-for="TblMembers.مساحت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.منطقه" class="control-label"></label>
+                <input asp-for="TblMembers.منطقه" class="form-control" />
+                <span asp-validation-for="TblMembers.منطقه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.محله" class="control-label"></label>
+                <input asp-for="TblMembers.محله" class="form-control" />
+                <span asp-validation-for="TblMembers.محله" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تلفنمغازه" class="control-label"></label>
+                <input asp-for="TblMembers.تلفنمغازه" class="form-control" />
+                <span asp-validation-for="TblMembers.تلفنمغازه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.فکسمغازه" class="control-label"></label>
+                <input asp-for="TblMembers.فکسمغازه" class="form-control" />
+                <span asp-validation-for="TblMembers.فکسمغازه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تلفنمنزل" class="control-label"></label>
+                <input asp-for="TblMembers.تلفنمنزل" class="form-control" />
+                <span asp-validation-for="TblMembers.تلفنمنزل" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تلفنهمراه" class="control-label"></label>
+                <input asp-for="TblMembers.تلفنهمراه" class="form-control" />
+                <span asp-validation-for="TblMembers.تلفنهمراه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تلفنمنزلمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.تلفنمنزلمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.تلفنمنزلمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.فکسمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.فکسمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.فکسمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.همراهمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.همراهمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.همراهمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.علتابطالپرونده" class="control-label"></label>
+                <input asp-for="TblMembers.علتابطالپرونده" class="form-control" />
+                <span asp-validation-for="TblMembers.علتابطالپرونده" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخابطالپرونده" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخابطالپرونده" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخابطالپرونده" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخفوت" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخفوت" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخفوت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخشناسایی" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخشناسایی" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخشناسایی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مرکزشناسایی" class="control-label"></label>
+                <input asp-for="TblMembers.مرکزشناسایی" class="form-control" />
+                <span asp-validation-for="TblMembers.مرکزشناسایی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ملاحضاتشناسایی" class="control-label"></label>
+                <input asp-for="TblMembers.ملاحضاتشناسایی" class="form-control" />
+                <span asp-validation-for="TblMembers.ملاحضاتشناسایی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مشارکت" class="control-label"></label>
+                <input asp-for="TblMembers.مشارکت" class="form-control" />
+                <span asp-validation-for="TblMembers.مشارکت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.باب" class="control-label"></label>
+                <input asp-for="TblMembers.باب" class="form-control" />
+                <span asp-validation-for="TblMembers.باب" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.دهنه" class="control-label"></label>
+                <input asp-for="TblMembers.دهنه" class="form-control" />
+                <span asp-validation-for="TblMembers.دهنه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.دانگ" class="control-label"></label>
+                <input asp-for="TblMembers.دانگ" class="form-control" />
+                <span asp-validation-for="TblMembers.دانگ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کلسهم" class="control-label"></label>
+                <input asp-for="TblMembers.کلسهم" class="form-control" />
+                <span asp-validation-for="TblMembers.کلسهم" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.سهم" class="control-label"></label>
+                <input asp-for="TblMembers.سهم" class="form-control" />
+                <span asp-validation-for="TblMembers.سهم" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.حوزهمالیاتی" class="control-label"></label>
+                <input asp-for="TblMembers.حوزهمالیاتی" class="form-control" />
+                <span asp-validation-for="TblMembers.حوزهمالیاتی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.حوزهبیمه" class="control-label"></label>
+                <input asp-for="TblMembers.حوزهبیمه" class="form-control" />
+                <span asp-validation-for="TblMembers.حوزهبیمه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.حوزهکلانتری" class="control-label"></label>
+                <input asp-for="TblMembers.حوزهکلانتری" class="form-control" />
+                <span asp-validation-for="TblMembers.حوزهکلانتری" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نامشرکت" class="control-label"></label>
+                <input asp-for="TblMembers.نامشرکت" class="form-control" />
+                <span asp-validation-for="TblMembers.نامشرکت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهثبتشرکت" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهثبتشرکت" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهثبتشرکت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخثبتشرکت" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخثبتشرکت" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخثبتشرکت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مبلغتمبر" class="control-label"></label>
+                <input asp-for="TblMembers.مبلغتمبر" class="form-control" />
+                <span asp-validation-for="TblMembers.مبلغتمبر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهتمبر" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهتمبر" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهتمبر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریختمبر" class="control-label"></label>
+                <input asp-for="TblMembers.تاریختمبر" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریختمبر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.وضعیتانتقال" class="control-label"></label>
+                <input asp-for="TblMembers.وضعیتانتقال" class="form-control" />
+                <span asp-validation-for="TblMembers.وضعیتانتقال" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ناماتحادیهقبلی" class="control-label"></label>
+                <input asp-for="TblMembers.ناماتحادیهقبلی" class="form-control" />
+                <span asp-validation-for="TblMembers.ناماتحادیهقبلی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهپروانهقبلی" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهپروانهقبلی" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهپروانهقبلی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخپروانهقبلی" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخپروانهقبلی" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخپروانهقبلی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.آدرسمنزل" class="control-label"></label>
+                <input asp-for="TblMembers.آدرسمنزل" class="form-control" />
+                <span asp-validation-for="TblMembers.آدرسمنزل" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کدپستیمنزل" class="control-label"></label>
+                <input asp-for="TblMembers.کدپستیمنزل" class="form-control" />
+                <span asp-validation-for="TblMembers.کدپستیمنزل" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.جنسیتمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.جنسیتمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.جنسیتمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ناممباشر" class="control-label"></label>
+                <input asp-for="TblMembers.ناممباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.ناممباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نامپدرمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.نامپدرمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.نامپدرمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شناسنامهمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.شناسنامهمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.شناسنامهمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مسلسلمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.مسلسلمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.مسلسلمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریختولدمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.تاریختولدمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریختولدمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.محلتولدمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.محلتولدمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.محلتولدمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.محلصدورمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.محلصدورمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.محلصدورمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخصدورمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخصدورمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخصدورمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاهلمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.تاهلمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.تاهلمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تعدادتکفلمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.تعدادتکفلمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.تعدادتکفلمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهکارتمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهکارتمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهکارتمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخصدورکارتمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخصدورکارتمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخصدورکارتمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخابطالکارتمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخابطالکارتمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخابطالکارتمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهمسلسلمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهمسلسلمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهمسلسلمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کدملیمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.کدملیمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.کدملیمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.آدرسمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.آدرسمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.آدرسمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کدپستیمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.کدپستیمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.کدپستیمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تحصیلاتمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.تحصیلاتمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.تحصیلاتمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.دینمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.دینمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.دینمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.AksSaheb" class="control-label"></label>
+                <input asp-for="TblMembers.AksSaheb" class="form-control" />
+                <span asp-validation-for="TblMembers.AksSaheb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.AksMobasher" class="control-label"></label>
+                <input asp-for="TblMembers.AksMobasher" class="form-control" />
+                <span asp-validation-for="TblMembers.AksMobasher" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.توضیحات" class="control-label"></label>
+                <input asp-for="TblMembers.توضیحات" class="form-control" />
+                <span asp-validation-for="TblMembers.توضیحات" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مبلغبدهی" class="control-label"></label>
+                <input asp-for="TblMembers.مبلغبدهی" class="form-control" />
+                <span asp-validation-for="TblMembers.مبلغبدهی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.انتقالبهپرونده" class="control-label"></label>
+                <input asp-for="TblMembers.انتقالبهپرونده" class="form-control" />
+                <span asp-validation-for="TblMembers.انتقالبهپرونده" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.انتقالازپرونده" class="control-label"></label>
+                <input asp-for="TblMembers.انتقالازپرونده" class="form-control" />
+                <span asp-validation-for="TblMembers.انتقالازپرونده" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.محلبایگانی" class="control-label"></label>
+                <input asp-for="TblMembers.محلبایگانی" class="form-control" />
+                <span asp-validation-for="TblMembers.محلبایگانی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.محجور" class="control-label"></label>
+                <input asp-for="TblMembers.محجور" class="form-control" />
+                <span asp-validation-for="TblMembers.محجور" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.غیرفعال" class="control-label"></label>
+                <input asp-for="TblMembers.غیرفعال" class="form-control" />
+                <span asp-validation-for="TblMembers.غیرفعال" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تغییرشغل" class="control-label"></label>
+                <input asp-for="TblMembers.تغییرشغل" class="form-control" />
+                <span asp-validation-for="TblMembers.تغییرشغل" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.وبسایت" class="control-label"></label>
+                <input asp-for="TblMembers.وبسایت" class="form-control" />
+                <span asp-validation-for="TblMembers.وبسایت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ایمیل" class="control-label"></label>
+                <input asp-for="TblMembers.ایمیل" class="form-control" />
+                <span asp-validation-for="TblMembers.ایمیل" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.EtCode" class="control-label"></label>
+                <input asp-for="TblMembers.EtCode" class="form-control" />
+                <span asp-validation-for="TblMembers.EtCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.رشتهتحصیلی" class="control-label"></label>
+                <input asp-for="TblMembers.رشتهتحصیلی" class="form-control" />
+                <span asp-validation-for="TblMembers.رشتهتحصیلی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ناحیهشهرداری" class="control-label"></label>
+                <input asp-for="TblMembers.ناحیهشهرداری" class="form-control" />
+                <span asp-validation-for="TblMembers.ناحیهشهرداری" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.فکسمنزل" class="control-label"></label>
+                <input asp-for="TblMembers.فکسمنزل" class="form-control" />
+                <span asp-validation-for="TblMembers.فکسمنزل" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.پلاکپاساژ" class="control-label"></label>
+                <input asp-for="TblMembers.پلاکپاساژ" class="form-control" />
+                <span asp-validation-for="TblMembers.پلاکپاساژ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.حراجازتاریخ" class="control-label"></label>
+                <input asp-for="TblMembers.حراجازتاریخ" class="form-control" />
+                <span asp-validation-for="TblMembers.حراجازتاریخ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.حراجتاتاریخ" class="control-label"></label>
+                <input asp-for="TblMembers.حراجتاتاریخ" class="form-control" />
+                <span asp-validation-for="TblMembers.حراجتاتاریخ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.فروشفوقالعادهاز" class="control-label"></label>
+                <input asp-for="TblMembers.فروشفوقالعادهاز" class="form-control" />
+                <span asp-validation-for="TblMembers.فروشفوقالعادهاز" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.فروشفوقالعادهتا" class="control-label"></label>
+                <input asp-for="TblMembers.فروشفوقالعادهتا" class="form-control" />
+                <span asp-validation-for="TblMembers.فروشفوقالعادهتا" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.واگذاریااجاره" class="control-label"></label>
+                <input asp-for="TblMembers.واگذاریااجاره" class="form-control" />
+                <span asp-validation-for="TblMembers.واگذاریااجاره" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تغییرمکان" class="control-label"></label>
+                <input asp-for="TblMembers.تغییرمکان" class="form-control" />
+                <span asp-validation-for="TblMembers.تغییرمکان" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.قیم" class="control-label"></label>
+                <input asp-for="TblMembers.قیم" class="form-control" />
+                <span asp-validation-for="TblMembers.قیم" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.آموزشنظامصنفی" class="control-label"></label>
+                <input asp-for="TblMembers.آموزشنظامصنفی" class="form-control" />
+                <span asp-validation-for="TblMembers.آموزشنظامصنفی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.آموزشنظامصنفیمسلسل" class="control-label"></label>
+                <input asp-for="TblMembers.آموزشنظامصنفیمسلسل" class="form-control" />
+                <span asp-validation-for="TblMembers.آموزشنظامصنفیمسلسل" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شناسهملی" class="control-label"></label>
+                <input asp-for="TblMembers.شناسهملی" class="form-control" />
+                <span asp-validation-for="TblMembers.شناسهملی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهتاییدبهداشت" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهتاییدبهداشت" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهتاییدبهداشت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریختاییدبهداشت" class="control-label"></label>
+                <input asp-for="TblMembers.تاریختاییدبهداشت" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریختاییدبهداشت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.پلاکقدیم" class="control-label"></label>
+                <input asp-for="TblMembers.پلاکقدیم" class="form-control" />
+                <span asp-validation-for="TblMembers.پلاکقدیم" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.SmsIds" class="control-label"></label>
+                <input asp-for="TblMembers.SmsIds" class="form-control" />
+                <span asp-validation-for="TblMembers.SmsIds" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.BinaryIds" class="control-label"></label>
+                <input asp-for="TblMembers.BinaryIds" class="form-control" />
+                <span asp-validation-for="TblMembers.BinaryIds" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ناحیهاماکن" class="control-label"></label>
+                <input asp-for="TblMembers.ناحیهاماکن" class="form-control" />
+                <span asp-validation-for="TblMembers.ناحیهاماکن" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.IsSent" class="control-label"></label>
+                <input asp-for="TblMembers.IsSent" class="form-control" />
+                <span asp-validation-for="TblMembers.IsSent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.LastSent" class="control-label"></label>
+                <input asp-for="TblMembers.LastSent" class="form-control" />
+                <span asp-validation-for="TblMembers.LastSent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شناسهشیوا" class="control-label"></label>
+                <input asp-for="TblMembers.شناسهشیوا" class="form-control" />
+                <span asp-validation-for="TblMembers.شناسهشیوا" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.پلاکآبیقدیم" class="control-label"></label>
+                <input asp-for="TblMembers.پلاکآبیقدیم" class="form-control" />
+                <span asp-validation-for="TblMembers.پلاکآبیقدیم" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.هویت" class="control-label"></label>
+                <input asp-for="TblMembers.هویت" class="form-control" />
+                <span asp-validation-for="TblMembers.هویت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شهر" class="control-label"></label>
+                <input asp-for="TblMembers.شهر" class="form-control" />
+                <span asp-validation-for="TblMembers.شهر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مرجعصدور" class="control-label"></label>
+                <input asp-for="TblMembers.مرجعصدور" class="form-control" />
+                <span asp-validation-for="TblMembers.مرجعصدور" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نوعفروش" class="control-label"></label>
+                <input asp-for="TblMembers.نوعفروش" class="form-control" />
+                <span asp-validation-for="TblMembers.نوعفروش" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مذهب" class="control-label"></label>
+                <input asp-for="TblMembers.مذهب" class="form-control" />
+                <span asp-validation-for="TblMembers.مذهب" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.وضعیتمالکیت" class="control-label"></label>
+                <input asp-for="TblMembers.وضعیتمالکیت" class="form-control" />
+                <span asp-validation-for="TblMembers.وضعیتمالکیت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.LetterIds" class="control-label"></label>
+                <input asp-for="TblMembers.LetterIds" class="form-control" />
+                <span asp-validation-for="TblMembers.LetterIds" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.وضعیترسیدگی" class="control-label"></label>
+                <input asp-for="TblMembers.وضعیترسیدگی" class="form-control" />
+                <span asp-validation-for="TblMembers.وضعیترسیدگی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مرحله" class="control-label"></label>
+                <input asp-for="TblMembers.مرحله" class="form-control" />
+                <span asp-validation-for="TblMembers.مرحله" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.حراجاز" class="control-label"></label>
+                <input asp-for="TblMembers.حراجاز" class="form-control" />
+                <span asp-validation-for="TblMembers.حراجاز" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.حراجتا" class="control-label"></label>
+                <input asp-for="TblMembers.حراجتا" class="form-control" />
+                <span asp-validation-for="TblMembers.حراجتا" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.فوقاز" class="control-label"></label>
+                <input asp-for="TblMembers.فوقاز" class="form-control" />
+                <span asp-validation-for="TblMembers.فوقاز" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.فوقتا" class="control-label"></label>
+                <input asp-for="TblMembers.فوقتا" class="form-control" />
+                <span asp-validation-for="TblMembers.فوقتا" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نامخانوادگیمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.نامخانوادگیمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.نامخانوادگیمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.رشتهتحصیلیمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.رشتهتحصیلیمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.رشتهتحصیلیمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.بدهیازسال" class="control-label"></label>
+                <input asp-for="TblMembers.بدهیازسال" class="form-control" />
+                <span asp-validation-for="TblMembers.بدهیازسال" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.بدهیتاسال" class="control-label"></label>
+                <input asp-for="TblMembers.بدهیتاسال" class="form-control" />
+                <span asp-validation-for="TblMembers.بدهیتاسال" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.بازرسیمرحلهاولبازرس" class="control-label"></label>
+                <input asp-for="TblMembers.بازرسیمرحلهاولبازرس" class="form-control" />
+                <span asp-validation-for="TblMembers.بازرسیمرحلهاولبازرس" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.بازرسیمرحلهاولشمارهنامه" class="control-label"></label>
+                <input asp-for="TblMembers.بازرسیمرحلهاولشمارهنامه" class="form-control" />
+                <span asp-validation-for="TblMembers.بازرسیمرحلهاولشمارهنامه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.بازرسیمرحلهاولنقص" class="control-label"></label>
+                <input asp-for="TblMembers.بازرسیمرحلهاولنقص" class="form-control" />
+                <span asp-validation-for="TblMembers.بازرسیمرحلهاولنقص" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.بازرسیمرحلهاولتاریخ" class="control-label"></label>
+                <input asp-for="TblMembers.بازرسیمرحلهاولتاریخ" class="form-control" />
+                <span asp-validation-for="TblMembers.بازرسیمرحلهاولتاریخ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نوعشخص" class="control-label"></label>
+                <input asp-for="TblMembers.نوعشخص" class="form-control" />
+                <span asp-validation-for="TblMembers.نوعشخص" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نوعپروانهکسبقبلی" class="control-label"></label>
+                <input asp-for="TblMembers.نوعپروانهکسبقبلی" class="form-control" />
+                <span asp-validation-for="TblMembers.نوعپروانهکسبقبلی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نواقصبازرسی" class="control-label"></label>
+                <input asp-for="TblMembers.نواقصبازرسی" class="form-control" />
+                <span asp-validation-for="TblMembers.نواقصبازرسی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تابعیت" class="control-label"></label>
+                <input asp-for="TblMembers.تابعیت" class="form-control" />
+                <span asp-validation-for="TblMembers.تابعیت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نظاموظیفه" class="control-label"></label>
+                <input asp-for="TblMembers.نظاموظیفه" class="form-control" />
+                <span asp-validation-for="TblMembers.نظاموظیفه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهگذرنامه" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهگذرنامه" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهگذرنامه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخگذرنامه" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخگذرنامه" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخگذرنامه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.گذرنامهانقضاء" class="control-label"></label>
+                <input asp-for="TblMembers.گذرنامهانقضاء" class="form-control" />
+                <span asp-validation-for="TblMembers.گذرنامهانقضاء" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهاقامت" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهاقامت" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهاقامت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخصدوراقامت" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخصدوراقامت" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخصدوراقامت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخانقضاءاقامت" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخانقضاءاقامت" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخانقضاءاقامت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهپروانهکار" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهپروانهکار" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهپروانهکار" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخپروانهکار" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخپروانهکار" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخپروانهکار" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.انقضاءپروانهکار" class="control-label"></label>
+                <input asp-for="TblMembers.انقضاءپروانهکار" class="form-control" />
+                <span asp-validation-for="TblMembers.انقضاءپروانهکار" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.PicSahebPath" class="control-label"></label>
+                <input asp-for="TblMembers.PicSahebPath" class="form-control" />
+                <span asp-validation-for="TblMembers.PicSahebPath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.حداقلمساحت" class="control-label"></label>
+                <input asp-for="TblMembers.حداقلمساحت" class="form-control" />
+                <span asp-validation-for="TblMembers.حداقلمساحت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.طبقه" class="control-label"></label>
+                <input asp-for="TblMembers.طبقه" class="form-control" />
+                <span asp-validation-for="TblMembers.طبقه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.واحد" class="control-label"></label>
+                <input asp-for="TblMembers.واحد" class="form-control" />
+                <span asp-validation-for="TblMembers.واحد" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نوعسند" class="control-label"></label>
+                <input asp-for="TblMembers.نوعسند" class="form-control" />
+                <span asp-validation-for="TblMembers.نوعسند" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.عنوانسند" class="control-label"></label>
+                <input asp-for="TblMembers.عنوانسند" class="form-control" />
+                <span asp-validation-for="TblMembers.عنوانسند" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نوعمالکیت" class="control-label"></label>
+                <input asp-for="TblMembers.نوعمالکیت" class="form-control" />
+                <span asp-validation-for="TblMembers.نوعمالکیت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.دهستان" class="control-label"></label>
+                <input asp-for="TblMembers.دهستان" class="form-control" />
+                <span asp-validation-for="TblMembers.دهستان" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ورثهمحجور" class="control-label"></label>
+                <input asp-for="TblMembers.ورثهمحجور" class="form-control" />
+                <span asp-validation-for="TblMembers.ورثهمحجور" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ولیقهری" class="control-label"></label>
+                <input asp-for="TblMembers.ولیقهری" class="form-control" />
+                <span asp-validation-for="TblMembers.ولیقهری" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهقیمنامه" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهقیمنامه" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهقیمنامه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخصدورقیمنامه" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخصدورقیمنامه" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخصدورقیمنامه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مرجعصادرکنندهقیمنامه" class="control-label"></label>
+                <input asp-for="TblMembers.مرجعصادرکنندهقیمنامه" class="form-control" />
+                <span asp-validation-for="TblMembers.مرجعصادرکنندهقیمنامه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نامقیم" class="control-label"></label>
+                <input asp-for="TblMembers.نامقیم" class="form-control" />
+                <span asp-validation-for="TblMembers.نامقیم" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کدملیقیم" class="control-label"></label>
+                <input asp-for="TblMembers.کدملیقیم" class="form-control" />
+                <span asp-validation-for="TblMembers.کدملیقیم" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهشناسنامهقیم" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهشناسنامهقیم" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهشناسنامهقیم" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.LastUpdate" class="control-label"></label>
+                <input asp-for="TblMembers.LastUpdate" class="form-control" />
+                <span asp-validation-for="TblMembers.LastUpdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ناممستعار" class="control-label"></label>
+                <input asp-for="TblMembers.ناممستعار" class="form-control" />
+                <span asp-validation-for="TblMembers.ناممستعار" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نوعشغلقبلی" class="control-label"></label>
+                <input asp-for="TblMembers.نوعشغلقبلی" class="form-control" />
+                <span asp-validation-for="TblMembers.نوعشغلقبلی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.رستهقبلی" class="control-label"></label>
+                <input asp-for="TblMembers.رستهقبلی" class="form-control" />
+                <span asp-validation-for="TblMembers.رستهقبلی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شناسهثبتشرکت" class="control-label"></label>
+                <input asp-for="TblMembers.شناسهثبتشرکت" class="form-control" />
+                <span asp-validation-for="TblMembers.شناسهثبتشرکت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.IsEdit" class="control-label"></label>
+                <input asp-for="TblMembers.IsEdit" class="form-control" />
+                <span asp-validation-for="TblMembers.IsEdit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کدرهگیری" class="control-label"></label>
+                <input asp-for="TblMembers.کدرهگیری" class="form-control" />
+                <span asp-validation-for="TblMembers.کدرهگیری" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مباشردارد" class="control-label"></label>
+                <input asp-for="TblMembers.مباشردارد" class="form-control" />
+                <span asp-validation-for="TblMembers.مباشردارد" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شریکدارد" class="control-label"></label>
+                <input asp-for="TblMembers.شریکدارد" class="form-control" />
+                <span asp-validation-for="TblMembers.شریکدارد" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.بدهیسالیانه" class="control-label"></label>
+                <input asp-for="TblMembers.بدهیسالیانه" class="form-control" />
+                <span asp-validation-for="TblMembers.بدهیسالیانه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.سریشناسنامه" class="control-label"></label>
+                <input asp-for="TblMembers.سریشناسنامه" class="form-control" />
+                <span asp-validation-for="TblMembers.سریشناسنامه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ادارهبهداشت" class="control-label"></label>
+                <input asp-for="TblMembers.ادارهبهداشت" class="form-control" />
+                <span asp-validation-for="TblMembers.ادارهبهداشت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.PicMobasherPath" class="control-label"></label>
+                <input asp-for="TblMembers.PicMobasherPath" class="form-control" />
+                <span asp-validation-for="TblMembers.PicMobasherPath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.دستهتحصیلی" class="control-label"></label>
+                <input asp-for="TblMembers.دستهتحصیلی" class="form-control" />
+                <span asp-validation-for="TblMembers.دستهتحصیلی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ناممستعارمباشر" class="control-label"></label>
+                <input asp-for="TblMembers.ناممستعارمباشر" class="form-control" />
+                <span asp-validation-for="TblMembers.ناممستعارمباشر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کدمعین" class="control-label"></label>
+                <input asp-for="TblMembers.کدمعین" class="form-control" />
+                <span asp-validation-for="TblMembers.کدمعین" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کددفترکل" class="control-label"></label>
+                <input asp-for="TblMembers.کددفترکل" class="form-control" />
+                <span asp-validation-for="TblMembers.کددفترکل" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.علتغیرفعالپرونده" class="control-label"></label>
+                <input asp-for="TblMembers.علتغیرفعالپرونده" class="form-control" />
+                <span asp-validation-for="TblMembers.علتغیرفعالپرونده" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخغیرفعال" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخغیرفعال" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخغیرفعال" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهنامهغیرفعال" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهنامهغیرفعال" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهنامهغیرفعال" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.علتتعلیق" class="control-label"></label>
+                <input asp-for="TblMembers.علتتعلیق" class="form-control" />
+                <span asp-validation-for="TblMembers.علتتعلیق" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.OrgPictures" class="control-label"></label>
+                <input asp-for="TblMembers.OrgPictures" class="form-control" />
+                <span asp-validation-for="TblMembers.OrgPictures" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.صندوقمکانیزه" class="control-label"></label>
+                <input asp-for="TblMembers.صندوقمکانیزه" class="form-control" />
+                <span asp-validation-for="TblMembers.صندوقمکانیزه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.دستگاهکارتخوان" class="control-label"></label>
+                <input asp-for="TblMembers.دستگاهکارتخوان" class="form-control" />
+                <span asp-validation-for="TblMembers.دستگاهکارتخوان" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ترازودیجیتال" class="control-label"></label>
+                <input asp-for="TblMembers.ترازودیجیتال" class="form-control" />
+                <span asp-validation-for="TblMembers.ترازودیجیتال" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.دوربینمداربسته" class="control-label"></label>
+                <input asp-for="TblMembers.دوربینمداربسته" class="form-control" />
+                <span asp-validation-for="TblMembers.دوربینمداربسته" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.Is27" class="control-label"></label>
+                <input asp-for="TblMembers.Is27" class="form-control" />
+                <span asp-validation-for="TblMembers.Is27" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.ماندهازقبل" class="control-label"></label>
+                <input asp-for="TblMembers.ماندهازقبل" class="form-control" />
+                <span asp-validation-for="TblMembers.ماندهازقبل" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهکارتبازرگانی" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهکارتبازرگانی" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهکارتبازرگانی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخکارتبازرگانی" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخکارتبازرگانی" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخکارتبازرگانی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.محصولاتصادراتی" class="control-label"></label>
+                <input asp-for="TblMembers.محصولاتصادراتی" class="form-control" />
+                <span asp-validation-for="TblMembers.محصولاتصادراتی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نشانیکارخانه" class="control-label"></label>
+                <input asp-for="TblMembers.نشانیکارخانه" class="form-control" />
+                <span asp-validation-for="TblMembers.نشانیکارخانه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تلفنهایکارخانه" class="control-label"></label>
+                <input asp-for="TblMembers.تلفنهایکارخانه" class="form-control" />
+                <span asp-validation-for="TblMembers.تلفنهایکارخانه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.محصولاتمندرجدرپرونده" class="control-label"></label>
+                <input asp-for="TblMembers.محصولاتمندرجدرپرونده" class="form-control" />
+                <span asp-validation-for="TblMembers.محصولاتمندرجدرپرونده" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کمیسیونفرعی" class="control-label"></label>
+                <input asp-for="TblMembers.کمیسیونفرعی" class="form-control" />
+                <span asp-validation-for="TblMembers.کمیسیونفرعی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخطرحکمیسیون" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخطرحکمیسیون" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخطرحکمیسیون" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخطرحکمیسیونفنی" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخطرحکمیسیونفنی" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخطرحکمیسیونفنی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخطرحکمیسیونهیئتمدیره" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخطرحکمیسیونهیئتمدیره" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخطرحکمیسیونهیئتمدیره" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تلفنرابط" class="control-label"></label>
+                <input asp-for="TblMembers.تلفنرابط" class="form-control" />
+                <span asp-validation-for="TblMembers.تلفنرابط" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.توضیحاتطرحکمیسیون" class="control-label"></label>
+                <input asp-for="TblMembers.توضیحاتطرحکمیسیون" class="form-control" />
+                <span asp-validation-for="TblMembers.توضیحاتطرحکمیسیون" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.توضیحاتطرحکمیسیونفنی" class="control-label"></label>
+                <input asp-for="TblMembers.توضیحاتطرحکمیسیونفنی" class="form-control" />
+                <span asp-validation-for="TblMembers.توضیحاتطرحکمیسیونفنی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.توضیحاتکمیسیونهیئتمدیره" class="control-label"></label>
+                <input asp-for="TblMembers.توضیحاتکمیسیونهیئتمدیره" class="form-control" />
+                <span asp-validation-for="TblMembers.توضیحاتکمیسیونهیئتمدیره" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهاولینپروانه" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهاولینپروانه" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهاولینپروانه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخاولینپروانه" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخاولینپروانه" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخاولینپروانه" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخابطال" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخابطال" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخابطال" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.دخانیات" class="control-label"></label>
+                <input asp-for="TblMembers.دخانیات" class="form-control" />
+                <span asp-validation-for="TblMembers.دخانیات" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مساحتانبار" class="control-label"></label>
+                <input asp-for="TblMembers.مساحتانبار" class="form-control" />
+                <span asp-validation-for="TblMembers.مساحتانبار" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.عمدهکالا" class="control-label"></label>
+                <input asp-for="TblMembers.عمدهکالا" class="form-control" />
+                <span asp-validation-for="TblMembers.عمدهکالا" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخاستعلامدارایی" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخاستعلامدارایی" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخاستعلامدارایی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهاستعلامدارایی" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهاستعلامدارایی" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهاستعلامدارایی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.پاسخاماکنمثبت" class="control-label"></label>
+                <input asp-for="TblMembers.پاسخاماکنمثبت" class="form-control" />
+                <span asp-validation-for="TblMembers.پاسخاماکنمثبت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.پاسخبهداشتمثبت" class="control-label"></label>
+                <input asp-for="TblMembers.پاسخبهداشتمثبت" class="form-control" />
+                <span asp-validation-for="TblMembers.پاسخبهداشتمثبت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخانقضاءدرخواست" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخانقضاءدرخواست" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخانقضاءدرخواست" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخمجوزدخانی" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخمجوزدخانی" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخمجوزدخانی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.انقضاءمجوزدخانی" class="control-label"></label>
+                <input asp-for="TblMembers.انقضاءمجوزدخانی" class="form-control" />
+                <span asp-validation-for="TblMembers.انقضاءمجوزدخانی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهمجوزدخانی" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهمجوزدخانی" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهمجوزدخانی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.دارایمجوزدخانی" class="control-label"></label>
+                <input asp-for="TblMembers.دارایمجوزدخانی" class="form-control" />
+                <span asp-validation-for="TblMembers.دارایمجوزدخانی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.آخرینعضویت" class="control-label"></label>
+                <input asp-for="TblMembers.آخرینعضویت" class="form-control" />
+                <span asp-validation-for="TblMembers.آخرینعضویت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.آدرسشرکت" class="control-label"></label>
+                <input asp-for="TblMembers.آدرسشرکت" class="form-control" />
+                <span asp-validation-for="TblMembers.آدرسشرکت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.سمتشرکت" class="control-label"></label>
+                <input asp-for="TblMembers.سمتشرکت" class="form-control" />
+                <span asp-validation-for="TblMembers.سمتشرکت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نوعکاربری" class="control-label"></label>
+                <input asp-for="TblMembers.نوعکاربری" class="form-control" />
+                <span asp-validation-for="TblMembers.نوعکاربری" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.دستگاهها" class="control-label"></label>
+                <input asp-for="TblMembers.دستگاهها" class="form-control" />
+                <span asp-validation-for="TblMembers.دستگاهها" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شمارهتابلو" class="control-label"></label>
+                <input asp-for="TblMembers.شمارهتابلو" class="form-control" />
+                <span asp-validation-for="TblMembers.شمارهتابلو" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.توضیحاتتابلو" class="control-label"></label>
+                <input asp-for="TblMembers.توضیحاتتابلو" class="form-control" />
+                <span asp-validation-for="TblMembers.توضیحاتتابلو" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.آدرسواحدصنفیقبلی" class="control-label"></label>
+                <input asp-for="TblMembers.آدرسواحدصنفیقبلی" class="form-control" />
+                <span asp-validation-for="TblMembers.آدرسواحدصنفیقبلی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مفاصاحسابشهرداری" class="control-label"></label>
+                <input asp-for="TblMembers.مفاصاحسابشهرداری" class="form-control" />
+                <span asp-validation-for="TblMembers.مفاصاحسابشهرداری" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تاریخمفاصاحساب" class="control-label"></label>
+                <input asp-for="TblMembers.تاریخمفاصاحساب" class="form-control" />
+                <span asp-validation-for="TblMembers.تاریخمفاصاحساب" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.سالآخرینعضویت" class="control-label"></label>
+                <input asp-for="TblMembers.سالآخرینعضویت" class="form-control" />
+                <span asp-validation-for="TblMembers.سالآخرینعضویت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.شبکهاجتماعی" class="control-label"></label>
+                <input asp-for="TblMembers.شبکهاجتماعی" class="form-control" />
+                <span asp-validation-for="TblMembers.شبکهاجتماعی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کلاسهایآموزشی" class="control-label"></label>
+                <input asp-for="TblMembers.کلاسهایآموزشی" class="form-control" />
+                <span asp-validation-for="TblMembers.کلاسهایآموزشی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مسئولپرونده" class="control-label"></label>
+                <input asp-for="TblMembers.مسئولپرونده" class="form-control" />
+                <span asp-validation-for="TblMembers.مسئولپرونده" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.آخرینبازرسی" class="control-label"></label>
+                <input asp-for="TblMembers.آخرینبازرسی" class="form-control" />
+                <span asp-validation-for="TblMembers.آخرینبازرسی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.مجوزماهرمضان" class="control-label"></label>
+                <input asp-for="TblMembers.مجوزماهرمضان" class="form-control" />
+                <span asp-validation-for="TblMembers.مجوزماهرمضان" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.DeviceId" class="control-label"></label>
+                <input asp-for="TblMembers.DeviceId" class="form-control" />
+                <span asp-validation-for="TblMembers.DeviceId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.Lat" class="control-label"></label>
+                <input asp-for="TblMembers.Lat" class="form-control" />
+                <span asp-validation-for="TblMembers.Lat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.Lng" class="control-label"></label>
+                <input asp-for="TblMembers.Lng" class="form-control" />
+                <span asp-validation-for="TblMembers.Lng" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.IsLock" class="control-label"></label>
+                <input asp-for="TblMembers.IsLock" class="form-control" />
+                <span asp-validation-for="TblMembers.IsLock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.FirebaseToken" class="control-label"></label>
+                <input asp-for="TblMembers.FirebaseToken" class="form-control" />
+                <span asp-validation-for="TblMembers.FirebaseToken" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.LastFingerPrintDetect" class="control-label"></label>
+                <input asp-for="TblMembers.LastFingerPrintDetect" class="form-control" />
+                <span asp-validation-for="TblMembers.LastFingerPrintDetect" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.کداقتصادی" class="control-label"></label>
+                <input asp-for="TblMembers.کداقتصادی" class="form-control" />
+                <span asp-validation-for="TblMembers.کداقتصادی" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.تعدادپروانههایکسب" class="control-label"></label>
+                <input asp-for="TblMembers.تعدادپروانههایکسب" class="form-control" />
+                <span asp-validation-for="TblMembers.تعدادپروانههایکسب" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.نوععضویت" class="control-label"></label>
+                <input asp-for="TblMembers.نوععضویت" class="form-control" />
+                <span asp-validation-for="TblMembers.نوععضویت" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblMembers.سایر" class="control-label"></label>
+                <input asp-for="TblMembers.سایر" class="form-control" />
+                <span asp-validation-for="TblMembers.سایر" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

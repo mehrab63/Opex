@@ -1,0 +1,131 @@
+﻿@page
+@model Opex.Pages.OfficeMember.DeleteModel
+<input type="hidden" id="selectedTab" value="payment" />
+<div class="tab-content">
+    <div class="tab-pane" id="payment">
+        <div class="col-sm-10 col-sm-offset-1 " style="margin-top:25px">
+            <h4>آیا از حذف این عضو مطمعن هستید؟</h4>
+            <div> 
+                <hr />
+                <dl class="dl-horizontal"> 
+                    <dt>
+                        @Html.DisplayFor(model => model.TblOfficeMember.Lname)
+                       
+                    </dt>
+                    <dd> نام و نام خانوادگی</dd>
+                    <dt> 
+                    <dt>
+                        @Html.DisplayFor(model => model.TblOfficeMember.ShMelli)
+                    </dt>
+                    <dd> کد ملی </dd> 
+                    <dt>
+                        @Html.DisplayFor(model => model.TblOfficeMember.Role)
+                    </dt>
+                    <dd>
+                        سمت
+                       
+                    </dd>
+                    <dt>
+                        @Html.DisplayFor(model => model.TblOfficeMember.Reshteh)
+                    </dt>
+                    <dd>
+                        رشته
+                        
+                    </dd>
+                    <dt>
+                        @Html.DisplayFor(model => model.TblOfficeMember.DReshte)
+                    </dt>
+                    <dd>
+                        درجه
+                       
+                    </dd>
+                    <dt>
+                        @Html.DisplayFor(model => model.TblOfficeMember.LicenceDate)
+                                    </dt>
+                    <dd>
+                        تاریخ اخذ مدرک
+                        
+                    </dd>
+                    <dt>
+                        @Html.DisplayFor(model => model.TblOfficeMember.WorkeFlow)
+                    </dt>
+                    <dd>
+                        سابقه کار مرتبط با فعالیت‌های شرکت
+                       
+                    </dd>
+                </dl>
+
+                <form method="post">
+                    <input type="hidden" asp-for="TblOfficeMember.MemberId" />
+                    <input type="submit" value="حـذف" class="btn btn-danger" /> |
+                    <a asp-page="../FinancialBalance/Index">بازگشت</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Footer{
+    <div class="wizard-footer">
+        <div class="clearfix"></div>
+    </div>
+
+}
+@section Scripts{
+    <!--   Core JS Files   -->
+    <script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+    <script src="/js/register.js" type="text/javascript"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--  Plugin for the Wizard -->
+    <script src=" /js/demo.js" type="text/javascript"></script>
+    <script src=" /js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+    <!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+    <script src=" /js/jquery.validate.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            var first = $('#selectedTab').val();
+            var mid = $('#selectedTab').val();
+            if (first == "rquest-type") {
+                $('#wizard').bootstrapWizard('show', 1);
+            }
+            else {
+                $('#wizard').bootstrapWizard('show', 0);
+            }
+            switch (mid) {
+                case "type":
+                    $('#wizard').bootstrapWizard('show', 0);
+                    break;
+
+                case "facilities":
+                    $('#wizard').bootstrapWizard('show', 1);
+                    break;
+                case "payment":
+                    $('#wizard').bootstrapWizard('show', 2);
+                    break;
+                case "question":
+                    $('#wizard').bootstrapWizard('show', 3);
+                    break;
+                case "upload":
+                    $('#wizard').bootstrapWizard('show', 4);
+                    break;
+                case "description":
+                    $('#wizard').bootstrapWizard('show', 5);
+                    break;
+                case "Verify1":
+                    $('#wizard').bootstrapWizard('show', 6);
+                    break;
+
+            }
+
+        });
+    </script>
+}

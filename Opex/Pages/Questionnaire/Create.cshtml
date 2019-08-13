@@ -1,0 +1,94 @@
+﻿@page
+@model Opex.Pages.Questionnaire.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>TblQuestionnaire</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.Question1" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.Question1" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.Question1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.Question11" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.Question11" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.Question11" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.Question12" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.Question12" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.Question12" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.Question13" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.Question13" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.Question13" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.Question14" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.Question14" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.Question14" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.Question2" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.Question2" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.Question2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.Question3" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.Question3" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.Question3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.Question3Disp" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.Question3Disp" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.Question3Disp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.Question4" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.Question4" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.Question4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.Question4Disp" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.Question4Disp" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.Question4Disp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.Question5" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.Question5" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.Question5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.SystemCode" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.SystemCode" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.SystemCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblQuestionnaire.CodeYekta" class="control-label"></label>
+                <input asp-for="TblQuestionnaire.CodeYekta" class="form-control" />
+                <span asp-validation-for="TblQuestionnaire.CodeYekta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

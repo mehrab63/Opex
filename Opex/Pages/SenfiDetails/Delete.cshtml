@@ -1,0 +1,1798 @@
+﻿@page
+@model Opex.Pages.SenfiDetails.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TblMembers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.OldMemberId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.OldMemberId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کدیکتا)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کدیکتا)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کداستان)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کداستان)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کدشهرستان)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کدشهرستان)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ناماستان)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ناماستان)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نامشهرستان)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نامشهرستان)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کداتحادیه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کداتحادیه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ناماتحادیه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ناماتحادیه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.وضعیتپرونده)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.وضعیتپرونده)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نوعپروانه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نوعپروانه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهپروانهکسب)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهپروانهکسب)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخصدور)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخصدور)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهدرخواست)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهدرخواست)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخدرخواست)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخدرخواست)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مرحلهدرخواست)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مرحلهدرخواست)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ملاحضاتدرخواست)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ملاحضاتدرخواست)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخانقضاء)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخانقضاء)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریختمدید)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریختمدید)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.درجهصنفی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.درجهصنفی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.علترددرخواست)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.علترددرخواست)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهعضویت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهعضویت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهبایگانی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهبایگانی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نوعفعالیت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نوعفعالیت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مسلسلجدید)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مسلسلجدید)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مسلسلقدیم)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مسلسلقدیم)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهتاییداماکن)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهتاییداماکن)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریختاییداماکن)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریختاییداماکن)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.جنسیت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.جنسیت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نام)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نام)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاهل)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاهل)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نامخانوادگی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نامخانوادگی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نامپدر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نامپدر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کدملی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کدملی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهشناسنامه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهشناسنامه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مسلسلشناسنامه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مسلسلشناسنامه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخصدورشناسنامه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخصدورشناسنامه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.محلصدورشناسنامه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.محلصدورشناسنامه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریختولد)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریختولد)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.محلتولد)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.محلتولد)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.بخش)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.بخش)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ملیت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ملیت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ایثارگر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ایثارگر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.موقت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.موقت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.روستا)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.روستا)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ولایت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ولایت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.صادره)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.صادره)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.موافقتنامه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.موافقتنامه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کدپستی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کدپستی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.آدرس)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.آدرس)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.پلاکآبی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.پلاکآبی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.پلاکثبتی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.پلاکثبتی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.وضعیتاستقرار)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.وضعیتاستقرار)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.محلاستقرار)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.محلاستقرار)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.حدودصنفی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.حدودصنفی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.فاصلهصنفی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.فاصلهصنفی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.جهتصنفی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.جهتصنفی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.رسته)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.رسته)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کدرسته)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کدرسته)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شناسهصنفی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شناسهصنفی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تحصیلات)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تحصیلات)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.دین)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.دین)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.عنوانواحدصنفی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.عنوانواحدصنفی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.سالتاسیس)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.سالتاسیس)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تعدادکارکنان)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تعدادکارکنان)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تحتتکفل)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تحتتکفل)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تعدادشریک)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تعدادشریک)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.وضعیتتملک)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.وضعیتتملک)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.وضعیتسند)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.وضعیتسند)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مساحت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مساحت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.منطقه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.منطقه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.محله)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.محله)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تلفنمغازه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تلفنمغازه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.فکسمغازه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.فکسمغازه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تلفنمنزل)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تلفنمنزل)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تلفنهمراه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تلفنهمراه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تلفنمنزلمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تلفنمنزلمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.فکسمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.فکسمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.همراهمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.همراهمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.علتابطالپرونده)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.علتابطالپرونده)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخابطالپرونده)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخابطالپرونده)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخفوت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخفوت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخشناسایی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخشناسایی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مرکزشناسایی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مرکزشناسایی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ملاحضاتشناسایی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ملاحضاتشناسایی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مشارکت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مشارکت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.باب)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.باب)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.دهنه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.دهنه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.دانگ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.دانگ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کلسهم)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کلسهم)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.سهم)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.سهم)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.حوزهمالیاتی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.حوزهمالیاتی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.حوزهبیمه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.حوزهبیمه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.حوزهکلانتری)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.حوزهکلانتری)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نامشرکت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نامشرکت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهثبتشرکت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهثبتشرکت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخثبتشرکت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخثبتشرکت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مبلغتمبر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مبلغتمبر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهتمبر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهتمبر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریختمبر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریختمبر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.وضعیتانتقال)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.وضعیتانتقال)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ناماتحادیهقبلی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ناماتحادیهقبلی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهپروانهقبلی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهپروانهقبلی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخپروانهقبلی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخپروانهقبلی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.آدرسمنزل)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.آدرسمنزل)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کدپستیمنزل)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کدپستیمنزل)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.جنسیتمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.جنسیتمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ناممباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ناممباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نامپدرمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نامپدرمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شناسنامهمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شناسنامهمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مسلسلمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مسلسلمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریختولدمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریختولدمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.محلتولدمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.محلتولدمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.محلصدورمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.محلصدورمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخصدورمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخصدورمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاهلمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاهلمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تعدادتکفلمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تعدادتکفلمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهکارتمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهکارتمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخصدورکارتمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخصدورکارتمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخابطالکارتمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخابطالکارتمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهمسلسلمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهمسلسلمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کدملیمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کدملیمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.آدرسمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.آدرسمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کدپستیمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کدپستیمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تحصیلاتمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تحصیلاتمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.دینمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.دینمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.AksSaheb)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.AksSaheb)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.AksMobasher)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.AksMobasher)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.توضیحات)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.توضیحات)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مبلغبدهی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مبلغبدهی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.انتقالبهپرونده)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.انتقالبهپرونده)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.انتقالازپرونده)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.انتقالازپرونده)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.محلبایگانی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.محلبایگانی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.محجور)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.محجور)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.غیرفعال)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.غیرفعال)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تغییرشغل)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تغییرشغل)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.وبسایت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.وبسایت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ایمیل)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ایمیل)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.EtCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.EtCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.رشتهتحصیلی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.رشتهتحصیلی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ناحیهشهرداری)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ناحیهشهرداری)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.فکسمنزل)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.فکسمنزل)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.پلاکپاساژ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.پلاکپاساژ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.حراجازتاریخ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.حراجازتاریخ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.حراجتاتاریخ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.حراجتاتاریخ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.فروشفوقالعادهاز)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.فروشفوقالعادهاز)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.فروشفوقالعادهتا)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.فروشفوقالعادهتا)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.واگذاریااجاره)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.واگذاریااجاره)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تغییرمکان)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تغییرمکان)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.قیم)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.قیم)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.آموزشنظامصنفی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.آموزشنظامصنفی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.آموزشنظامصنفیمسلسل)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.آموزشنظامصنفیمسلسل)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شناسهملی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شناسهملی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهتاییدبهداشت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهتاییدبهداشت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریختاییدبهداشت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریختاییدبهداشت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.پلاکقدیم)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.پلاکقدیم)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.SmsIds)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.SmsIds)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.BinaryIds)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.BinaryIds)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ناحیهاماکن)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ناحیهاماکن)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.IsSent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.IsSent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.LastSent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.LastSent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شناسهشیوا)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شناسهشیوا)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.پلاکآبیقدیم)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.پلاکآبیقدیم)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.هویت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.هویت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شهر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شهر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مرجعصدور)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مرجعصدور)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نوعفروش)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نوعفروش)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مذهب)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مذهب)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.وضعیتمالکیت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.وضعیتمالکیت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.LetterIds)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.LetterIds)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.وضعیترسیدگی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.وضعیترسیدگی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مرحله)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مرحله)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.حراجاز)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.حراجاز)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.حراجتا)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.حراجتا)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.فوقاز)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.فوقاز)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.فوقتا)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.فوقتا)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نامخانوادگیمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نامخانوادگیمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.رشتهتحصیلیمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.رشتهتحصیلیمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.بدهیازسال)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.بدهیازسال)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.بدهیتاسال)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.بدهیتاسال)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.بازرسیمرحلهاولبازرس)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.بازرسیمرحلهاولبازرس)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.بازرسیمرحلهاولشمارهنامه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.بازرسیمرحلهاولشمارهنامه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.بازرسیمرحلهاولنقص)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.بازرسیمرحلهاولنقص)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.بازرسیمرحلهاولتاریخ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.بازرسیمرحلهاولتاریخ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نوعشخص)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نوعشخص)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نوعپروانهکسبقبلی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نوعپروانهکسبقبلی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نواقصبازرسی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نواقصبازرسی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تابعیت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تابعیت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نظاموظیفه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نظاموظیفه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهگذرنامه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهگذرنامه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخگذرنامه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخگذرنامه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.گذرنامهانقضاء)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.گذرنامهانقضاء)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهاقامت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهاقامت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخصدوراقامت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخصدوراقامت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخانقضاءاقامت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخانقضاءاقامت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهپروانهکار)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهپروانهکار)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخپروانهکار)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخپروانهکار)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.انقضاءپروانهکار)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.انقضاءپروانهکار)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.PicSahebPath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.PicSahebPath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.حداقلمساحت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.حداقلمساحت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.طبقه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.طبقه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.واحد)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.واحد)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نوعسند)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نوعسند)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.عنوانسند)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.عنوانسند)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نوعمالکیت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نوعمالکیت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.دهستان)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.دهستان)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ورثهمحجور)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ورثهمحجور)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ولیقهری)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ولیقهری)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهقیمنامه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهقیمنامه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخصدورقیمنامه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخصدورقیمنامه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مرجعصادرکنندهقیمنامه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مرجعصادرکنندهقیمنامه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نامقیم)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نامقیم)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کدملیقیم)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کدملیقیم)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهشناسنامهقیم)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهشناسنامهقیم)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.LastUpdate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.LastUpdate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ناممستعار)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ناممستعار)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نوعشغلقبلی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نوعشغلقبلی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.رستهقبلی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.رستهقبلی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شناسهثبتشرکت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شناسهثبتشرکت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.IsEdit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.IsEdit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کدرهگیری)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کدرهگیری)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مباشردارد)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مباشردارد)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شریکدارد)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شریکدارد)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.بدهیسالیانه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.بدهیسالیانه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.سریشناسنامه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.سریشناسنامه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ادارهبهداشت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ادارهبهداشت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.PicMobasherPath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.PicMobasherPath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.دستهتحصیلی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.دستهتحصیلی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ناممستعارمباشر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ناممستعارمباشر)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کدمعین)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کدمعین)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کددفترکل)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کددفترکل)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.علتغیرفعالپرونده)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.علتغیرفعالپرونده)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخغیرفعال)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخغیرفعال)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهنامهغیرفعال)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهنامهغیرفعال)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.علتتعلیق)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.علتتعلیق)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.OrgPictures)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.OrgPictures)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.صندوقمکانیزه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.صندوقمکانیزه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.دستگاهکارتخوان)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.دستگاهکارتخوان)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ترازودیجیتال)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ترازودیجیتال)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.دوربینمداربسته)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.دوربینمداربسته)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.Is27)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.Is27)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.ماندهازقبل)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.ماندهازقبل)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهکارتبازرگانی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهکارتبازرگانی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخکارتبازرگانی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخکارتبازرگانی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.محصولاتصادراتی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.محصولاتصادراتی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نشانیکارخانه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نشانیکارخانه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تلفنهایکارخانه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تلفنهایکارخانه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.محصولاتمندرجدرپرونده)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.محصولاتمندرجدرپرونده)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کمیسیونفرعی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کمیسیونفرعی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخطرحکمیسیون)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخطرحکمیسیون)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخطرحکمیسیونفنی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخطرحکمیسیونفنی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخطرحکمیسیونهیئتمدیره)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخطرحکمیسیونهیئتمدیره)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تلفنرابط)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تلفنرابط)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.توضیحاتطرحکمیسیون)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.توضیحاتطرحکمیسیون)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.توضیحاتطرحکمیسیونفنی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.توضیحاتطرحکمیسیونفنی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.توضیحاتکمیسیونهیئتمدیره)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.توضیحاتکمیسیونهیئتمدیره)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهاولینپروانه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهاولینپروانه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخاولینپروانه)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخاولینپروانه)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخابطال)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخابطال)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.دخانیات)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.دخانیات)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مساحتانبار)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مساحتانبار)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.عمدهکالا)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.عمدهکالا)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخاستعلامدارایی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخاستعلامدارایی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهاستعلامدارایی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهاستعلامدارایی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.پاسخاماکنمثبت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.پاسخاماکنمثبت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.پاسخبهداشتمثبت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.پاسخبهداشتمثبت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخانقضاءدرخواست)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخانقضاءدرخواست)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخمجوزدخانی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخمجوزدخانی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.انقضاءمجوزدخانی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.انقضاءمجوزدخانی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهمجوزدخانی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهمجوزدخانی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.دارایمجوزدخانی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.دارایمجوزدخانی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.آخرینعضویت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.آخرینعضویت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.آدرسشرکت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.آدرسشرکت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.سمتشرکت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.سمتشرکت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نوعکاربری)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نوعکاربری)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.دستگاهها)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.دستگاهها)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شمارهتابلو)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شمارهتابلو)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.توضیحاتتابلو)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.توضیحاتتابلو)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.آدرسواحدصنفیقبلی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.آدرسواحدصنفیقبلی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مفاصاحسابشهرداری)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مفاصاحسابشهرداری)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تاریخمفاصاحساب)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تاریخمفاصاحساب)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.سالآخرینعضویت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.سالآخرینعضویت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.شبکهاجتماعی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.شبکهاجتماعی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کلاسهایآموزشی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کلاسهایآموزشی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مسئولپرونده)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مسئولپرونده)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.آخرینبازرسی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.آخرینبازرسی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.مجوزماهرمضان)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.مجوزماهرمضان)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.DeviceId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.DeviceId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.Lat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.Lat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.Lng)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.Lng)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.IsLock)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.IsLock)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.FirebaseToken)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.FirebaseToken)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.LastFingerPrintDetect)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.LastFingerPrintDetect)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.کداقتصادی)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.کداقتصادی)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.تعدادپروانههایکسب)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.تعدادپروانههایکسب)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.نوععضویت)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.نوععضویت)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblMembers.سایر)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblMembers.سایر)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="TblMembers.MemberId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

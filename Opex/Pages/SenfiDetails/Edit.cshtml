@@ -1,0 +1,576 @@
+﻿@page
+@model Opex.Pages.SenfiDetails.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="tab-content">
+    <h2>ویرایش</h2>
+    <input type="hidden" id="selectedTab" value="facilities" />
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <form method="post">
+                <div>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="tblMembers.MemberId" />
+                    <input type="hidden" asp-for="tblMembers.AksMobasher" />
+                    <input type="hidden" asp-for="tblMembers.AksSaheb" />
+                    <input type="hidden" asp-for="tblMembers.BinaryIds" />
+                    <input type="hidden" asp-for="tblMembers.DeviceId" />
+                    <input type="hidden" asp-for="tblMembers.EtCode" />
+                    <input type="hidden" asp-for="tblMembers.FirebaseToken" />
+                    <input type="hidden" asp-for="tblMembers.Is27" />
+                    <input type="hidden" asp-for="tblMembers.IsEdit" />
+                    <input type="hidden" asp-for="tblMembers.IsLock" />
+                    <input type="hidden" asp-for="tblMembers.IsSent" />
+                    <input type="hidden" asp-for="tblMembers.LastFingerPrintDetect" />
+                    <input type="hidden" asp-for="tblMembers.LastSent" />
+                    <input type="hidden" asp-for="tblMembers.LastUpdate" />
+                    <input type="hidden" asp-for="tblMembers.Lat" />
+                    <input type="hidden" asp-for="tblMembers.LetterIds" />
+                    <input type="hidden" asp-for="tblMembers.Lng" />
+                    <input type="hidden" asp-for="tblMembers.OldMemberId" />
+                    <input type="hidden" asp-for="tblMembers.OrgPictures" />
+                    <input type="hidden" asp-for="tblMembers.PicMobasherPath" />
+                    <input type="hidden" asp-for="tblMembers.PicSahebPath" />
+                    <input type="hidden" asp-for="tblMembers.SmsIds" />
+                    <input type="hidden" asp-for="tblMembers.آخرینبازرسی" />
+                    <input type="hidden" asp-for="tblMembers.آخرینعضویت" />
+                    <input type="hidden" asp-for="tblMembers.آدرسمباشر" />
+                    <input type="hidden" asp-for="tblMembers.آدرسمنزل" />
+                    <input type="hidden" asp-for="tblMembers.آدرسواحدصنفیقبلی" />
+                    <input type="hidden" asp-for="tblMembers.آموزشنظامصنفی" />
+                    <input type="hidden" asp-for="tblMembers.آموزشنظامصنفیمسلسل" />
+                    <input type="hidden" asp-for="tblMembers.ادارهبهداشت" />
+                    <input type="hidden" asp-for="tblMembers.انتقالازپرونده" />
+                    <input type="hidden" asp-for="tblMembers.انتقالبهپرونده" />
+                    <input type="hidden" asp-for="tblMembers.انقضاءمجوزدخانی" />
+                    <input type="hidden" asp-for="tblMembers.انقضاءپروانهکار" />
+                    <input type="hidden" asp-for="tblMembers.ایثارگر" />
+                    <input type="hidden" asp-for="tblMembers.باب" />
+                    <input type="hidden" asp-for="tblMembers.بازرسیمرحلهاولبازرس" />
+                    <input type="hidden" asp-for="tblMembers.بازرسیمرحلهاولتاریخ" />
+                    <input type="hidden" asp-for="tblMembers.بازرسیمرحلهاولشمارهنامه" />
+                    <input type="hidden" asp-for="tblMembers.بازرسیمرحلهاولنقص" />
+                    <input type="hidden" asp-for="tblMembers.بخش" />
+                    <input type="hidden" asp-for="tblMembers.بدهیازسال" />
+                    <input type="hidden" asp-for="tblMembers.بدهیتاسال" />
+                    <input type="hidden" asp-for="tblMembers.بدهیسالیانه" />
+                    <input type="hidden" asp-for="tblMembers.تابعیت" />
+                    <input type="hidden" asp-for="tblMembers.تاریخابطال" />
+                    <input type="hidden" asp-for="tblMembers.تاریخابطالپرونده" />
+                    <input type="hidden" asp-for="tblMembers.تاریخابطالکارتمباشر" />
+                    <input type="hidden" asp-for="tblMembers.تاریخاستعلامدارایی" />
+                    <input type="hidden" asp-for="tblMembers.تاریخانقضاء" />
+                    <input type="hidden" asp-for="tblMembers.تاریخانقضاءاقامت" />
+                    <input type="hidden" asp-for="tblMembers.تاریخانقضاءدرخواست" />
+                    <input type="hidden" asp-for="tblMembers.تاریخاولینپروانه" />
+                    <input type="hidden" asp-for="tblMembers.تاریختاییداماکن" />
+                    <input type="hidden" asp-for="tblMembers.تاریختاییدبهداشت" />
+                    <input type="hidden" asp-for="tblMembers.تاریختمبر" />
+                    <input type="hidden" asp-for="tblMembers.تاریختمدید" />
+                    <input type="hidden" asp-for="tblMembers.تاریختولد" />
+                    <input type="hidden" asp-for="tblMembers.تاریختولدمباشر" />
+                    <input type="hidden" asp-for="tblMembers.تاریخثبتشرکت" />
+                    <input type="hidden" asp-for="tblMembers.تاریخدرخواست" />
+                    <input type="hidden" asp-for="tblMembers.تاریخشناسایی" />
+                    <input type="hidden" asp-for="tblMembers.تاریخصدور" />
+                    <input type="hidden" asp-for="tblMembers.تاریخصدوراقامت" />
+                    <input type="hidden" asp-for="tblMembers.تاریخصدورشناسنامه" />
+                    <input type="hidden" asp-for="tblMembers.تاریخصدورقیمنامه" />
+                    <input type="hidden" asp-for="tblMembers.تاریخصدورمباشر" />
+                    <input type="hidden" asp-for="tblMembers.تاریخصدورکارتمباشر" />
+                    <input type="hidden" asp-for="tblMembers.تاریخطرحکمیسیون" />
+                    <input type="hidden" asp-for="tblMembers.تاریخطرحکمیسیونفنی" />
+                    <input type="hidden" asp-for="tblMembers.تاریخطرحکمیسیونهیئتمدیره" />
+                    <input type="hidden" asp-for="tblMembers.تاریخغیرفعال" />
+                    <input type="hidden" asp-for="tblMembers.تاریخفوت" />
+                    <input type="hidden" asp-for="tblMembers.تاریخمجوزدخانی" />
+                    <input type="hidden" asp-for="tblMembers.تاریخمفاصاحساب" />
+                    <input type="hidden" asp-for="tblMembers.تاریخپروانهقبلی" />
+                    <input type="hidden" asp-for="tblMembers.تاریخپروانهکار" />
+                    <input type="hidden" asp-for="tblMembers.تاریخکارتبازرگانی" />
+                    <input type="hidden" asp-for="tblMembers.تاریخگذرنامه" />
+                    <input type="hidden" asp-for="tblMembers.تاهل" />
+                    <input type="hidden" asp-for="tblMembers.تاهلمباشر" />
+                    <input type="hidden" asp-for="tblMembers.تحتتکفل" />
+                    <input type="hidden" asp-for="tblMembers.تحصیلات" />
+                    <input type="hidden" asp-for="tblMembers.تحصیلاتمباشر" />
+                    <input type="hidden" asp-for="tblMembers.ترازودیجیتال" />
+                    <input type="hidden" asp-for="tblMembers.تعدادتکفلمباشر" />
+                    <input type="hidden" asp-for="tblMembers.تعدادشریک" />
+                    <input type="hidden" asp-for="tblMembers.تعدادپروانههایکسب" />
+                    <input type="hidden" asp-for="tblMembers.تغییرشغل" />
+                    <input type="hidden" asp-for="tblMembers.تغییرمکان" />
+                    <input type="hidden" asp-for="tblMembers.تلفنرابط" />
+                    <input type="hidden" asp-for="tblMembers.تلفنمنزلمباشر" />
+                    <input type="hidden" asp-for="tblMembers.تلفنهایکارخانه" />
+                    <input type="hidden" asp-for="tblMembers.توضیحات" />
+                    <input type="hidden" asp-for="tblMembers.توضیحاتتابلو" />
+                    <input type="hidden" asp-for="tblMembers.توضیحاتطرحکمیسیون" />
+                    <input type="hidden" asp-for="tblMembers.توضیحاتطرحکمیسیونفنی" />
+                    <input type="hidden" asp-for="tblMembers.توضیحاتکمیسیونهیئتمدیره" />
+                    <input type="hidden" asp-for="tblMembers.جنسیت" />
+                    <input type="hidden" asp-for="tblMembers.جنسیتمباشر" />
+                    <input type="hidden" asp-for="tblMembers.جهتصنفی" />
+                    <input type="hidden" asp-for="tblMembers.حداقلمساحت" />
+                    <input type="hidden" asp-for="tblMembers.حدودصنفی" />
+                    <input type="hidden" asp-for="tblMembers.حراجاز" />
+                    <input type="hidden" asp-for="tblMembers.حراجازتاریخ" />
+                    <input type="hidden" asp-for="tblMembers.حراجتا" />
+                    <input type="hidden" asp-for="tblMembers.حراجتاتاریخ" />
+                    <input type="hidden" asp-for="tblMembers.حوزهبیمه" />
+                    <input type="hidden" asp-for="tblMembers.حوزهمالیاتی" />
+                    <input type="hidden" asp-for="tblMembers.حوزهکلانتری" />
+                    <input type="hidden" asp-for="tblMembers.دارایمجوزدخانی" />
+                    <input type="hidden" asp-for="tblMembers.دانگ" />
+                    <input type="hidden" asp-for="tblMembers.دخانیات" />
+                    <input type="hidden" asp-for="tblMembers.درجهصنفی" />
+                    <input type="hidden" asp-for="tblMembers.دستهتحصیلی" />
+                    <input type="hidden" asp-for="tblMembers.دستگاهکارتخوان" />
+                    <input type="hidden" asp-for="tblMembers.دهستان" />
+                    <input type="hidden" asp-for="tblMembers.دهنه" />
+                    <input type="hidden" asp-for="tblMembers.دوربینمداربسته" />
+                    <input type="hidden" asp-for="tblMembers.دین" />
+                    <input type="hidden" asp-for="tblMembers.دینمباشر" />
+                    <input type="hidden" asp-for="tblMembers.رستهقبلی" />
+                    <input type="hidden" asp-for="tblMembers.رشتهتحصیلی" />
+                    <input type="hidden" asp-for="tblMembers.رشتهتحصیلیمباشر" />
+                    <input type="hidden" asp-for="tblMembers.روستا" />
+                    <input type="hidden" asp-for="tblMembers.سالآخرینعضویت" />
+                    <input type="hidden" asp-for="tblMembers.سایر" />
+                    <input type="hidden" asp-for="tblMembers.سریشناسنامه" />
+                    <input type="hidden" asp-for="tblMembers.سمتشرکت" />
+                    <input type="hidden" asp-for="tblMembers.سهم" />
+                    <input type="hidden" asp-for="tblMembers.شبکهاجتماعی" />
+                    <input type="hidden" asp-for="tblMembers.شریکدارد" />
+                    <input type="hidden" asp-for="tblMembers.شمارهاستعلامدارایی" />
+                    <input type="hidden" asp-for="tblMembers.شمارهاقامت" />
+                    <input type="hidden" asp-for="tblMembers.شمارهاولینپروانه" />
+                    <input type="hidden" asp-for="tblMembers.شمارهبایگانی" />
+                    <input type="hidden" asp-for="tblMembers.شمارهتابلو" />
+                    <input type="hidden" asp-for="tblMembers.شمارهتاییداماکن" />
+                    <input type="hidden" asp-for="tblMembers.شمارهتمبر" />
+                    <input type="hidden" asp-for="tblMembers.شمارهدرخواست" />
+                    <input type="hidden" asp-for="tblMembers.شمارهشناسنامهقیم" />
+                    <input type="hidden" asp-for="tblMembers.شمارهعضویت" />
+                    <input type="hidden" asp-for="tblMembers.شمارهقیمنامه" />
+                    <input type="hidden" asp-for="tblMembers.شمارهمجوزدخانی" />
+                    <input type="hidden" asp-for="tblMembers.شمارهمسلسلمباشر" />
+                    <input type="hidden" asp-for="tblMembers.شمارهنامهغیرفعال" />
+                    <input type="hidden" asp-for="tblMembers.شمارهپروانهقبلی" />
+                    <input type="hidden" asp-for="tblMembers.شمارهپروانهکار" />
+                    <input type="hidden" asp-for="tblMembers.شمارهپروانهکسب" />
+                    <input type="hidden" asp-for="tblMembers.شمارهکارتمباشر" />
+                    <input type="hidden" asp-for="tblMembers.شمارهگذرنامه" />
+                    <input type="hidden" asp-for="tblMembers.شناسنامهمباشر" />
+                    <input type="hidden" asp-for="tblMembers.شناسهثبتشرکت" />
+                    <input type="hidden" asp-for="tblMembers.شناسهشیوا" />
+                    <input type="hidden" asp-for="tblMembers.شناسهصنفی" />
+                    <input type="hidden" asp-for="tblMembers.صادره" />
+                    <input type="hidden" asp-for="tblMembers.صندوقمکانیزه" />
+                    <input type="hidden" asp-for="tblMembers.طبقه" />
+                    <input type="hidden" asp-for="tblMembers.علتابطالپرونده" />
+                    <input type="hidden" asp-for="tblMembers.علتتعلیق" />
+                    <input type="hidden" asp-for="tblMembers.علترددرخواست" />
+                    <input type="hidden" asp-for="tblMembers.علتغیرفعالپرونده" />
+                    <input type="hidden" asp-for="tblMembers.عمدهکالا" />
+                    <input type="hidden" asp-for="tblMembers.عنوانسند" />
+                    <input type="hidden" asp-for="tblMembers.عنوانواحدصنفی" />
+                    <input type="hidden" asp-for="tblMembers.غیرفعال" />
+                    <input type="hidden" asp-for="tblMembers.فاصلهصنفی" />
+                    <input type="hidden" asp-for="tblMembers.فروشفوقالعادهاز" />
+                    <input type="hidden" asp-for="tblMembers.فروشفوقالعادهتا" />
+                    <input type="hidden" asp-for="tblMembers.فوقاز" />
+                    <input type="hidden" asp-for="tblMembers.فوقتا" />
+                    <input type="hidden" asp-for="tblMembers.فکسمباشر" />
+                    <input type="hidden" asp-for="tblMembers.فکسمنزل" />
+                    <input type="hidden" asp-for="tblMembers.قیم" />
+                    <input type="hidden" asp-for="tblMembers.ماندهازقبل" />
+                    <input type="hidden" asp-for="tblMembers.مباشردارد" />
+                    <input type="hidden" asp-for="tblMembers.مبلغبدهی" />
+                    <input type="hidden" asp-for="tblMembers.مبلغتمبر" />
+                    <input type="hidden" asp-for="tblMembers.مجوزماهرمضان" />
+                    <input type="hidden" asp-for="tblMembers.محجور" />
+                    <input type="hidden" asp-for="tblMembers.محصولاتصادراتی" />
+                    <input type="hidden" asp-for="tblMembers.محصولاتمندرجدرپرونده" />
+                    <input type="hidden" asp-for="tblMembers.محلاستقرار" />
+                    <input type="hidden" asp-for="tblMembers.محلبایگانی" />
+                    <input type="hidden" asp-for="tblMembers.محلتولد" />
+                    <input type="hidden" asp-for="tblMembers.محلتولدمباشر" />
+                    <input type="hidden" asp-for="tblMembers.محلصدورشناسنامه" />
+                    <input type="hidden" asp-for="tblMembers.محلصدورمباشر" />
+                    <input type="hidden" asp-for="tblMembers.محله" />
+                    <input type="hidden" asp-for="tblMembers.مذهب" />
+                    <input type="hidden" asp-for="tblMembers.مرجعصادرکنندهقیمنامه" />
+                    <input type="hidden" asp-for="tblMembers.مرجعصدور" />
+                    <input type="hidden" asp-for="tblMembers.مرحله" />
+                    <input type="hidden" asp-for="tblMembers.مرحلهدرخواست" />
+                    <input type="hidden" asp-for="tblMembers.مرکزشناسایی" />
+                    <input type="hidden" asp-for="tblMembers.مسئولپرونده" />
+                    <input type="hidden" asp-for="tblMembers.مساحت" />
+                    <input type="hidden" asp-for="tblMembers.مساحتانبار" />
+                    <input type="hidden" asp-for="tblMembers.مسلسلجدید" />
+                    <input type="hidden" asp-for="tblMembers.مسلسلشناسنامه" />
+                    <input type="hidden" asp-for="tblMembers.مسلسلقدیم" />
+                    <input type="hidden" asp-for="tblMembers.مسلسلمباشر" />
+                    <input type="hidden" asp-for="tblMembers.مشارکت" />
+                    <input type="hidden" asp-for="tblMembers.مفاصاحسابشهرداری" />
+                    <input type="hidden" asp-for="tblMembers.ملاحضاتدرخواست" />
+                    <input type="hidden" asp-for="tblMembers.ملاحضاتشناسایی" />
+                    <input type="hidden" asp-for="tblMembers.ملیت" />
+                    <input type="hidden" asp-for="tblMembers.منطقه" />
+                    <input type="hidden" asp-for="tblMembers.موافقتنامه" />
+                    <input type="hidden" asp-for="tblMembers.موقت" />
+                    <input type="hidden" asp-for="tblMembers.ناحیهاماکن" />
+                    <input type="hidden" asp-for="tblMembers.ناحیهشهرداری" />
+                    <input type="hidden" asp-for="tblMembers.نام" />
+                    <input type="hidden" asp-for="tblMembers.ناماتحادیه" />
+                    <input type="hidden" asp-for="tblMembers.ناماتحادیهقبلی" />
+                    <input type="hidden" asp-for="tblMembers.ناماستان" />
+                    <input type="hidden" asp-for="tblMembers.نامخانوادگیمباشر" />
+                    <input type="hidden" asp-for="tblMembers.نامشهرستان" />
+                    <input type="hidden" asp-for="tblMembers.نامقیم" />
+                    <input type="hidden" asp-for="tblMembers.ناممباشر" />
+                    <input type="hidden" asp-for="tblMembers.ناممستعار" />
+                    <input type="hidden" asp-for="tblMembers.ناممستعارمباشر" />
+                    <input type="hidden" asp-for="tblMembers.نامپدرمباشر" />
+                    <input type="hidden" asp-for="tblMembers.نشانیکارخانه" />
+                    <input type="hidden" asp-for="tblMembers.نظاموظیفه" />
+                    <input type="hidden" asp-for="tblMembers.نواقصبازرسی" />
+                    <input type="hidden" asp-for="tblMembers.نوعسند" />
+                    <input type="hidden" asp-for="tblMembers.نوعشغلقبلی" />
+                    <input type="hidden" asp-for="tblMembers.نوععضویت" />
+                    <input type="hidden" asp-for="tblMembers.نوعفروش" />
+                    <input type="hidden" asp-for="tblMembers.نوعپروانه" />
+                    <input type="hidden" asp-for="tblMembers.نوعپروانهکسبقبلی" />
+                    <input type="hidden" asp-for="tblMembers.نوعکاربری" />
+                    <input type="hidden" asp-for="tblMembers.همراهمباشر" />
+                    <input type="hidden" asp-for="tblMembers.هویت" />
+                    <input type="hidden" asp-for="tblMembers.واحد" />
+                    <input type="hidden" asp-for="tblMembers.واگذاریااجاره" />
+                    <input type="hidden" asp-for="tblMembers.ورثهمحجور" />
+                    <input type="hidden" asp-for="tblMembers.وضعیتاستقرار" />
+                    <input type="hidden" asp-for="tblMembers.وضعیتانتقال" />
+                    <input type="hidden" asp-for="tblMembers.وضعیتتملک" />
+                    <input type="hidden" asp-for="tblMembers.وضعیترسیدگی" />
+                    <input type="hidden" asp-for="tblMembers.وضعیتسند" />
+                    <input type="hidden" asp-for="tblMembers.وضعیتمالکیت" />
+                    <input type="hidden" asp-for="tblMembers.وضعیتپرونده" />
+                    <input type="hidden" asp-for="tblMembers.ولایت" />
+                    <input type="hidden" asp-for="tblMembers.ولیقهری" />
+                    <input type="hidden" asp-for="tblMembers.پاسخاماکنمثبت" />
+                    <input type="hidden" asp-for="tblMembers.پاسخبهداشتمثبت" />
+                    <input type="hidden" asp-for="tblMembers.پلاکآبی" />
+                    <input type="hidden" asp-for="tblMembers.پلاکآبیقدیم" />
+                    <input type="hidden" asp-for="tblMembers.پلاکثبتی" />
+                    <input type="hidden" asp-for="tblMembers.پلاکقدیم" />
+                    <input type="hidden" asp-for="tblMembers.پلاکپاساژ" />
+                    <input type="hidden" asp-for="tblMembers.کداتحادیه" />
+                    <input type="hidden" asp-for="tblMembers.کداقتصادی" />
+                    <input type="hidden" asp-for="tblMembers.کددفترکل" />
+                    <input type="hidden" asp-for="tblMembers.کدرسته" />
+                    <input type="hidden" asp-for="tblMembers.کدرهگیری" />
+                    <input type="hidden" asp-for="tblMembers.کدمعین" />
+                    <input type="hidden" asp-for="tblMembers.کدملیقیم" />
+                    <input type="hidden" asp-for="tblMembers.کدملیمباشر" />
+                    <input type="hidden" asp-for="tblMembers.کدپستیمباشر" />
+                    <input type="hidden" asp-for="tblMembers.کدپستیمنزل" />
+                    <input type="hidden" asp-for="tblMembers.کدیکتا" />
+                    <input type="hidden" asp-for="tblMembers.کلاسهایآموزشی" />
+                    <input type="hidden" asp-for="tblMembers.کلسهم" />
+                    <input type="hidden" asp-for="tblMembers.کمیسیونفرعی" />
+                    <input type="hidden" asp-for="tblMembers.گذرنامهانقضاء" />
+                </div>
+                <h4 class="mb-3 text-center">اطلاعات صنفی</h4>
+                <hr />
+                <label for="address">آدرس</label>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">استان:</label>
+                        <select asp-for="tblMembers.کداستان" class="form-control form-control-lg" name="province"
+                                id="validationCustom03" onchange="ChangecatList()">
+                            <option selected></option>
+                            <option value="01">آذربایجان شرقی</option>
+                            <option value="02">آذربایجان غربی</option>
+                            <option value="03">اردبیل</option>
+                            <option value="04">اصفهان</option>
+                            <option value="05">البرز</option>
+                            <option value="06">ایلام</option>
+                            <option value="07">بوشهر</option>
+                            <option value="08">تهران</option>
+                            <option value="09">چهارمحال و بختیاری</option>
+                            <option value="10">خراسان جنوبی</option>
+                            <option value="11">خراسان رضوی</option>
+                            <option value="12">خراسان شمالی</option>
+                            <option value="13">خوزستان</option>
+                            <option value="14">زنجان</option>
+                            <option value="15">سمنان</option>
+                            <option value="16">سیستان و بلوچستان</option>
+                            <option value="17">فارس</option>
+                            <option value="18">قزوین</option>
+                            <option value="19">کردستان</option>
+                            <option value="20">کرمان</option>
+                            <option value="21">کرمانشاه</option>
+                            <option value="22">کهگیلویه وبویراحمد</option>
+                            <option value="23">گلستان</option>
+                            <option value="24">گیلان</option>
+                            <option value="25">لرستان</option>
+                            <option value="26">مازندران</option>
+                            <option value="27">مرکزی</option>
+                            <option value="28">هرمزگان</option>
+                            <option value="29">همدان</option>
+                            <option value="30">یزد</option>
+                        </select>
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom04">شهرستان:</label>
+                        <select asp-for="tblMembers.کدشهرستان" class="form-control form-control-lg" id="validationCustom04" name="city">
+                            <option selected>@Model.tblMembers.نامشهرستان</option> 
+                        </select>
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom04">شهر/بخش</label>
+                        <input asp-for="tblMembers.شهر" class="form-control" />
+                        <span asp-validation-for="tblMembers.شهر" class="text-danger"></span>
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationCustom04"> آدرس کامل را در کادر زیر وارد کنید. </label>
+                        <input required asp-for="tblMembers.آدرس" class="form-control" />
+                        <span asp-validation-for="tblMembers.آدرس" class="text-danger"></span>
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="cc-name">کد پستی</label>
+                        <input maxlength="10" onkeypress="javascript:return isNumber(event)" style="direction:ltr" required asp-for="tblMembers.کدپستی" class="form-control" />
+                        <span asp-validation-for="tblMembers.کدپستی" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="cc-expiration">شمارۀ تلفن دفتر مرکزی:</label>
+                        <input style="direction:ltr" asp-for="tblMembers.تلفنمغازه" class="form-control" />
+                        <span asp-validation-for="tblMembers.تلفنمغازه" class="text-danger"></span>
+                        <div class="invalid-feedback"> شماره تلفن الزامیست  </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="cc-expiration">شماره فکس دفتر مرکزی:</label>
+                        <input maxlength="11" onkeypress="javascript:return isNumber(event)" style="direction:ltr"  asp-for="tblMembers.فکسمغازه" class="form-control" />
+                        <span asp-validation-for="tblMembers.فکسمغازه" class="text-danger"></span>
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="cc-expiration"> آدرس وب‌سایت:</label>
+                        <input style="direction:ltr" asp-for="tblMembers.وبسایت" class="form-control" />
+                        <span asp-validation-for="tblMembers.وبسایت" class="text-danger"></span>
+
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="cc-expiration"> تعداد نیروهای شاغل:</label>
+                        <input maxlength="5" onkeypress="javascript:return isNumber(event)" style="direction:ltr" asp-for="tblMembers.تعدادکارکنان" class="form-control" placeholder="نفر" />
+                        <span asp-validation-for="tblMembers.تعدادکارکنان" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-expiration">کمیسیون تخصصی اصلی</label>
+                            <select asp-for="tblMembers.رسته" class="form-control">
+                                <option selected>@Model.tblMembers.رسته</option>
+                                <option value="کمیسیون قیر">کمیسیون قیر</option>
+                                <option value="کمیسیون فرآورده های روغنی">کمیسیون فرآورده های روغنی</option>
+                                <option value="کمیسیون شیمیایی و گاز">کمیسیون شیمیایی و گاز</option>
+                                <option value="کمیسیون فرآورده های پارافینی">کمیسیون فرآورده های پارافینی</option>
+                                <option value="کمیسیون پتروشیمی">کمیسیون پتروشیمی</option>
+                                <option value="نفت،سواپ،ترانزیت و بانکرینگ">نفت،سواپ،ترانزیت و بانکرینگ</option>
+                                <option value="کمیسیون بازرگانی">کمیسیون بازرگانی</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="invalid-feedback" style="color:red;margin-top:5px">
+                        (این کمیسیون به تشخیص دبیرخانه اتحادیه و بر اساس زمینه فعالیت شرکت تایید خواهد شد)
+                    </div>
+                </div>
+
+                <hr class="mb-4">
+                <div class="row">
+                    <div class="col-md-2 mb-3">
+                        <label for="validationCustom04">
+                            کمیسیون‌های مهمان:
+                        </label>
+                    </div>
+                    <div class="col-md-10 mb-3">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom04">
+                                کمیسیون‌ مهمان اول:
+                            </label>
+                            <select name="کمیسیونفرعی1" class="form-control">
+                                <option selected>@Model.tblMembers.کمیسیونفرعی</option>
+                                <option value="کمیسیون قیر">کمیسیون قیر</option>
+                                <option value="کمیسیون فرآورده های روغنی">کمیسیون فرآورده های روغنی</option>
+                                <option value="کمیسیون شیمیایی و گاز">کمیسیون شیمیایی و گاز</option>
+                                <option value="کمیسیون فرآورده های پارافینی">کمیسیون فرآورده های پارافینی</option>
+                                <option value="کمیسیون پتروشیمی">کمیسیون پتروشیمی</option>
+                                <option value="نفت،سواپ،ترانزیت و بانکرینگ">نفت،سواپ،ترانزیت و بانکرینگ</option>
+                                <option value="کمیسیون بازرگانی">کمیسیون بازرگانی</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom04">
+                                کمیسیون‌ مهمان دوم:
+                            </label>
+                            <select name="کمیسیونفرعی2" class="form-control">
+                                <option selected></option>
+                                <option value="کمیسیون قیر">کمیسیون قیر</option>
+                                <option value="کمیسیون فرآورده های روغنی">کمیسیون فرآورده های روغنی</option>
+                                <option value="کمیسیون شیمیایی و گاز">کمیسیون شیمیایی و گاز</option>
+                                <option value="کمیسیون فرآورده های پارافینی">کمیسیون فرآورده های پارافینی</option>
+                                <option value="کمیسیون پتروشیمی">کمیسیون پتروشیمی</option>
+                                <option value="نفت،سواپ،ترانزیت و بانکرینگ">نفت،سواپ،ترانزیت و بانکرینگ</option>
+                                <option value="کمیسیون بازرگانی">کمیسیون بازرگانی</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="invalid-feedback col-md-12 mb-3" style="color:red;margin-top:5px">
+                        (هر متقاضی می توانند دو کمیسیون را به عنوان کمیسیون مهمان انتخاب نماید)
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <div class="row">
+
+                    <div class="col-sm-2 col-sm-offset-1 pull-left  ">
+                        <a class="btn btn-warning btn-block" asp-page="./Index">بازگشت</a>
+                    </div>
+                    <div class="col-sm-2 col-sm-offset-1 pull-right">
+
+                        <input type="submit" value="ذخیره" class="btn btn-wd btn-primary btn-block" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <!--   Core JS Files   -->
+    <script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+    <script src="/js/register.js" type="text/javascript"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--  Plugin for the Wizard -->
+    <script src=" /js/demo.js" type="text/javascript"></script>
+    <script src=" /js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+    <!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+    <script src=" /js/jquery.validate.min.js" type="text/javascript"></script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+
+        $(document).ready(function () {
+            var first = $('#selectedTab').val();
+            var mid = $('#selectedTab').val();
+            if (first == "rquest-type") {
+            $('#wizard').bootstrapWizard('show', 1);
+            }
+            else {
+                $('#wizard').bootstrapWizard('show', 0);
+            }
+            switch (mid)
+            {
+                case "type":
+                    $('#wizard').bootstrapWizard('show', 0);
+                    break;
+
+                case "facilities":
+                    $('#wizard').bootstrapWizard('show', 1);
+                    break;
+                case "payment":
+                    $('#wizard').bootstrapWizard('show', 2);
+                    break;
+                case "question":
+                    $('#wizard').bootstrapWizard('show', 3);
+                    break;
+                case "upload":
+                    $('#wizard').bootstrapWizard('show', 4);
+                    break;
+                case "description":
+                    $('#wizard').bootstrapWizard('show', 5);
+                    break;
+                case "Verify1":
+                    $('#wizard').bootstrapWizard('show', 6);
+                    break;
+
+            }
+
+
+            $("#agree").attr('checked', false);
+
+            $(".morelink").click(function () {
+                $("#agreement").removeClass("hidden");
+                $("#agree").prop("checked", false);
+
+            })
+            $("#agree").change(function () {
+                if (this.checked) {
+                    $("#nextBtn").removeClass("hidden");
+                } else {
+                    $("#nextBtn").addClass("hidden");
+                }
+            });
+
+
+
+            $('#uploadInput').change(function (event) {
+                var fileName = event.target.value;
+
+                //if (fileName) {
+                //    $("#uploadBtn").removeAttr("disabled");
+                //} else {
+                //    $("#uploadBtn").attr("disabled", "disabled")
+                //}
+            });
+
+    $(function() {
+        var t = '@HttpContext.Request.Query["t"]';
+        if (t.length) {
+            $('a[href="#' + t + '"]').bootstrapWizard('show', 3);
+        }
+    });
+
+
+    var tabId = getUrlParameter("tab");
+    if (tabId) {
+    $("#" + tabId).addClass("active")
+    }
+
+    $("#nextTab").click(function () {
+    $("#demoTabs").tabs("show", this.hash);
+    window.location.hash = this.hash
+
+    });
+    $("#demoTabs").tabs("show", window.location.hash);
+    $('#rootwizard').bootstrapWizard('show', 3);
+
+});
+
+    </script>
+}

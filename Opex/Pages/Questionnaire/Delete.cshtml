@@ -1,0 +1,100 @@
+﻿@page
+@model Opex.Pages.Questionnaire.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TblQuestionnaire</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.Question1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.Question1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.Question11)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.Question11)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.Question12)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.Question12)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.Question13)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.Question13)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.Question14)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.Question14)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.Question2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.Question2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.Question3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.Question3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.Question3Disp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.Question3Disp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.Question4)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.Question4)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.Question4Disp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.Question4Disp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.Question5)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.Question5)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.SystemCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.SystemCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblQuestionnaire.CodeYekta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblQuestionnaire.CodeYekta)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="TblQuestionnaire.Qid" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

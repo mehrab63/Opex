@@ -1,0 +1,208 @@
+﻿@page
+@model Opex.Pages.Questionnaire.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="tab-pane" id="question">
+    <div class="col-sm-10 col-sm-offset-1" style="margin-top:15%">
+        <form method="post" enctype="multipart/form-data">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="tblQuestionnaire.Qid" />
+            @Html.AntiForgeryToken()
+            <h3 class="mb-3 text-center"><strong>پرسشنامه انجام فعاليت های تشكيلاتی</strong></h3>
+            <div class=" alert-success">@TempData["Sucsses"]</div>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <hr />
+            <div class="row">
+
+                <div class="col-md-12 mb-3">
+                    <label for="validationCustom01">1- عضو كدام تشكل يا انجمن صنفي هستيد؟ </label>
+                    <span>(با ذكر تاريخ عضويت)</span>
+                    <input asp-for="tblQuestionnaire.Question1" class="form-control" />
+                    <span asp-validation-for="tblQuestionnaire.Question1" class="text-danger"></span>
+
+                    <div class="invalid-feedback">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom02">- اتاق های بازرگانی سراسر کشور:</label>
+                    <span>(لطفاً  نام ببرید)</span>
+                    <input asp-for="tblQuestionnaire.Question11" class="form-control" />
+                    <span asp-validation-for="tblQuestionnaire.Question11" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">- اتاق های مشترک ایران با سایر کشورها </label>
+                    <span> (لطفاً نام ببرید)</span>
+                    <input asp-for="tblQuestionnaire.Question12" class="form-control" />
+                    <span asp-validation-for="tblQuestionnaire.Question12" class="text-danger"></span>                <div class="invalid-feedback">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom04">اتحادیه ها و تشکل های صنفی دیگر  </label>
+                    <span>(لطفاً نام ببرید)</span>
+                    <input asp-for="tblQuestionnaire.Question13" class="form-control" />
+                    <span asp-validation-for="tblQuestionnaire.Question13" class="text-danger"></span>                <div class="invalid-feedback">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom05">هرگونه تشکل یا سازمان و ارگانهای غیر دولتی </label>
+                    <span>(لطفاً نام ببرید)</span>
+                    <input asp-for="tblQuestionnaire.Question14" class="form-control" />
+                    <span asp-validation-for="tblQuestionnaire.Question14" class="text-danger"></span>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+
+                <div class="col-md-12 mb-3">
+                    <label for="validationCustom06">2- آیا اعضاء هیئت مدیره یا مدیر عامل آن شرکت محترم عضو هیأت مدیره  تشکل های دیگر صنفی، اقتصادی، اجتماعی و امثالهم میباشد؟</label>
+                    <span>(لطفاً  نام ببرید)</span>
+                    <input asp-for="tblQuestionnaire.Question2" class="form-control" />
+                    <span asp-validation-for="tblQuestionnaire.Question2" class="text-danger"></span>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+
+                <div class="col-md-12 mb-3">
+                    <label for="validationCustom07">3-  آیا اعضاء هیئت مدیره یا مدیر عامل آن شرکت محترم عضو هیأت مدیره  یا مدیر عامل و یا سهامدار عمده شرکت های دیگری نیز می باشند؟</label>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="yesno3" value="1">
+                            <span>بلی</span>
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="yesno3" value="2">
+                            <span>خیر</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="validationCustom08">لطفاً نام هر یک از شرکت ها و سمت فرد مربوطه و نوع فعالیت شرکت مزبور را مرقوم فرمائید.</label>
+                    <span>(لطفاً  نام ببرید)</span>
+                    <input asp-for="tblQuestionnaire.Question3Disp" class="form-control" />
+                    <span asp-validation-for="tblQuestionnaire.Question3Disp" class="text-danger"></span>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <label for="validationCustom09">4-  آیا آن شرکت  در خارج از ایران دارای دفتر یا نمایندگی و یا شعبه می باشد؟</label>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="yesno4" value="1">
+                            <span>بلی</span>
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="yesno4" value="2">
+                            <span>خیر</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="validationCustom10">لطفاً اسم  کشورها را مرقوم فرمائید:</label>
+                    <input asp-for="tblQuestionnaire.Question4Disp" class="form-control" />
+                    <span asp-validation-for="tblQuestionnaire.Question4Disp" class="text-danger"></span>
+                </div>
+            </div>
+            <hr />
+            <label for="address">
+                5- در صورت نیاز به برگزاری جلسات و یا پیگیری کارهای اتحادیه در سازمان ها، نهادها و مراجع قانونی تحت پوشش سه قوه مملکتی آیا اتحادیه می تواند از کمک آن عضو محترم بهره گیری نماید؟
+            </label>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <span>(لطفاً نام ببرید:)</span>
+                    <input asp-for="tblQuestionnaire.Question5" class="form-control" />
+                    <span asp-validation-for="tblQuestionnaire.Question5" class="text-danger"></span>                <div class="invalid-feedback">
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+
+                <div class="col-sm-2 col-sm-offset-1 pull-left  ">
+                    <a class="btn btn-warning btn-block" asp-page="./Index">بازگشت</a>
+                </div>
+                <div class="col-sm-2 col-sm-offset-1 pull-right">
+
+                    <input type="submit" value="ذخیره" class="btn btn-wd btn-primary btn-block" />
+                </div>
+
+            </div>
+            <br />
+        </form>
+    </div>
+</div>
+
+@section Footer{
+    <div class="wizard-footer"> 
+        <div class="clearfix"></div>
+    </div>
+}
+
+
+@section Scripts{
+
+
+    <!--   Core JS Files   -->
+    <script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+    <script src="/js/register.js" type="text/javascript"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--  Plugin for the Wizard -->
+    <script src=" /js/demo.js" type="text/javascript"></script>
+    <script src=" /js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+    <!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+    <script src=" /js/jquery.validate.min.js" type="text/javascript"></script>
+    <script>
+
+        $(document).ready(function () {
+            var first = $('#selectedTab').val();
+            var mid = $('#selectedTab').val();
+            if (first == "rquest-type") {
+                $('#wizard').bootstrapWizard('show', 1);
+            }
+            else {
+                $('#wizard').bootstrapWizard('show', 0);
+            }
+            switch (mid) {
+                case "type":
+                    $('#wizard').bootstrapWizard('show', 0);
+                    break;
+
+                case "facilities":
+                    $('#wizard').bootstrapWizard('show', 1);
+                    break;
+                case "payment":
+                    $('#wizard').bootstrapWizard('show', 2);
+                    break;
+                case "question":
+                    $('#wizard').bootstrapWizard('show', 3);
+                    break;
+                case "upload":
+                    $('#wizard').bootstrapWizard('show', 4);
+                    break;
+                case "description":
+                    $('#wizard').bootstrapWizard('show', 5);
+                    break;
+                case "Verify1":
+                    $('#wizard').bootstrapWizard('show', 6);
+                    break;
+
+            }
+
+        });
+
+    </script>
+} 

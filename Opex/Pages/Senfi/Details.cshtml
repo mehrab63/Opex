@@ -1,0 +1,496 @@
+﻿@page
+@model Opex.Pages.Senfi.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>اطلاعات ثبت شده</h2>
+    
+    <div class="tab-pane" id="type">
+        <div class="col-md-8">
+            <div class=" col-md-9 col-lg-9 ">
+                <table class="table table-user-information">
+                    <tbody>
+                        <tr>
+                            <td>وضعیت پرونده:</td>
+                            <td>
+                                @Html.DisplayFor(model => model.TblMembers.وضعیتپرونده)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>نوع پروانه:</td>
+                            <td>@Html.DisplayFor(model => model.TblMembers.نوعپروانه)</td>
+                        </tr>
+                        <tr>
+                            <td>شماره درخواست</td>
+                            <td>@Html.DisplayFor(model => model.TblMembers.شمارهدرخواست)</td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <td>تاریخ درخواست</td>
+                            <td> @Html.DisplayFor(model => model.TblMembers.تاریخدرخواست)</td>
+                        </tr>
+                        <tr>
+                            <td>نوع فعالیت</td>
+                            <td>@Html.DisplayFor(model => model.TblMembers.نوعفعالیت)</td>
+                        </tr>
+                        <tr>
+
+                            <td> نام</td>
+                            <td>@Html.DisplayFor(model => model.TblMembers.نام)</td>
+                        </tr>
+                        <tr>
+
+                            <td> نام خانوادگی</td>
+                            <td>@Html.DisplayFor(model => model.TblMembers.نامخانوادگی)</td>
+                        </tr>
+                        <tr>
+
+                            <td> نام پدر</td>
+                            <td>@Html.DisplayFor(model => model.TblMembers.نامپدر)</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><a href="mailto:info@support.com">info@support.com</a></td>
+                        </tr>
+                    <td>Phone Number</td>
+                    <td>
+                        123-4567-890(Landline)<br><br>555-4567-890(Mobile)
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><a asp-page="./Edit" asp-route-id="@Model.TblMembers.MemberId">ویرایش</a></td>
+                         
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <hr />
+
+        </div>
+        <div>
+            @if (TempData["message"] != null)
+            {
+                @TempData["message"]
+            }
+            <form method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                <!-- RADIO BUTTONS BLOCK -->
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="row">
+
+                        <h3 class="text-center">نوع پروانه ی درخواستی را مشخص کنید</h3>
+                        <div class="frb-group">
+                            <div class="frb frb-primary col-sm-4 col-sm-offset-2">
+                                <input type="radio" id="radio-button-1" name="toggler" value="2">
+                                <label for="radio-button-1">
+                                    <span class="frb-title">شخصیت حقوقی</span>
+                                    <span class="frb-description"></span>
+                                </label>
+                            </div>
+                            <div class="frb frb-primary col-sm-4 ">
+                                <input type="radio" checked id="radio-button-0" name="toggler" value="1">
+                                <label for="radio-button-0">
+                                    <span class="frb-title">شخصیت حقیقی</span>
+                                    <span class="frb-description"></span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="" id="">
+                            <div class="row">
+                                <div class="col-md-12 order-md-1">
+                                    <h4 class="mb-3">اطلاعات پایه</h4>
+                                    <div class="col-md-4 mb-2">
+                                        <label for="firstName">نام</label>
+                                        <input required type="text" name="نام" class="form-control " placeholder=" @Html.DisplayFor(model => model.TblMembers.نام)" />
+
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <label for="lastName">نام خانوادگی</label>
+                                        <input required type="text" class="form-control" name="نامخانوادگی"
+                                               id="lastName"
+                                               placeholder="@Html.DisplayFor(model => model.TblMembers.نامخانوادگی) "
+                                               value="">
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <label for="lastName">نام پدر</label>
+                                        <input required type="text" name="نامپدر" class="form-control"
+                                               id="lastName"
+                                               placeholder=" @Html.DisplayFor(model => model.TblMembers.نامپدر)"
+                                               value="">
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <label for="firstName"> شماره شناسنامه  </label>
+                                        <input required type="text" name="شمارهشناسنامه" readonly class="form-control"
+                                               id="firstName"
+                                               placeholder="@Html.DisplayFor(model => model.TblMembers.شمارهشناسنامه)"
+                                               value="">
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <label for="lastName">شماره ملی</label>
+                                        <input type="text" name="کدملی" class="form-control"
+                                               id="lastName"
+                                               readonly
+                                               placeholder="@Html.DisplayFor(model => model.TblMembers.کدملی) "
+                                               value=" ">
+                                        <div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-2">
+                                        <label for="lastName">شماره موبایل</label>
+                                        <input required type="text" name="تلفنهمراه" class="form-control"
+                                               id="lastName"
+                                               placeholder=" @Html.DisplayFor(model => model.TblMembers.تلفنهمراه)"
+                                               value="">
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label for="cc-expiration">آدرس پستی</label>
+                                        <input required type="text" name="آدرس" class="form-control" id="cc-cvv" placeholder="@Html.DisplayFor(model => model.TblMembers.آدرس)">
+                                    </div>
+
+                                    <div class=" col-md-4 mb-3">
+                                        <label for="email">
+                                            ایمیل <span class="text-muted">(اختیاری)</span>
+                                        </label>
+                                        <input type="email" name="ایمیل" class="form-control" id="email"
+                                               placeholder="@Html.DisplayFor(model => model.TblMembers.ایمیل)">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="cc-expiration">آدرس وب‌سایت:</label>
+                                        <input type="text" class="form-control" id="cc-cvv" placeholder=" @Html.DisplayFor(model => model.TblMembers.وبسایت)">
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                        <div class="toHide" id="blk-2" style="display:none">
+                            <div class="row">
+                                <h4> مشخصات شرکت :</h4>
+                                <div class="">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cc-expiration">نام شركت:</label>
+                                        <input type="text" name="نامشرکت" class="form-control"
+                                               id="cc-expiration"
+                                               placeholder="نام شرکت را کامل وارد کنید">
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">شماره ثبت: </label>
+                                        <input type="text" name="شمارهثبتشرکت" class="form-control" id="cc-cvv"
+                                               placeholder="">
+                                        <div class="invalid-feedback"> </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">سال تاسیس:</label>
+                                        <input type="text" name="سالتاسیس" class="form-control" id="cc-cvv"
+                                               placeholder="سال">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">نام تجاری:</label>
+                                        <input type="text" name="BusinessName" class="form-control" id="cc-cvv"
+                                               placeholder="">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration"> محل ثبت شركت:</label>
+                                        <input type="text" class="form-control" name="CompanyRegisterPlace" id="cc-cvv"
+                                               placeholder="">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">شماره کارت بازرگانی :</label>
+                                        <input type="text" name="شمارهکارتبازرگانی" class="form-control" id="cc-cvv"
+                                               placeholder="شماره">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">شماره شناسه ملی :</label>
+                                        <input type="text" name="شناسهملی" class="form-control" id="cc-cvv"
+                                               placeholder="شماره">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="">
+                                    <hr class="mb-4">
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">نام رئیس هیئت‌ مدیره:</label>
+                                        <input type="text" name="Name" class="form-control" id="cc-cvv"
+                                               placeholder="نام و نام خانوادگی">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">نام پدر:</label>
+                                        <input type="text" name="FatherName" class="form-control" id="cc-cvv"
+                                               placeholder="">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">شماره شناسنامه:</label>
+                                        <input type="text" name="ShShenasnameh" class="form-control" id="cc-cvv"
+                                               placeholder="">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">شماره ملی:</label>
+                                        <input type="text" name="ShMelli" class="form-control" id="cc-cvv"
+                                               placeholder="">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="cc-expiration">
+                                            شماره موبایل رئیس هیئت‌ مدیره:
+                                        </label>
+                                        <input type="text" name="mobile" class="form-control" id="cc-cvv"
+                                               placeholder="">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="cc-expiration">شماره تلفن دفتر مرکزی</label>
+                                        <input type="text" name="CenterOfficeTell" class="form-control" id="cc-cvv" placeholder="">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="cc-expiration">شماره فکس واحد تولیدی:</label>
+                                        <input type="text" name="ProductiveUnitTell" class="form-control" id="cc-cvv" placeholder="">
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label for="cc-expiration">آدرس پستی</label>
+                                        <input type="text" name="PostAddress" class="form-control" id="cc-cvv" placeholder="">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="cc-expiration">واحد تولیدی:</label>
+                                        <input type="text" name="CenterOfficeName" class="form-control" id="cc-cvv" placeholder="">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="cc-expiration">کد پستی</label>
+                                        <input type="text" name="PostCode" class="form-control" id="cc-cvv" placeholder="">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="cc-expiration">آدرس وب‌سایت:</label>
+                                        <input type="text" name="WebAddress" class="form-control" id="cc-cvv" placeholder="ایمیل">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="">
+                                    <hr class="mb-4">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="cc-expiration">نام و نام خانوادگی رابط: </label>
+                                        <input type="text" name="ConnectorName" class="form-control" id="cc-cvv"
+                                               placeholder="نام و نام خانوادگی">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="cc-expiration"> سمت:</label>
+                                        <input type="text" name="ConnectorRole" class="form-control" id="cc-cvv"
+                                               placeholder="">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="cc-expiration">شماره موبایل رابط:</label>
+                                        <input type="text" name="تلفنرابط" class="form-control" id="cc-cvv"
+                                               placeholder="">
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 mb-2">
+                                    <label for="cc-expiration">نوع مالکیت:</label>
+                                </div>
+                                <div class="btn-group">
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="testrad" value="0">
+                                        <span>خصوصی</span>
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="testrad" value="1">
+                                        <span>دولتی</span>
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="testrad" value="2">
+                                        <span>تعاونی</span>
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="testrad" value="3">
+                                        <span>تحت پوشش</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 mb-2">
+                                    <label for="cc-expiration">نوع فعالیت:</label>
+                                </div>
+                                <div class="btn-group">
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="testrad1" value="0">
+                                        <span>تولیدی</span>
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="testrad1" value="1">
+                                        <span>بازرگانی</span>
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="testrad1" value="2">
+                                        <span>حمل‌ونقل/ترانزیت</span>
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="testrad1" value="3">
+                                        <span>سواپ</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                        </br>
+                    </div>
+                    <hr />
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 col-sm-offset-5">
+                        <button type="submit" formaction="/Subscribe" class="btn btn-wd btn-primary btn-block">ذخیره</button>
+                    </div>
+                </div>
+            </form>
+        </div> 
+    </div>
+    
+
+    @section Scripts{
+        <!--   Core JS Files   -->
+        <script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+        <script src="/js/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+        <script src="/js/register.js" type="text/javascript"></script>
+        <script src="~/js/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+        <!--  Plugin for the Wizard -->
+        <script src=" /js/demo.js" type="text/javascript"></script>
+        <script src=" /js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+        <!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+        <script src=" /js/jquery.validate.min.js" type="text/javascript"></script>
+        <script>
+
+        $(document).ready(function () {
+            var first = $('#selectedTab').val();
+            var mid = $('#selectedTab').val();
+            if (first == "rquest-type") {
+            $('#wizard').bootstrapWizard('show', 1);
+            }
+            else {
+                $('#wizard').bootstrapWizard('show', 0);
+            }
+            switch (mid)
+            {
+                case "type":
+                    $('#wizard').bootstrapWizard('show', 0);
+                    break;
+
+                case "facilities":
+                    $('#wizard').bootstrapWizard('show', 1);
+                    break;
+                case "payment":
+                    $('#wizard').bootstrapWizard('show', 2);
+                    break;
+                case "question":
+                    $('#wizard').bootstrapWizard('show', 3);
+                    break;
+                case "upload":
+                    $('#wizard').bootstrapWizard('show', 4);
+                    break;
+                case "description":
+                    $('#wizard').bootstrapWizard('show', 5);
+                    break;
+                case "Verify1":
+                    $('#wizard').bootstrapWizard('show', 6);
+                    break;
+
+            }
+
+
+            $("#agree").attr('checked', false);
+
+            $(".morelink").click(function () {
+                $("#agreement").removeClass("hidden");
+                $("#agree").prop("checked", false);
+
+            })
+            $("#agree").change(function () {
+                if (this.checked) {
+                    $("#nextBtn").removeClass("hidden");
+                } else {
+                    $("#nextBtn").addClass("hidden");
+                }
+            });
+
+
+
+            $('#uploadInput').change(function (event) {
+                var fileName = event.target.value;
+
+                //if (fileName) {
+                //    $("#uploadBtn").removeAttr("disabled");
+                //} else {
+                //    $("#uploadBtn").attr("disabled", "disabled")
+                //}
+            });
+
+    $(function() {
+        var t = '@HttpContext.Request.Query["t"]';
+        if (t.length) {
+            $('a[href="#' + t + '"]').bootstrapWizard('show', 3);
+        }
+    });
+
+
+    var tabId = getUrlParameter("tab");
+    if (tabId) {
+    $("#" + tabId).addClass("active")
+    }
+
+    $("#nextTab").click(function () {
+    $("#demoTabs").tabs("show", this.hash);
+    window.location.hash = this.hash
+
+    });
+    $("#demoTabs").tabs("show", window.location.hash);
+    $('#rootwizard').bootstrapWizard('show', 3);
+
+});
+
+        </script>
+    }

@@ -1,0 +1,258 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html { 
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+} 
+
+.footer {
+    
+    margin-top: 20px;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.trash {
+    color: rgb(209, 91, 71);
+}
+
+.flag {
+    color: rgb(248, 148, 6);
+}
+
+.panel-body {
+    padding: 0px;
+}
+
+.panel-footer .pagination {
+    margin: 0;
+}
+
+.panel .glyphicon, .list-group-item .glyphicon {
+    margin-right: 5px;
+}
+
+.panel-body .radio, .checkbox {
+    display: inline-block;
+    margin: 0px;
+}
+
+.panel-body input[type=checkbox]:checked + label {
+    text-decoration: line-through;
+    color: rgb(128, 144, 160);
+}
+
+.list-group-item:hover, a.list-group-item:focus {
+    text-decoration: none;
+    background-color: rgb(245, 245, 245);
+}
+
+.list-group {
+    margin-bottom: 0px;
+}
+
+.list-group-item > .mybadge {
+    float: right;
+}
+
+.mybadge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.5;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 2px;
+    background-color: Window;
+    float: right
+}
+
+.ds-btn li {
+    direction: rtl;
+    list-style: none;
+    float: right;
+    padding: 10px;
+}
+
+    .ds-btn li a span {
+        direction: rtl;
+        padding-left: 15px;
+        padding-right: 5px;
+        width: 100%;
+        display: inline-block;
+        text-align: right;
+    }
+
+        .ds-btn li a span small {
+            direction: rtl;
+            width: 100%;
+            display: inline-block;
+            text-align: right;
+        }
+
+
+/*  bhoechie tab */
+div.bhoechie-tab-container {
+    z-index: 10;
+    min-height:240px;
+    background-color: #ffffff;
+    padding: 0 !important;
+    border-radius:4px 0 0 4px;
+    -moz-border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-top: 10px; 
+    -webkit-box-shadow: 0 0 12px rgba(0,0,0,.175);
+    box-shadow: 0 0 12px rgba(0,0,0,.175);
+    -moz-box-shadow: 0 0  12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+    opacity: 0.97;
+    filter: alpha(opacity=97);
+}
+
+div.bhoechie-tab-menu {
+    z-index:11;
+    margin-top:10px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+    div.bhoechie-tab-menu div.list-group {
+        margin-bottom: 0;
+    }
+
+        div.bhoechie-tab-menu div.list-group > a {
+            margin-bottom: 0;
+        }
+
+            div.bhoechie-tab-menu div.list-group > a .glyphicon,
+            div.bhoechie-tab-menu div.list-group > a .fa {
+                color: #337ab7;
+            }
+
+            div.bhoechie-tab-menu div.list-group > a:first-child {
+                border-top-right-radius: 5px;
+                border-top-left-radius: 0;
+                -moz-border-top-right-radius: 5px;
+            }
+
+            div.bhoechie-tab-menu div.list-group > a:last-child {
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 0;
+                -moz-border-bottom-right-radius: 0;
+            }
+
+            div.bhoechie-tab-menu div.list-group > a.active,
+            div.bhoechie-tab-menu div.list-group > a.active .glyphicon,
+            div.bhoechie-tab-menu div.list-group > a.active .fa {
+                background-color: #337ab7;
+                background-image: #337ab7;
+                color: #ffffff;
+            }
+
+                div.bhoechie-tab-menu div.list-group > a.active:after {
+                    content: '';
+                    position: absolute;
+                    right: 100%;
+                    top: 50%;
+                    margin-top: -13px;
+                    border-left: 0;
+                    border-bottom: 13px solid transparent;
+                    border-top: 13px solid transparent;
+                    border-right: 10px solid #337ab7;
+                }
+
+div.bhoechie-tab-content {
+    background-color: #ffffff;
+    /* border: 1px solid #eeeeee; */
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
+    display: none;
+}
+div.bhoechie-tab-content img {
+    width:85%;
+    height:100%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: thin solid #000000
+}
+.dl-horizont{
+    line-height:1.4;
+}
+.dl-horizont dt {
+    float: right;
+    width: 140px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.dl-horizont dd {
+    margin-bottom:10px;
+    text-align:right;
+    margin-right:140px;
+    margin-left: 60px
+}
+
+

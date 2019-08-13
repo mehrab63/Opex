@@ -1,0 +1,66 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "خطا";
+}
+<input type="hidden" id="selectedTab" value="payment" />
+<div class="tab-pane" id="payment">
+    <div class="col-sm-10 col-sm-offset-1 text-left" style="margin-top:85px;direction:ltr">
+        <h1 class="text-danger">Error.</h1>
+        <h2 class="text-danger">An error occurred while processing your request.</h2>
+
+        @if (Model.ShowRequestId)
+        {
+            <p><strong>Request ID:</strong> <code>@Model.RequestId</code></p>
+        }
+        @if (Model.ShowMessage)
+        {
+            <div class=" alert alert-danger">@Model.Error</div>
+        }
+        <h3>Development Mode</h3>
+        <p>
+            Swapping to the <strong>Development</strong> environment displays detailed information about the error that occurred.
+        </p>
+        <p class="text-justify" style="direction:ltr">
+            <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
+            It can result in displaying sensitive information from exceptions to end users.
+            For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
+            and restarting the app.
+        </p>
+        <div class="alert"></div>
+        @section Footer{
+             
+            <div class="clearfix"></div>
+        }
+    </div>
+</div>
+
+
+@section Scripts{
+    <!--   Core JS Files   -->
+    <script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+    <script src="/js/register.js" type="text/javascript"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--  Plugin for the Wizard -->
+    <script src=" /js/demo.js" type="text/javascript"></script>
+    <script src=" /js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+    <!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+    <script src=" /js/jquery.validate.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            if (window.location.pathname == "/Error") {
+                $("#navigation").addClass("hidden");
+
+            }
+
+        });
+    </script>
+}

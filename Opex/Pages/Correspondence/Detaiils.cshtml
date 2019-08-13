@@ -1,0 +1,314 @@
+﻿@page
+@model Opex.Pages.Correspondence.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TblLetters</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.CreateUser)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.CreateUser)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.CreateDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.CreateDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.LetterNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.LetterNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.SystemLetterNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.SystemLetterNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.LetterDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.LetterDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.Arjaiat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.Arjaiat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.DocumentType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.DocumentType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.SendType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.SendType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.RelateLetterId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.RelateLetterId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.supplier)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.supplier)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.Sender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.Sender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.Reciver)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.Reciver)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.Subjects)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.Subjects)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.SubjectId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.SubjectId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.Peyvast)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.Peyvast)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.MemberIds)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.MemberIds)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.BinaryIds)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.BinaryIds)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.ReportId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.ReportId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.Copy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.Copy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.LetterType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.LetterType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.RelateLetterType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.RelateLetterType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.SignDateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.SignDateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.SignUserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.SignUserId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.WhoSouldSign)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.WhoSouldSign)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.WhoSigned)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.WhoSigned)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.OldLetterId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.OldLetterId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.SignType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.SignType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.Params)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.Params)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.isEdit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.isEdit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.IsVisit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.IsVisit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.SenderName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.SenderName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.ReciverName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.ReciverName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.SubjectName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.SubjectName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.LetterTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.LetterTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.CreateUserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.CreateUserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.Comment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.Comment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.TempFID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.TempFID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.TempFieldValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.TempFieldValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.LetterContent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.LetterContent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.FName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.FName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.LName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.LName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.BayganiNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.BayganiNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.IsDeactive)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.IsDeactive)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.DeactiveComment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.DeactiveComment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.Result)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.Result)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.LinksLetterIds)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.LinksLetterIds)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.ArchiveId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.ArchiveId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.OtherEce)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.OtherEce)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TblLetters.EceToCopy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TblLetters.EceToCopy)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.TblLetters.LetterId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

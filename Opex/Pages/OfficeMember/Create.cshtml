@@ -1,0 +1,238 @@
+﻿@page
+@model Opex.Pages.OfficeMember.CreateModel
+<input type="hidden" id="selectedTab" value="payment" />
+<div class="tab-content">
+    <div class="tab-pane" id="payment">
+        <div class="col-sm-10 col-sm-offset-1 " style="margin-top:25px">
+            <div class="row">
+                <h4 class="mb-3 text-center">ارزیابی توان مالی و بازرگانی</h4>
+                <div class="alert-success">
+                    @if (TempData["Success"] != null)
+                    {
+                        @TempData["Success"]
+                    }
+                </div>
+                <div class="alert-danger">
+                    @if (TempData["Error"] != null)
+                    {
+                        @TempData["Error"]
+                    }
+                </div>
+                <label for="address">1- مشخصات مدیریتی و نیروی انسانی</label>
+                <span>(مشخصات اعضاء هیئت‌مدیره و مدیران شرکت)</span>
+                <form method="post" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="tblOfficeMember.Name" />
+                    <div class="row ">
+                        <div class="col-md-4 mb-3 ">
+                            <label for="validationCustom04 ">  سمت: </label>
+                            <select asp-for="tblOfficeMember.Role" class="form-control">
+                                <option selected></option>
+                                <option value="رئیس هیات مدیره">رئیس هیات مدیره</option>
+                                <option value="عضو هیات مدیره">عضو هیات مدیره</option>
+                            </select>
+                            <div class="invalid-feedback">  @Html.ValidationMessageFor(Model => Model.tblOfficeMember.Role, "", new { @class = "text-danger" })</div>
+
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom04">نام و نام خانوادگی</label>
+                            <input type="text" asp-for="tblOfficeMember.Lname" class="form-control" />
+                            <div class="invalid-feedback">
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label>نام پدر:</label>
+                            <input asp-for="tblOfficeMember.FatherName" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.FatherName" class="text-danger"></span>
+
+                            <div class="invalid-feedback"> </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>شماره شناسنامه:</label>
+                            <input autocomplete="off" onkeypress="javascript:return isNumber(event)" style="direction:ltr" maxlength="10" asp-for="tblOfficeMember.ShShenasnameh" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.ShShenasnameh" class="text-danger"></span>
+
+                            <div class="invalid-feedback">
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">کدملی</label>
+                            <input autocomplete="off" onkeypress="javascript:return isNumber(event)" style="direction:ltr" maxlength="10" type="text" asp-for="tblOfficeMember.ShMelli" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.ShMelli" class = "text-danger"></span>
+                            <div class="invalid-feedback"> 
+                                @Html.ValidationMessageFor(Model => Model.tblOfficeMember.ShMelli, "", new { @class = "text-danger" })
+                                @if (ViewData["Error"] != null)
+                                {<span class="alert-danger"> @ViewData["Error"] </span>}
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">تحصیلات</label>
+                            <input type="text" asp-for="tblOfficeMember.DReshte" class="form-control" />
+                            <div class="invalid-feedback">
+                                درجه
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">.</label>
+                            <input type="text" asp-for="tblOfficeMember.Reshteh" class="form-control" />
+                            رشته
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">تاریخ اخذ مدرک</label>
+                            <input onkeypress="javascript:return isNumber(event)" style="direction:ltr" maxlength="10" type="text" asp-for="tblOfficeMember.LicenceDate" class="form-control" />
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>  شماره موبایل: </label>
+                            <input onkeypress="javascript:return isNumber(event)" style="direction:ltr" maxlength="11" asp-for="tblOfficeMember.mobile" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.mobile" class="text-danger"></span>
+
+                        </div> 
+                        <div class="col-md-3 mb-3">
+                            <label>شماره تلفن دفتر مرکزی</label>
+                            <input style="direction:ltr" asp-for="tblOfficeMember.CenterOfficeTell" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.CenterOfficeTell" class="text-danger"></span>
+
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>شماره فکس واحد تولیدی:</label>
+                            <input style="direction:ltr" asp-for="tblOfficeMember.ProductiveUnitTell" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.ProductiveUnitTell" class="text-danger"></span>
+
+                        </div>
+                        <div class="col-md-7 mb-3">
+                            <label for="validationCustom04">سابقه کار مرتبط با فعالیت‌های شرکت</label>
+                            <input type="text" asp-for="tblOfficeMember.WorkeFlow" class="form-control" />
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label>آدرس پستی</label>
+                            <input asp-for="tblOfficeMember.PostAddress" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.PostAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <div class="col-md-12 mb-3">
+                        <div class="col-md-4 mb-3">
+                            <label>نام واحد تولیدی:</label>
+                            <input asp-for="tblOfficeMember.CenterOfficeName" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.CenterOfficeName" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label>کد پستی</label>
+                            <input onkeypress="javascript:return isNumber(event)" style="direction:ltr" maxlength="10" asp-for="tblOfficeMember.PostCode" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.PostCode" class="text-danger"></span>
+
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label>آدرس وب‌ سایت:</label>
+                            <input style="direction:ltr" asp-for="tblOfficeMember.WebAddress" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.WebAddress" class="text-danger"></span>
+
+
+                        </div>
+                        <hr class="mb-4">
+                        <div class="col-md-4 mb-3">
+                            <label>نام و نام خانوادگی رابط: </label>
+                            <input asp-for="tblOfficeMember.ConnectorName" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.ConnectorName" class="text-danger"></span>
+                            <div class="invalid-feedback">
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label>سمت رابط: </label>
+                            <input asp-for="tblOfficeMember.ConnectorRole" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.ConnectorRole" class="text-danger"></span>
+                            <div class="invalid-feedback">
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label>شماره موبایل رابط:</label>
+                            <input onkeypress="javascript:return isNumber(event)" style="direction:ltr" maxlength="10" asp-for="tblOfficeMember.ConnectorPhone" class="form-control" />
+                            <span asp-validation-for="tblOfficeMember.ConnectorPhone" class="text-danger"></span>
+                            <div class="invalid-feedback">
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <br />
+                            <input type="submit" asp-page-handler="OfficeMem" value="ذخیره" class="btn  btn-primary btn-sm pull-right" />&nbsp;| &nbsp;<a asp-page="../FinancialBalance/Index">بازگشت</a>
+
+                        </div>
+                    </div>
+                </form>
+
+                <div class="row">
+                    <hr class="mb-4">
+                    <div class="col-md-12 mb-3">  
+                        
+                    </div>
+
+                    <hr />
+                </div>
+                <hr />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Footer{
+    <div class="wizard-footer"> 
+        <div class="clearfix"></div>
+    </div>
+
+}
+@section Scripts{
+    <!--   Core JS Files   -->
+    <script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+    <script src="/js/register.js" type="text/javascript"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--  Plugin for the Wizard -->
+    <script src=" /js/demo.js" type="text/javascript"></script>
+    <script src=" /js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+    <!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+    <script src=" /js/jquery.validate.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            var first = $('#selectedTab').val();
+            var mid = $('#selectedTab').val();
+            if (first == "rquest-type") {
+                $('#wizard').bootstrapWizard('show', 1);
+            }
+            else {
+                $('#wizard').bootstrapWizard('show', 0);
+            }
+            switch (mid) {
+                case "type":
+                    $('#wizard').bootstrapWizard('show', 0);
+                    break;
+
+                case "facilities":
+                    $('#wizard').bootstrapWizard('show', 1);
+                    break;
+                case "payment":
+                    $('#wizard').bootstrapWizard('show', 2);
+                    break;
+                case "question":
+                    $('#wizard').bootstrapWizard('show', 3);
+                    break;
+                case "upload":
+                    $('#wizard').bootstrapWizard('show', 4);
+                    break;
+                case "description":
+                    $('#wizard').bootstrapWizard('show', 5);
+                    break;
+                case "Verify1":
+                    $('#wizard').bootstrapWizard('show', 6);
+                    break;
+
+            }
+
+        });
+    </script>
+}

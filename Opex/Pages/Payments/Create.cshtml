@@ -1,0 +1,160 @@
+﻿@page
+@model Opex.Pages.Payments.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>TblPayments</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TblPayments.CreateDate" class="control-label"></label>
+                <input asp-for="TblPayments.CreateDate" class="form-control" />
+                <span asp-validation-for="TblPayments.CreateDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.CreateUser" class="control-label"></label>
+                <input asp-for="TblPayments.CreateUser" class="form-control" />
+                <span asp-validation-for="TblPayments.CreateUser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.EtCode" class="control-label"></label>
+                <input asp-for="TblPayments.EtCode" class="form-control" />
+                <span asp-validation-for="TblPayments.EtCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.SystemCode" class="control-label"></label>
+                <input asp-for="TblPayments.SystemCode" class="form-control" />
+                <span asp-validation-for="TblPayments.SystemCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.PaymentType" class="control-label"></label>
+                <input asp-for="TblPayments.PaymentType" class="form-control" />
+                <span asp-validation-for="TblPayments.PaymentType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.PaymentAbout" class="control-label"></label>
+                <input asp-for="TblPayments.PaymentAbout" class="form-control" />
+                <span asp-validation-for="TblPayments.PaymentAbout" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.PaymentPrice" class="control-label"></label>
+                <input asp-for="TblPayments.PaymentPrice" class="form-control" />
+                <span asp-validation-for="TblPayments.PaymentPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.FromYear" class="control-label"></label>
+                <input asp-for="TblPayments.FromYear" class="form-control" />
+                <span asp-validation-for="TblPayments.FromYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.ToYear" class="control-label"></label>
+                <input asp-for="TblPayments.ToYear" class="form-control" />
+                <span asp-validation-for="TblPayments.ToYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.Discount" class="control-label"></label>
+                <input asp-for="TblPayments.Discount" class="form-control" />
+                <span asp-validation-for="TblPayments.Discount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.TotalPrice" class="control-label"></label>
+                <input asp-for="TblPayments.TotalPrice" class="form-control" />
+                <span asp-validation-for="TblPayments.TotalPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.Mandeh" class="control-label"></label>
+                <input asp-for="TblPayments.Mandeh" class="form-control" />
+                <span asp-validation-for="TblPayments.Mandeh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.FishNum" class="control-label"></label>
+                <input asp-for="TblPayments.FishNum" class="form-control" />
+                <span asp-validation-for="TblPayments.FishNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.FishDate" class="control-label"></label>
+                <input asp-for="TblPayments.FishDate" class="form-control" />
+                <span asp-validation-for="TblPayments.FishDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.FishBank" class="control-label"></label>
+                <input asp-for="TblPayments.FishBank" class="form-control" />
+                <span asp-validation-for="TblPayments.FishBank" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.FishComment" class="control-label"></label>
+                <input asp-for="TblPayments.FishComment" class="form-control" />
+                <span asp-validation-for="TblPayments.FishComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.CheckNum" class="control-label"></label>
+                <input asp-for="TblPayments.CheckNum" class="form-control" />
+                <span asp-validation-for="TblPayments.CheckNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.CheckDate" class="control-label"></label>
+                <input asp-for="TblPayments.CheckDate" class="form-control" />
+                <span asp-validation-for="TblPayments.CheckDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.CheckShobe" class="control-label"></label>
+                <input asp-for="TblPayments.CheckShobe" class="form-control" />
+                <span asp-validation-for="TblPayments.CheckShobe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.CheckBank" class="control-label"></label>
+                <input asp-for="TblPayments.CheckBank" class="form-control" />
+                <span asp-validation-for="TblPayments.CheckBank" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.CheckComment" class="control-label"></label>
+                <input asp-for="TblPayments.CheckComment" class="form-control" />
+                <span asp-validation-for="TblPayments.CheckComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.OldPaymentId" class="control-label"></label>
+                <input asp-for="TblPayments.OldPaymentId" class="form-control" />
+                <span asp-validation-for="TblPayments.OldPaymentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.IsEdit" class="control-label"></label>
+                <input asp-for="TblPayments.IsEdit" class="form-control" />
+                <span asp-validation-for="TblPayments.IsEdit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.CheckStateId" class="control-label"></label>
+                <input asp-for="TblPayments.CheckStateId" class="form-control" />
+                <span asp-validation-for="TblPayments.CheckStateId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.DateSabt" class="control-label"></label>
+                <input asp-for="TblPayments.DateSabt" class="form-control" />
+                <span asp-validation-for="TblPayments.DateSabt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblPayments.BinaryId" class="control-label"></label>
+                <input asp-for="TblPayments.BinaryId" class="form-control" />
+                <span asp-validation-for="TblPayments.BinaryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

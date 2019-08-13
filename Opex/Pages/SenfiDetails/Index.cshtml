@@ -1,0 +1,183 @@
+﻿@page
+@model Opex.Pages.SenfiDetails.IndexModel
+
+@{
+    ViewData["Title"] = "اطلاعات صنفی";
+} 
+<input type="hidden" id="selectedTab" value="facilities" />
+<div class="tab-pane" id="facilities">
+    <div class="col-md-12" style="margin-top:85px">
+        <h2>اطلاعات صنفی</h2>
+        @if (Model.ShowMessage)
+        {
+            <div class="alert alert-success" role="alert">
+                @Model.Message
+            </div>
+        }
+        @if (@TempData["Error"] != null)
+        {
+            <div class="alert alert-primary">
+                @TempData["Error"]
+            </div>
+        }
+
+        <table class="table table-user-information">
+            <tbody>
+                <tr>
+
+                    <td> آدرس</td>
+                    <td>@Html.DisplayFor(model => model.TblMembers.آدرس)</td>
+                </tr>
+                <tr>
+
+                    <td> کمیسیون اصلی</td>
+                    <td>@Html.DisplayFor(model => model.TblMembers.رسته)</td>
+                </tr>
+                <tr>
+
+                    <td> کمیسیون فرعی</td>
+                    <td>@Html.DisplayFor(model => model.TblMembers.کمیسیونفرعی)</td>
+                </tr>
+                <tr>
+                    <td>ایمیل</td>
+                    <td><a href="mailto:info@support.com">@Html.DisplayFor(Model => Model.TblMembers.ایمیل)</a></td>
+                </tr>
+
+            <td>شماره تلفن:</td>
+            <td>
+                تلفن دفتر: @Html.DisplayFor(Model => Model.TblMembers.تلفنمغازه)<br><br>تلفن همراه: @Html.DisplayFor(Model => Model.TblMembers.تلفنهمراه)
+            </td>
+            <tbody>
+                <tr>
+                    <td><a asp-page="./Edit" asp-route-id="@Model.TblMembers.MemberId">ویرایش</a></td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div> 
+</div>
+
+
+@section Footer{
+
+    <div class="pull-right">
+        <a class='btn btn-next btn-fill btn-danger btn-wd' asp-page="/FinancialBalance/Index">مرحله بعدی</a>
+
+    </div>
+    <div class="pull-left">
+        <a asp-page="/Senfi/Index" class='btn btn-previous btn-default btn-wd' name='Previous'>مرحله قبلی</a>
+    </div>
+    <div class="clearfix"></div>
+}
+
+
+@section Scripts{
+    <!--   Core JS Files   -->
+    <script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+    <script src="/js/register.js" type="text/javascript"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--  Plugin for the Wizard -->
+    <script src=" /js/demo.js" type="text/javascript"></script>
+    <script src=" /js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+    <!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+    <script src=" /js/jquery.validate.min.js" type="text/javascript"></script>
+    <script>
+
+        $(document).ready(function () {
+            var first = $('#selectedTab').val();
+            var mid = $('#selectedTab').val();
+            if (first == "rquest-type") {
+            $('#wizard').bootstrapWizard('show', 1);
+            }
+            else {
+                $('#wizard').bootstrapWizard('show', 0);
+            }
+            switch (mid)
+            {
+                case "type":
+                    $('#wizard').bootstrapWizard('show', 0);
+                    break;
+
+                case "facilities":
+                    $('#wizard').bootstrapWizard('show', 1);
+                    break;
+                case "payment":
+                    $('#wizard').bootstrapWizard('show', 2);
+                    break;
+                case "question":
+                    $('#wizard').bootstrapWizard('show', 3);
+                    break;
+                case "upload":
+                    $('#wizard').bootstrapWizard('show', 4);
+                    break;
+                case "description":
+                    $('#wizard').bootstrapWizard('show', 5);
+                    break;
+                case "Verify1":
+                    $('#wizard').bootstrapWizard('show', 6);
+                    break;
+
+            }
+
+
+            $("#agree").attr('checked', false);
+
+            $(".morelink").click(function () {
+                $("#agreement").removeClass("hidden");
+                $("#agree").prop("checked", false);
+
+            })
+            $("#agree").change(function () {
+                if (this.checked) {
+                    $("#nextBtn").removeClass("hidden");
+                } else {
+                    $("#nextBtn").addClass("hidden");
+                }
+            });
+
+
+
+            $('#uploadInput').change(function (event) {
+                var fileName = event.target.value;
+
+                //if (fileName) {
+                //    $("#uploadBtn").removeAttr("disabled");
+                //} else {
+                //    $("#uploadBtn").attr("disabled", "disabled")
+                //}
+            });
+
+    $(function() {
+        var t = '@HttpContext.Request.Query["t"]';
+        if (t.length) {
+            $('a[href="#' + t + '"]').bootstrapWizard('show', 3);
+        }
+    });
+
+
+    var tabId = getUrlParameter("tab");
+    if (tabId) {
+    $("#" + tabId).addClass("active")
+    }
+
+    $("#nextTab").click(function () {
+    $("#demoTabs").tabs("show", this.hash);
+    window.location.hash = this.hash
+
+    });
+    $("#demoTabs").tabs("show", window.location.hash);
+    $('#rootwizard').bootstrapWizard('show', 3);
+
+});
+
+    </script>
+}

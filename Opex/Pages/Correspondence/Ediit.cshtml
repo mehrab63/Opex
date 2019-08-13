@@ -1,0 +1,276 @@
+﻿@page
+@model Opex.Pages.Correspondence.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>TblLetters</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TblLetters.LetterId" />
+            <div class="form-group">
+                <label asp-for="TblLetters.CreateUser" class="control-label"></label>
+                <input asp-for="TblLetters.CreateUser" class="form-control" />
+                <span asp-validation-for="TblLetters.CreateUser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.CreateDate" class="control-label"></label>
+                <input asp-for="TblLetters.CreateDate" class="form-control" />
+                <span asp-validation-for="TblLetters.CreateDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.LetterNum" class="control-label"></label>
+                <input asp-for="TblLetters.LetterNum" class="form-control" />
+                <span asp-validation-for="TblLetters.LetterNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.SystemLetterNum" class="control-label"></label>
+                <input asp-for="TblLetters.SystemLetterNum" class="form-control" />
+                <span asp-validation-for="TblLetters.SystemLetterNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.LetterDate" class="control-label"></label>
+                <input asp-for="TblLetters.LetterDate" class="form-control" />
+                <span asp-validation-for="TblLetters.LetterDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.Arjaiat" class="control-label"></label>
+                <input asp-for="TblLetters.Arjaiat" class="form-control" />
+                <span asp-validation-for="TblLetters.Arjaiat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.DocumentType" class="control-label"></label>
+                <input asp-for="TblLetters.DocumentType" class="form-control" />
+                <span asp-validation-for="TblLetters.DocumentType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.SendType" class="control-label"></label>
+                <input asp-for="TblLetters.SendType" class="form-control" />
+                <span asp-validation-for="TblLetters.SendType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.RelateLetterId" class="control-label"></label>
+                <input asp-for="TblLetters.RelateLetterId" class="form-control" />
+                <span asp-validation-for="TblLetters.RelateLetterId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.supplier" class="control-label"></label>
+                <input asp-for="TblLetters.supplier" class="form-control" />
+                <span asp-validation-for="TblLetters.supplier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.Sender" class="control-label"></label>
+                <input asp-for="TblLetters.Sender" class="form-control" />
+                <span asp-validation-for="TblLetters.Sender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.Reciver" class="control-label"></label>
+                <input asp-for="TblLetters.Reciver" class="form-control" />
+                <span asp-validation-for="TblLetters.Reciver" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.Subjects" class="control-label"></label>
+                <input asp-for="TblLetters.Subjects" class="form-control" />
+                <span asp-validation-for="TblLetters.Subjects" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.SubjectId" class="control-label"></label>
+                <input asp-for="TblLetters.SubjectId" class="form-control" />
+                <span asp-validation-for="TblLetters.SubjectId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.Peyvast" class="control-label"></label>
+                <input asp-for="TblLetters.Peyvast" class="form-control" />
+                <span asp-validation-for="TblLetters.Peyvast" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.MemberIds" class="control-label"></label>
+                <input asp-for="TblLetters.MemberIds" class="form-control" />
+                <span asp-validation-for="TblLetters.MemberIds" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.BinaryIds" class="control-label"></label>
+                <input asp-for="TblLetters.BinaryIds" class="form-control" />
+                <span asp-validation-for="TblLetters.BinaryIds" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.ReportId" class="control-label"></label>
+                <input asp-for="TblLetters.ReportId" class="form-control" />
+                <span asp-validation-for="TblLetters.ReportId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.Copy" class="control-label"></label>
+                <input asp-for="TblLetters.Copy" class="form-control" />
+                <span asp-validation-for="TblLetters.Copy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.LetterType" class="control-label"></label>
+                <input asp-for="TblLetters.LetterType" class="form-control" />
+                <span asp-validation-for="TblLetters.LetterType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.RelateLetterType" class="control-label"></label>
+                <input asp-for="TblLetters.RelateLetterType" class="form-control" />
+                <span asp-validation-for="TblLetters.RelateLetterType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.SignDateTime" class="control-label"></label>
+                <input asp-for="TblLetters.SignDateTime" class="form-control" />
+                <span asp-validation-for="TblLetters.SignDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.SignUserId" class="control-label"></label>
+                <input asp-for="TblLetters.SignUserId" class="form-control" />
+                <span asp-validation-for="TblLetters.SignUserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.WhoSouldSign" class="control-label"></label>
+                <input asp-for="TblLetters.WhoSouldSign" class="form-control" />
+                <span asp-validation-for="TblLetters.WhoSouldSign" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.WhoSigned" class="control-label"></label>
+                <input asp-for="TblLetters.WhoSigned" class="form-control" />
+                <span asp-validation-for="TblLetters.WhoSigned" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.OldLetterId" class="control-label"></label>
+                <input asp-for="TblLetters.OldLetterId" class="form-control" />
+                <span asp-validation-for="TblLetters.OldLetterId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.SignType" class="control-label"></label>
+                <input asp-for="TblLetters.SignType" class="form-control" />
+                <span asp-validation-for="TblLetters.SignType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.Params" class="control-label"></label>
+                <input asp-for="TblLetters.Params" class="form-control" />
+                <span asp-validation-for="TblLetters.Params" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.isEdit" class="control-label"></label>
+                <input asp-for="TblLetters.isEdit" class="form-control" />
+                <span asp-validation-for="TblLetters.isEdit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.IsVisit" class="control-label"></label>
+                <input asp-for="TblLetters.IsVisit" class="form-control" />
+                <span asp-validation-for="TblLetters.IsVisit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.SenderName" class="control-label"></label>
+                <input asp-for="TblLetters.SenderName" class="form-control" />
+                <span asp-validation-for="TblLetters.SenderName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.ReciverName" class="control-label"></label>
+                <input asp-for="TblLetters.ReciverName" class="form-control" />
+                <span asp-validation-for="TblLetters.ReciverName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.SubjectName" class="control-label"></label>
+                <input asp-for="TblLetters.SubjectName" class="form-control" />
+                <span asp-validation-for="TblLetters.SubjectName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.LetterTime" class="control-label"></label>
+                <input asp-for="TblLetters.LetterTime" class="form-control" />
+                <span asp-validation-for="TblLetters.LetterTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.CreateUserName" class="control-label"></label>
+                <input asp-for="TblLetters.CreateUserName" class="form-control" />
+                <span asp-validation-for="TblLetters.CreateUserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.Comment" class="control-label"></label>
+                <input asp-for="TblLetters.Comment" class="form-control" />
+                <span asp-validation-for="TblLetters.Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.TempFID" class="control-label"></label>
+                <input asp-for="TblLetters.TempFID" class="form-control" />
+                <span asp-validation-for="TblLetters.TempFID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.TempFieldValue" class="control-label"></label>
+                <input asp-for="TblLetters.TempFieldValue" class="form-control" />
+                <span asp-validation-for="TblLetters.TempFieldValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.LetterContent" class="control-label"></label>
+                <input asp-for="TblLetters.LetterContent" class="form-control" />
+                <span asp-validation-for="TblLetters.LetterContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.FName" class="control-label"></label>
+                <input asp-for="TblLetters.FName" class="form-control" />
+                <span asp-validation-for="TblLetters.FName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.LName" class="control-label"></label>
+                <input asp-for="TblLetters.LName" class="form-control" />
+                <span asp-validation-for="TblLetters.LName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.BayganiNumber" class="control-label"></label>
+                <input asp-for="TblLetters.BayganiNumber" class="form-control" />
+                <span asp-validation-for="TblLetters.BayganiNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.IsDeactive" class="control-label"></label>
+                <input asp-for="TblLetters.IsDeactive" class="form-control" />
+                <span asp-validation-for="TblLetters.IsDeactive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.DeactiveComment" class="control-label"></label>
+                <input asp-for="TblLetters.DeactiveComment" class="form-control" />
+                <span asp-validation-for="TblLetters.DeactiveComment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.Result" class="control-label"></label>
+                <input asp-for="TblLetters.Result" class="form-control" />
+                <span asp-validation-for="TblLetters.Result" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.LinksLetterIds" class="control-label"></label>
+                <input asp-for="TblLetters.LinksLetterIds" class="form-control" />
+                <span asp-validation-for="TblLetters.LinksLetterIds" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.ArchiveId" class="control-label"></label>
+                <input asp-for="TblLetters.ArchiveId" class="form-control" />
+                <span asp-validation-for="TblLetters.ArchiveId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.OtherEce" class="control-label"></label>
+                <input asp-for="TblLetters.OtherEce" class="form-control" />
+                <span asp-validation-for="TblLetters.OtherEce" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TblLetters.EceToCopy" class="control-label"></label>
+                <input asp-for="TblLetters.EceToCopy" class="form-control" />
+                <span asp-validation-for="TblLetters.EceToCopy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
