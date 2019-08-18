@@ -11,6 +11,8 @@ a.navbar-brand {
 -------------------------------------------------- */
 html {
     font-size: 14px;
+    position: relative;
+    min-height: 99%;
 }
 
 @media (min-width: 768px) {
@@ -36,33 +38,20 @@ button.accept-policy {
     line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html { 
-    min-height: 100%;
-}
-
 body {
     /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    margin-bottom: 80px !important;
 } 
 
-.footer {
-    
-    margin-top: 20px;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
+.footer { 
+    bottom:0;
+    font-size:12px;
+    margin-top:20px;
+    width: 100%; 
     /* Set the fixed height of the footer here */
     height: 60px;
-    line-height: 60px; /* Vertically center the text there */
-
-    position: relative;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    text-align: center;
+    line-height: 60px; 
+    position: absolute; 
 }
 
 .trash {

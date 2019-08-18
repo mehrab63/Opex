@@ -1,7 +1,7 @@
 ﻿@page
 @model Opex.Pages.Correspondence.IndexModel
 @using Opex.Helpers
-@inject IAppVersionService AppVersionService 
+@inject IAppVersionService AppVersionService
 @{
     ViewData["Title"] = "مکاتبات";
     Layout = null;
@@ -84,325 +84,321 @@
         </nav>
     </header>
     <div class="container">
-        <div class="col-sm-12 " style="min-height:100%">
-            <p>ثبت نامه و پیگیری مکاتبات در سیستم اتوماسیون اداری اتحادیه</p>
-            <div class="tab-content">
-                <div class="row">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bhoechie-tab-menu" style="float:right">
-                        <div class="list-group">
-                            <a id="save" href="#" class="list-group-item active text-center">
-                                <h4 class="glyphicon glyphicon-floppy-save"></h4><br />ثبت مکاتبات
-                            </a>
-                            <a id="find" href="#" class="list-group-item text-center">
-                                <h4 class="glyphicon glyphicon-search"></h4><br />پیگیری مکاتبات
-                            </a>
-                            <a id="guid" href="#" class="list-group-item text-center">
-                                <h4 class="glyphicon glyphicon-list"></h4><br />راهنما
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 bhoechie-tab-container" style="float:right">
-                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 bhoechie-tab">
-                            <!-- flight section -->
-                            <div id="savecontent" class="bhoechie-tab-content active">
-                                <center>
-                                    <input type="hidden" id="selectedTab" value="@ViewData["OnTab"]" />
-                                    @if (TempData["nofile"] != null)
-                                    {
-                                        <div class=" alert alert-danger"> @TempData["nofile"]</div>
-                                    }
-                                    @if (TempData["Success"] != null)
-                                    {
-                                        <div class="col-md-offset-2 col-md-8 " style="margin-bottom:6%">
-
-                                            <div class="col-sm-12">
-                                                <div class="col-xs-12 col-sm-8 text-right">
-                                                    <h2>@Model.FullName</h2>
-                                                    <p class="alert-info"><strong>کد رهگیری شما:</strong> <strong>@TempData["Success"]</strong> </p>
-                                                    <p>
-                                                        <strong>تاریخ ثبت:</strong>
-                                                        <span class="tags"><strong> @TempData["Date"]</strong></span>
-                                                    </p>
-                                                    <p><strong> توضیحات: </strong> نامه شما در سیستم ثبت شد، جهت پیگیری پاسخ نامه، از قسمت پیگیری مکاتبات استفاده نمایید. </p>
-
-                                                </div>
-                                                <div class="col-xs-12 col-sm-4 text-center">
-                                                    <figure>
-                                                        <img src="~/img/logo.png" alt="" class="img-circle img-responsive">
-                                                        <figcaption class="ratings">
-                                                            <p>
-                                                                اتحادیه صادرکنندگان فرآورده های نفت، گاز و پتروشیمی ایران
-                                                            </p>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <p class="text-center"><span>Iranian Oil ,Gas and Petrochemical Products Exporters' Union</span></p>
-
-                                        </div>
-                                        <div class="  col-md-8  col-md-offset-2" style="margin-bottom:4%"><span class="label label-danger">توجه !</span>&nbsp;<span class="label label-primary">   کد رهگیری را جهت اطلاع از آخرین اقدامات انجام شده روی نامه، نگهداری کنید.</span> </div>
-
-                                    }
-                                    @if (!Model.Registered)
-                                    {
-                                        <div class="col-md-12">
-                                            <h4 class="entry-title"><span>  ثبت نامه در سیستم اتوماسیون اداری اتحادیه</span> </h4>
-                                            <hr>
-                                            <form class="form-horizontal text-right" method="post" name="signup" id="signup" enctype="multipart/form-data">
-
-                                                <div class="form-group">
-                                                    <div class="  col-sm-6 col-sm-offset-3">
-                                                        <input type="text" class="form-control" required asp-for="FullName" id="mem_name" value="">
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <label>نام و نام خانوادگی<span class="text-danger">*</span></label>
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <div class=" col-sm-4 col-sm-offset-5">
-                                                        <div class="input-group" style="direction:ltr">
-                                                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                                                            <input type="text" autocomplete="off" class="form-control" id="phone" asp-for="PhoneNumber" placeholder="09*********"
-                                                                   onkeyup="javascript:return isValid(event)" maxlength="11"
-                                                                   onkeypress="javascript:return isNumber(event)" />
-                                                        </div>
-                                                        <span id="vali" class="text-center"></span>
-                                                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-
-                                                    </div>
-                                                    @if (TempData["noPhone"] != null)
-                                                    {
-                                                        <div class="alert-danger"> @TempData["noPhone"] </div>
-                                                    }
-                                                    <div class="col-sm-3">
-                                                        <label class=" ">شماره تلفن همراه<span class="text-danger">*</span></label>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class=" col-sm-6 col-sm-offset-3">
-                                                        <input type="text" class="form-control" asp-for="CompanyName" id="contactnum2" placeholder="نام شرکت را وارد کنید" value="">
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <label class=" ">
-                                                            نام شرکت <br>
-                                                            <small>(حقوقی)</small>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group ">
-
-                                                    <div class=" col-sm-8 col-sm-offset-1">
-                                                        <input required type="text" class="form-control" asp-for="LetterSubject" id="mem_name" placeholder="موضوع نامه را بنویسید" value="">
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <label class=" ">موضوع نامه<span class="text-danger">*</span></label>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-
-                                                    <div class=" col-sm-8 col-sm-offset-1">
-                                                        <textarea type="text"   class="form-control" asp-for="LetterDisp" id="mem_name" placeholder="اگر توضیحاتی در مورد نامه دارید بنویسید" value=""></textarea>
-                                                    </div>
-                                                    <div class="col-sm-2 col-sm-offset-1">
-                                                        <label class=" ">توضیحات<span class="text-danger">*</span></label>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group ">
-
-                                                    <div class=" col-sm-6 col-sm-offset-3">
-                                                        <div class="input-group" style="direction:ltr">
-                                                            <span class="input-group-addon" id="file_upload"><i class="glyphicon glyphicon-upload"></i></span>
-                                                            <input class="form-control upload" asp-for="Binary" type="file" id="file">
-
-                                                        </div>
-                                                        <span id="uploads" class="">
-                                                        </span>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <label>
-                                                            فایل نامه <br>
-                                                            <small>(حجم مجاز فایل تا 300KB)</small>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div id="FileDetaile" class="col-sm-12 hide">
-                                                    <table role="presentation" class="table table-striped">
-                                                        <tbody class="files">
-                                                            <tr class="template-upload fade in">
-                                                                <td>
-                                                                    <span class="glyphicon glyphicon-file" id="Preview"> </span>
-                                                                </td>
-                                                                <td>
-                                                                    <p style="direction:ltr" id="Name"> </p>
-                                                                    <strong class="error text-danger"></strong>
-                                                                </td>
-                                                                <td>
-                                                                   <span>حجم فایل</span><p style="direction:ltr" id="Size"> </p> 
-                                                                </td>
-                                                                <td> 
-                                                                    <a id="Cancel" class="btn btn-danger">
-                                                                        <i class="glyphicon glyphicon-remove"></i> 
-                                                                    </a> 
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class=" col-md-12 col-sm-12"><span class="text-muted text-danger"><span class="label label-danger">توجه !</span>  برای ثبت نامه باید حداقل یک فایل مجاز با پسوند های doc، docx، pdf، jpg، jpeg، zip، rar باشد.</span> </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="col-sm-8 col-sm-offset-2">
-                                                        <input type="submit" class="btn btn-primary" asp-page-handler="SendRequest" value="ثبت نامه" />
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    }
-                                </center>
-                            </div>
-                            <!-- train section -->
-                            <div id="findcontent" class="bhoechie-tab-content">
-                                <center>
-                                    <h4 class="entry-title"><span>پیگیری مکاتبات</span> </h4>
-                                    <hr />
-                                    <form class="form-horizontal text-right" method="post" name="signup" id="signup" enctype="multipart/form-data">
-                                        <div class="form-group">
-                                            <label class="col-md-2">شماره رهگیری:</label>
-                                            <div class="col-md-4 ">
-                                                <input required onkeypress="javascript:return isNumber(event)" maxlength="12" name="LetterNum" type="text" class="form-control" placeholder="کد رهگیری نامه را وارد کنید ...">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="submit" autocomplete="off" class="btn btn-primary" asp-page-handler="Search" value="جستـجو" />
-                                            </div>
-                                        </div>
-
-                                    </form>
-
-                                    <div class="row">
-                                        @if (TempData["Error"] != null)
-                                        {
-                                            <div class="alert alert-danger">
-                                                @TempData["Error"]
-                                            </div>
-                                        }
-                                        @if (Model.Find)
-                                        {<hr />
-                                            <dl class="dl-horizont">
-                                                @if (Model.sendedLetter.LetterDate != null)
-                                                {
-                                                    <dt>
-                                                        <span>تاریخ</span>
-                                                    </dt>
-                                                    <dd>
-                                                        @Model.sendedLetter.LetterDate
-                                                    </dd>
-                                                }
-
-                                                <dt>
-                                                <dt>
-                                                    <span>موضوع</span>
-                                                </dt>
-                                                <dd>
-                                                    @Model.sendedLetter.Subjects
-                                                </dd>
-                                                @if (Model.Letter.FName != null || Model.Letter.LName != null)
-                                                {
-                                                    <dt>
-                                                        <span>نام و نام خانوادگی</span>
-                                                    </dt>
-                                                    <dd>
-                                                        @Model.Letter.FName  @Model.Letter.LName
-                                                    </dd>
-                                                }
-                                            </dl>
-                                            <hr />
-                                            <div class="alert alert-info">
-                                                <dl class="dl-horizont">
-
-                                                    <dt>
-                                                        <span>تاریخ</span>
-                                                    </dt>
-                                                    <dd>
-                                                        @Html.DisplayFor(model => model.Letter.LetterDate)
-                                                    </dd>
-                                                    <dt>
-                                                    <dt>
-                                                        <span>موضوع</span>
-                                                    </dt>
-                                                    <dd>
-                                                        @Html.DisplayFor(model => model.Letter.Subjects)
-                                                    </dd>
-
-
-                                                    <dt>
-                                                        <span>توضیحات</span>
-                                                    </dt>
-                                                    <dd>
-                                                        @Model.Letter.Comment .
-                                                    </dd>
-                                                    @if (Model.Letter.FName != null || Model.Letter.LName != null)
-                                                    {
-                                                        <dt>
-                                                            <span>نام و نام خانوادگی</span>
-                                                        </dt>
-                                                        <dd>
-                                                            @Model.Letter.FName  @Model.Letter.LName
-                                                        </dd>
-                                                    }
-                                                    @if (Model.BinaryIds != null)
-                                                    {
-                                                        var i = 0;
-                                                        <dt>
-                                                            <span>پیوست ها(فایل)</span>
-                                                        </dt>
-                                                        <dd>
-                                                            @foreach (var item in Model.BinaryIds)
-                                                            {
-                                                                i++;
-                                                                <span>
-                                                                    @i- <a href="/Documents?id=@item" target="_blank" asp-rout-id="@item"><span class="glyphicon glyphicon-link "></span> مشاهده فایل</a>
-                                                                </span>
-                                                            }
-                                                        </dd>
-                                                    }
-                                                </dl>
-                                            </div>
-
-                                        }
-
-                                    </div>
-                                </center>
-                            </div>
-                            <!-- hotel search -->
-                            <div id="guidcontent" class="bhoechie-tab-content">
-                                <center>
-                                    <h2>راهنمای استفاده از ثبت  و پیگیری مکاتبات در سایت اتحادیه</h2>
-                                    <p class="text-right">
-                                        1) ابتدا وارد سایت اتحادیه به آدرس Opex.ir شوید.
-                                        <br />
-                                        2) وارد قسمت مکاتبات شوید.<br />
-                                        <img src="~/img/page2.jpg" /><br />
-                                        3) اطلاعات مورد نیاز جهت ثبت نامه را وارد کنید.<br />
-                                        <img src="~/img/page3.jpg" /><br />
-                                        4) کد پیگری که سامانه برمی گرداند را جهت اطلاع از آخرین اقدامات انجام شده روی نامه ،نگهداری کنید.<br />
-                                        <img src="~/img/Picture4.JPG" /><br />
-                                        5) جهت پیگیری نامه، کدرهگیری نامه را وارد کنید و پاسخی که برای نامه ثبت شده را مشاهده کنید.<br />
-                                        <img src="~/img/page4.jpg" />
-                                    </p>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-
+        <p>ثبت نامه و پیگیری مکاتبات در سیستم اتوماسیون اداری اتحادیه</p>
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bhoechie-tab-menu" style="float:right">
+                <div class="list-group">
+                    <a id="save" href="#" class="list-group-item active text-center">
+                        <h4 class="glyphicon glyphicon-floppy-save"></h4><br />ثبت مکاتبات
+                    </a>
+                    <a id="find" href="#" class="list-group-item text-center">
+                        <h4 class="glyphicon glyphicon-search"></h4><br />پیگیری مکاتبات
+                    </a>
+                    <a id="guid" href="#" class="list-group-item text-center">
+                        <h4 class="glyphicon glyphicon-list"></h4><br />راهنما
+                    </a>
                 </div>
             </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 bhoechie-tab-container" style="float:right">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 bhoechie-tab">
+                    <!-- flight section -->
+                    <div id="savecontent" class="bhoechie-tab-content active">
+                        <center>
+                            <input type="hidden" id="selectedTab" value="@ViewData["OnTab"]" />
+                            @if (TempData["nofile"] != null)
+                            {
+                                <div class=" alert alert-danger"> @TempData["nofile"]</div>
+                            }
+                            @if (TempData["Success"] != null)
+                            {
+                                <div class="col-md-offset-2 col-md-8 " style="margin-bottom:6%">
+
+                                    <div class="col-sm-12">
+                                        <div class="col-xs-12 col-sm-8 text-right">
+                                            <h2>@Model.FullName</h2>
+                                            <p class="alert-info"><strong>کد رهگیری شما:</strong> <strong>@TempData["Success"]</strong> </p>
+                                            <p>
+                                                <strong>تاریخ ثبت:</strong>
+                                                <span class="tags"><strong> @TempData["Date"]</strong></span>
+                                            </p>
+                                            <p><strong> توضیحات: </strong> نامه شما در سیستم ثبت شد، جهت پیگیری پاسخ نامه، از قسمت پیگیری مکاتبات استفاده نمایید. </p>
+
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 text-center">
+                                            <figure>
+                                                <img src="~/img/logo.png" alt="" class="img-circle img-responsive">
+                                                <figcaption class="ratings">
+                                                    <p>
+                                                        اتحادیه صادرکنندگان فرآورده های نفت، گاز و پتروشیمی ایران
+                                                    </p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <p class="text-center"><span>Iranian Oil ,Gas and Petrochemical Products Exporters' Union</span></p>
+
+                                </div>
+                                <div class="  col-md-8  col-md-offset-2" style="margin-bottom:4%"><span class="label label-danger">توجه !</span>&nbsp;<span class="label label-primary">   کد رهگیری را جهت اطلاع از آخرین اقدامات انجام شده روی نامه، نگهداری کنید.</span> </div>
+
+                            }
+                            @if (!Model.Registered)
+                            {
+                                <div class="col-md-12">
+                                    <h4 class="entry-title"><span>  ثبت نامه در سیستم اتوماسیون اداری اتحادیه</span> </h4>
+                                    <hr>
+                                    <form class="form-horizontal text-right" method="post" name="signup" id="signup" enctype="multipart/form-data">
+
+                                        <div class="form-group">
+                                            <div class="  col-sm-6 col-sm-offset-3">
+                                                <input type="text" class="form-control" required asp-for="FullName" id="mem_name" value="">
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label>نام و نام خانوادگی<span class="text-danger">*</span></label>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class=" col-sm-4 col-sm-offset-5">
+                                                <div class="input-group" style="direction:ltr">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                                                    <input type="text" autocomplete="off" class="form-control" id="phone" asp-for="PhoneNumber" placeholder="09*********"
+                                                           onkeyup="javascript:return isValid(event)" maxlength="11"
+                                                           onkeypress="javascript:return isNumber(event)" />
+                                                </div>
+                                                <span id="vali" class="text-center"></span>
+                                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+
+                                            </div>
+                                            @if (TempData["noPhone"] != null)
+                                            {
+                                                <div class="alert-danger"> @TempData["noPhone"] </div>
+                                            }
+                                            <div class="col-sm-3">
+                                                <label class=" ">شماره تلفن همراه<span class="text-danger">*</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class=" col-sm-6 col-sm-offset-3">
+                                                <input type="text" class="form-control" asp-for="CompanyName" id="contactnum2" placeholder="نام شرکت را وارد کنید" value="">
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label>
+                                                    نام شرکت <br>
+                                                    <small>(حقوقی)</small>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group ">
+
+                                            <div class=" col-sm-8 col-sm-offset-1">
+                                                <input required type="text" class="form-control" asp-for="LetterSubject" id="mem_name" placeholder="موضوع نامه را بنویسید" value="">
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label class=" ">موضوع نامه<span class="text-danger">*</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <div class=" col-sm-8 col-sm-offset-1">
+                                                <textarea type="text" class="form-control" asp-for="LetterDisp" id="mem_name" placeholder="اگر توضیحاتی در مورد نامه دارید بنویسید" value=""></textarea>
+                                            </div>
+                                            <div class="col-sm-2 col-sm-offset-1">
+                                                <label class=" ">توضیحات<span class="text-danger">*</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group ">
+
+                                            <div class=" col-sm-6 col-sm-offset-3">
+                                                <div class="input-group" style="direction:ltr">
+                                                    <span class="input-group-addon" id="file_upload"><i class="glyphicon glyphicon-upload"></i></span>
+                                                    <input class="form-control upload" asp-for="Binary" type="file" id="file">
+
+                                                </div>
+                                                <span id="uploads" class="">
+                                                </span>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label>
+                                                    فایل نامه <br>
+                                                    <small>(حجم مجاز فایل تا 1024KB)</small>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div id="FileDetaile" class="col-sm-12 hide">
+                                            <table role="presentation" class="table table-striped">
+                                                <tbody class="files">
+                                                    <tr class="template-upload fade in">
+                                                        <td>
+                                                            <span class="glyphicon glyphicon-file" id="Preview"> </span>
+                                                        </td>
+                                                        <td>
+                                                            <p style="direction:ltr" id="Name"> </p>
+                                                            <strong class="error text-danger"></strong>
+                                                        </td>
+                                                        <td>
+                                                            <span>حجم فایل</span><p style="direction:ltr" id="Size"> </p>
+                                                        </td>
+                                                        <td>
+                                                            <a id="Cancel" class="btn btn-danger">
+                                                                <i class="glyphicon glyphicon-remove"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class=" col-md-12 col-sm-12"><span class="text-muted text-danger"><span class="label label-danger">توجه !</span>  برای ثبت نامه باید حداقل یک فایل مجاز با پسوند های doc، docx، pdf، jpg، jpeg، zip، rar باشد.</span> </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-8 col-sm-offset-2">
+                                                <input type="submit" class="btn btn-primary" asp-page-handler="SendRequest" value="ثبت نامه" />
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            }
+                        </center>
+                    </div>
+                    <!-- train section -->
+                    <div id="findcontent" class="bhoechie-tab-content">
+                        <center>
+                            <h4 class="entry-title"><span>پیگیری مکاتبات</span> </h4>
+                            <hr />
+                            <form class="form-horizontal text-right" method="post" name="signup" id="signup" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label class="col-md-2">شماره رهگیری:</label>
+                                    <div class="col-md-4 ">
+                                        <input required onkeypress="javascript:return isNumber(event)" maxlength="12" name="LetterNum" type="text" class="form-control" placeholder="کد رهگیری نامه را وارد کنید ...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="submit" autocomplete="off" class="btn btn-primary" asp-page-handler="Search" value="جستـجو" />
+                                    </div>
+                                </div>
+
+                            </form>
+
+                            <div class="row">
+                                @if (TempData["Error"] != null)
+                                {
+                                    <div class="alert alert-danger">
+                                        @TempData["Error"]
+                                    </div>
+                                }
+                                @if (Model.Find)
+                                {<hr />
+                                    <dl class="dl-horizont">
+                                        @if (Model.sendedLetter.LetterDate != null)
+                                        {
+                                            <dt>
+                                                <span>تاریخ</span>
+                                            </dt>
+                                            <dd>
+                                                @Model.sendedLetter.LetterDate
+                                            </dd>
+                                        }
+
+                                        <dt>
+                                        <dt>
+                                            <span>موضوع</span>
+                                        </dt>
+                                        <dd>
+                                            @Model.sendedLetter.Subjects
+                                        </dd>
+                                        @if (Model.Letter.FName != null || Model.Letter.LName != null)
+                                        {
+                                            <dt>
+                                                <span>نام و نام خانوادگی</span>
+                                            </dt>
+                                            <dd>
+                                                @Model.Letter.FName  @Model.Letter.LName
+                                            </dd>
+                                        }
+                                    </dl>
+                                    <hr />
+                                    <div class="alert alert-info">
+                                        <dl class="dl-horizont">
+
+                                            <dt>
+                                                <span>تاریخ</span>
+                                            </dt>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.Letter.LetterDate)
+                                            </dd>
+                                            <dt>
+                                            <dt>
+                                                <span>موضوع</span>
+                                            </dt>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.Letter.Subjects)
+                                            </dd>
+
+
+                                            <dt>
+                                                <span>توضیحات</span>
+                                            </dt>
+                                            <dd>
+                                                @Model.Letter.Comment .
+                                            </dd>
+                                            @if (Model.Letter.FName != null || Model.Letter.LName != null)
+                                            {
+                                                <dt>
+                                                    <span>نام و نام خانوادگی</span>
+                                                </dt>
+                                                <dd>
+                                                    @Model.Letter.FName  @Model.Letter.LName
+                                                </dd>
+                                            }
+                                            @if (Model.BinaryIds != null)
+                                            {
+                                                var i = 0;
+                                                <dt>
+                                                    <span>پیوست ها(فایل)</span>
+                                                </dt>
+                                                <dd>
+                                                    @foreach (var item in Model.BinaryIds)
+                                                    {
+                                                        i++;
+                                                        <span>
+                                                            @i- <a href="/Documents?id=@item" target="_blank" asp-rout-id="@item"><span class="glyphicon glyphicon-link "></span> مشاهده فایل</a>
+                                                        </span>
+                                                    }
+                                                </dd>
+                                            }
+                                        </dl>
+                                    </div>
+
+                                }
+
+                            </div>
+                        </center>
+                    </div>
+                    <!-- hotel search -->
+                    <div id="guidcontent" class="bhoechie-tab-content">
+                        <center>
+                            <h2>راهنمای استفاده از ثبت  و پیگیری مکاتبات در سایت اتحادیه</h2>
+                            <p class="text-right">
+                                1) ابتدا وارد سایت اتحادیه به آدرس Opex.ir شوید.
+                                <br />
+                                2) وارد قسمت مکاتبات شوید.<br />
+                                <img src="~/img/page2.jpg" /><br />
+                                3) اطلاعات مورد نیاز جهت ثبت نامه را وارد کنید.<br />
+                                <img src="~/img/page3.jpg" /><br />
+                                4) کد پیگری که سامانه برمی گرداند را جهت اطلاع از آخرین اقدامات انجام شده روی نامه ،نگهداری کنید.<br />
+                                <img src="~/img/Picture4.JPG" /><br />
+                                5) جهت پیگیری نامه، کدرهگیری نامه را وارد کنید و پاسخی که برای نامه ثبت شده را مشاهده کنید.<br />
+                                <img src="~/img/page4.jpg" />
+                            </p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <footer class="border-top footer text-muted" style="margin-top:2%">
+    <footer class="border-top footer text-muted">
         <div class="container text-dark text-center ">
             &copy; 1398 - اتحادیه صادرکنندگان فرآورده های نفت، گاز و پتروشیمی ایران -
             <a href="http://www.opex.ir">Opex</a> -
@@ -411,8 +407,6 @@
                 Version : @AppVersionService.Version
             </div>
         </div>
-        
-        <div class="clearfix"></div>
     </footer>
     <!--   Core JS Files   -->
     <environment include="Development">
@@ -473,21 +467,21 @@
             }
 
             $("input[type='file']").on("change", function () {
-                if (this.files[0].size > 300000) { 
+                if (this.files[0].size > 1024000) {
                     $('#uploads').removeClass("hide");
                     $('#FileDetaile').addClass("hide");
                     $('#uploads').addClass("text-danger ");
-                    $('#uploads').text("اندازه فایل بیشتر از 300 کیلوبایت است. " + Math.round(this.files[0].size / 1024) + "KB");
+                    $('#uploads').text("اندازه فایل بیشتر از یک مگابایت است. " + Math.round(this.files[0].size / 1024) + "KB");
                     $(this).val('');
                 }
-                else { 
+                else {
                     $('#uploads').addClass("hide");
                     $('#FileDetaile').removeClass("hide");
-                    $('#Name').text(this.files[0].name); 
+                    $('#Name').text(this.files[0].name);
                     $('#Size').text(Math.round(this.files[0].size / 1024) + " KB");
                     $('#uploads').text(" حجم فایل: " + Math.round(this.files[0].size / 1024) + "KB")
-                    $('#uploads').addClass("text-success"); 
-                     
+                    $('#uploads').addClass("text-success");
+
                 }
             });
             $('#Cancel').click(
